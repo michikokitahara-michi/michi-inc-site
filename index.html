@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MICHI inc. | DOTをつなぎ、未知なる道を創る</title>
+<meta name="description" content="MICHI inc.（株式会社MICHI）は、成長しようとする人や企業、地域の点をつなぎ、ブランドの創造・体験設計・組織づくりに伴走するブランドクリエイションブティックです。代表取締役CEO 北原規稚子。">
+<meta property="og:title" content="MICHI inc. | DOTをつなぎ、未知なる道を創る">
+<meta property="og:description" content="MICHI inc.（株式会社MICHI）は、成長しようとする人や企業、地域の点をつなぎ、ブランドの創造・体験設計・組織づくりに伴走するブランドクリエイションブティックです。代表取締役CEO 北原規稚子。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/ceo.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
+body{margin:0;background:#FFFFFF}
+a{color:#111111}a:hover{color:#5A5A5A}
+.gnav{display:flex;flex-wrap:wrap}
+.mbtn{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:0;padding:0;margin-right:-10px;cursor:pointer;color:#111111}
+@media (max-width: 960px){.mbtn{display:inline-flex}.gnav{display:none}.gnav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;background:#FFFFFF;padding:4px 24px 20px;border-bottom:1px solid #E4E4E0;z-index:20;font-size:14px}.gnav.open a{padding:14px 0 !important;border-bottom:1px solid #EEEEEE}}
+
+.dt{transform-box:fill-box;transform-origin:center}
+.ln{stroke:#BDBDBD;stroke-width:1;stroke-dasharray:1;fill:none}
+.road{fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;animation:road 16s ease-in-out infinite}
+@keyframes road{0%,59.4%{stroke-dashoffset:1;opacity:1}71.9%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.ph{position:absolute;inset:0;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;column-gap:0;row-gap:4px;opacity:0}
+.ph span,.nb{display:inline-block}
+.p1{animation:p1 16s ease infinite}.p2{animation:p2 16s ease infinite}.p3{animation:p3 16s ease infinite}.p4{animation:p4 16s ease infinite}
+@keyframes p1{0%,3.7%{opacity:0;transform:translateY(8px)}6.2%,20%{opacity:1;transform:none}22.5%,100%{opacity:0;transform:none}}
+@keyframes p2{0%,23.7%{opacity:0;transform:translateY(8px)}26.2%,40%{opacity:1;transform:none}42.5%,100%{opacity:0;transform:none}}
+@keyframes p3{0%,43.7%{opacity:0;transform:translateY(8px)}46.2%,60%{opacity:1;transform:none}62.5%,100%{opacity:0;transform:none}}
+@keyframes p4{0%,62.5%{opacity:0;transform:translateY(8px)}65%,76%{opacity:1;transform:none}78%,100%{opacity:0;transform:none}}
+.fin{opacity:0;animation:fin 16s ease infinite}
+@keyframes fin{0%,78.7%{opacity:0;transform:scale(.97)}82.5%,96.2%{opacity:1;transform:none}100%{opacity:0;transform:none}}
+@keyframes l0{0%,7.5%{stroke-dashoffset:1;opacity:1}15.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l0{animation:l0 16s linear infinite}
+@keyframes l1{0%,8.2%{stroke-dashoffset:1;opacity:1}15.7%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l1{animation:l1 16s linear infinite}
+@keyframes l2{0%,9.0%{stroke-dashoffset:1;opacity:1}16.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l2{animation:l2 16s linear infinite}
+@keyframes l3{0%,9.8%{stroke-dashoffset:1;opacity:1}17.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l3{animation:l3 16s linear infinite}
+@keyframes l4{0%,10.5%{stroke-dashoffset:1;opacity:1}18.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l4{animation:l4 16s linear infinite}
+@keyframes l5{0%,11.2%{stroke-dashoffset:1;opacity:1}18.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l5{animation:l5 16s linear infinite}
+@keyframes l6{0%,12.0%{stroke-dashoffset:1;opacity:1}19.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l6{animation:l6 16s linear infinite}
+@keyframes l7{0%,12.8%{stroke-dashoffset:1;opacity:1}20.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l7{animation:l7 16s linear infinite}
+@keyframes l8{0%,13.5%{stroke-dashoffset:1;opacity:1}21.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l8{animation:l8 16s linear infinite}
+@keyframes l9{0%,14.3%{stroke-dashoffset:1;opacity:1}21.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l9{animation:l9 16s linear infinite}
+@keyframes l10{0%,15.0%{stroke-dashoffset:1;opacity:1}22.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l10{animation:l10 16s linear infinite}
+@keyframes l11{0%,15.7%{stroke-dashoffset:1;opacity:1}23.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l11{animation:l11 16s linear infinite}
+@keyframes l12{0%,16.5%{stroke-dashoffset:1;opacity:1}24.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l12{animation:l12 16s linear infinite}
+@keyframes l13{0%,17.2%{stroke-dashoffset:1;opacity:1}24.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l13{animation:l13 16s linear infinite}
+@keyframes l14{0%,18.0%{stroke-dashoffset:1;opacity:1}25.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l14{animation:l14 16s linear infinite}
+@keyframes l15{0%,18.8%{stroke-dashoffset:1;opacity:1}26.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l15{animation:l15 16s linear infinite}
+@keyframes l16{0%,19.5%{stroke-dashoffset:1;opacity:1}27.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l16{animation:l16 16s linear infinite}
+@keyframes l17{0%,20.2%{stroke-dashoffset:1;opacity:1}27.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l17{animation:l17 16s linear infinite}
+@keyframes l18{0%,21.0%{stroke-dashoffset:1;opacity:1}28.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l18{animation:l18 16s linear infinite}
+@keyframes l19{0%,21.7%{stroke-dashoffset:1;opacity:1}29.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l19{animation:l19 16s linear infinite}
+@keyframes l20{0%,22.5%{stroke-dashoffset:1;opacity:1}30.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l20{animation:l20 16s linear infinite}
+@keyframes l21{0%,23.2%{stroke-dashoffset:1;opacity:1}30.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l21{animation:l21 16s linear infinite}
+@keyframes l22{0%,24.0%{stroke-dashoffset:1;opacity:1}31.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l22{animation:l22 16s linear infinite}
+@keyframes l23{0%,24.8%{stroke-dashoffset:1;opacity:1}32.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l23{animation:l23 16s linear infinite}
+@keyframes l24{0%,25.5%{stroke-dashoffset:1;opacity:1}33.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l24{animation:l24 16s linear infinite}
+@keyframes l25{0%,26.2%{stroke-dashoffset:1;opacity:1}33.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l25{animation:l25 16s linear infinite}
+@keyframes l26{0%,27.0%{stroke-dashoffset:1;opacity:1}34.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l26{animation:l26 16s linear infinite}
+@keyframes l27{0%,27.7%{stroke-dashoffset:1;opacity:1}35.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l27{animation:l27 16s linear infinite}
+@keyframes l28{0%,28.5%{stroke-dashoffset:1;opacity:1}36.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l28{animation:l28 16s linear infinite}
+@keyframes l29{0%,29.2%{stroke-dashoffset:1;opacity:1}36.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l29{animation:l29 16s linear infinite}
+@keyframes l30{0%,30.0%{stroke-dashoffset:1;opacity:1}37.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l30{animation:l30 16s linear infinite}
+@keyframes l31{0%,30.8%{stroke-dashoffset:1;opacity:1}38.2%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l31{animation:l31 16s linear infinite}
+@keyframes l32{0%,31.5%{stroke-dashoffset:1;opacity:1}39.0%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l32{animation:l32 16s linear infinite}
+@keyframes l33{0%,32.2%{stroke-dashoffset:1;opacity:1}39.8%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l33{animation:l33 16s linear infinite}
+@keyframes l34{0%,33.0%{stroke-dashoffset:1;opacity:1}40.5%,96.2%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}.l34{animation:l34 16s linear infinite}
+@keyframes d0{0%{opacity:0;transform:scale(0)}3.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d0{animation:d0 16s ease-out infinite}
+@keyframes d1{0%,0.6%{opacity:0;transform:scale(0)}3.7%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d1{animation:d1 16s ease-out infinite}
+@keyframes d2{0%,1.1%{opacity:0;transform:scale(0)}4.2%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d2{animation:d2 16s ease-out infinite}
+@keyframes d3{0%,1.7%{opacity:0;transform:scale(0)}4.8%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d3{animation:d3 16s ease-out infinite}
+@keyframes d4{0%,2.2%{opacity:0;transform:scale(0)}5.4%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d4{animation:d4 16s ease-out infinite}
+@keyframes d5{0%,2.8%{opacity:0;transform:scale(0)}5.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d5{animation:d5 16s ease-out infinite}
+@keyframes d6{0%,3.4%{opacity:0;transform:scale(0)}6.5%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d6{animation:d6 16s ease-out infinite}
+@keyframes d7{0%,3.9%{opacity:0;transform:scale(0)}7.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d7{animation:d7 16s ease-out infinite}
+@keyframes d8{0%,4.5%{opacity:0;transform:scale(0)}7.6%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d8{animation:d8 16s ease-out infinite}
+@keyframes d9{0%,5.1%{opacity:0;transform:scale(0)}8.2%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d9{animation:d9 16s ease-out infinite}
+@keyframes d10{0%,5.6%{opacity:0;transform:scale(0)}8.8%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d10{animation:d10 16s ease-out infinite}
+@keyframes d11{0%,6.2%{opacity:0;transform:scale(0)}9.3%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d11{animation:d11 16s ease-out infinite}
+@keyframes d12{0%,6.8%{opacity:0;transform:scale(0)}9.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d12{animation:d12 16s ease-out infinite}
+@keyframes d13{0%,7.3%{opacity:0;transform:scale(0)}10.4%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d13{animation:d13 16s ease-out infinite}
+@keyframes d14{0%,7.9%{opacity:0;transform:scale(0)}11.0%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d14{animation:d14 16s ease-out infinite}
+@keyframes d15{0%,8.4%{opacity:0;transform:scale(0)}11.6%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d15{animation:d15 16s ease-out infinite}
+@keyframes d16{0%,9.0%{opacity:0;transform:scale(0)}12.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d16{animation:d16 16s ease-out infinite}
+@keyframes d17{0%,9.6%{opacity:0;transform:scale(0)}12.7%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d17{animation:d17 16s ease-out infinite}
+@keyframes d18{0%,10.1%{opacity:0;transform:scale(0)}13.2%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d18{animation:d18 16s ease-out infinite}
+@keyframes d19{0%,10.7%{opacity:0;transform:scale(0)}13.8%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d19{animation:d19 16s ease-out infinite}
+@keyframes d20{0%,11.2%{opacity:0;transform:scale(0)}14.4%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d20{animation:d20 16s ease-out infinite}
+@keyframes d21{0%,11.8%{opacity:0;transform:scale(0)}14.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d21{animation:d21 16s ease-out infinite}
+@keyframes d22{0%,12.4%{opacity:0;transform:scale(0)}15.5%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d22{animation:d22 16s ease-out infinite}
+@keyframes d23{0%,12.9%{opacity:0;transform:scale(0)}16.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d23{animation:d23 16s ease-out infinite}
+@keyframes d24{0%,13.5%{opacity:0;transform:scale(0)}16.6%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d24{animation:d24 16s ease-out infinite}
+@keyframes d25{0%,14.1%{opacity:0;transform:scale(0)}17.2%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d25{animation:d25 16s ease-out infinite}
+@keyframes d26{0%,14.6%{opacity:0;transform:scale(0)}17.8%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d26{animation:d26 16s ease-out infinite}
+@keyframes d27{0%,15.2%{opacity:0;transform:scale(0)}18.3%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d27{animation:d27 16s ease-out infinite}
+@keyframes d28{0%,15.8%{opacity:0;transform:scale(0)}18.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d28{animation:d28 16s ease-out infinite}
+@keyframes d29{0%,16.3%{opacity:0;transform:scale(0)}19.4%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d29{animation:d29 16s ease-out infinite}
+@media (prefers-reduced-motion: reduce){.dt,.ln,.road{animation:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}.ph{display:none}.fin{animation:none!important;opacity:1!important}}
+</style>
+</head>
+<body>
+
+
+<div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
+<header style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a aria-label="MICHI inc. ホーム" href="index.html" style="display: flex; align-items: center; min-height: 44px">
+<img alt="MICHI inc." src="assets/michi-inc-black.png" style="height: 22px; width: auto; display: block"/>
+</a>
+<button aria-expanded="false" aria-label="メニュー" class="mbtn" type="button">
+<svg aria-hidden="true" fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="24"><line x1="3" x2="21" y1="7" y2="7"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="17" y2="17"></line></svg>
+
+</button>
+<nav aria-label="メインメニュー" class="gnav" style="align-items: center; gap: 4px 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.18em">
+<a href="concept.html" style="text-decoration: none; padding: 12px 0">CONCEPT</a>
+<a href="concept.html#approach" style="text-decoration: none; padding: 12px 0">SERVICE</a>
+<a href="about.html" style="text-decoration: none; padding: 12px 0">ABOUT CEO</a>
+<a href="works.html" style="text-decoration: none; padding: 12px 0">WORKS</a>
+<a href="media.html" style="text-decoration: none; padding: 12px 0">MEDIA</a>
+<a href="talks.html" style="text-decoration: none; padding: 12px 0">TALKS</a>
+<a href="contact.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
+</nav>
+</header>
+<section aria-label="DOTをつなぎ、未知なる道を創る" style="position: relative; height: clamp(540px, 56vw, 780px); overflow: hidden; background: #FFFFFF; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #EEEEEE">
+<svg aria-hidden="true" preserveaspectratio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%" viewbox="0 0 1440 820">
+<line class="ln l0" pathlength="1" x1="480" x2="656" y1="152" y2="262"></line>
+<line class="ln l1" pathlength="1" x1="480" x2="395" y1="152" y2="311"></line>
+<line class="ln l2" pathlength="1" x1="480" x2="353" y1="152" y2="63"></line>
+<line class="ln l3" pathlength="1" x1="925" x2="841" y1="94" y2="234"></line>
+<line class="ln l4" pathlength="1" x1="925" x2="779" y1="94" y2="60"></line>
+<line class="ln l5" pathlength="1" x1="925" x2="1083" y1="94" y2="70"></line>
+<line class="ln l6" pathlength="1" x1="119" x2="286" y1="416" y2="470"></line>
+<line class="ln l7" pathlength="1" x1="119" x2="78" y1="416" y2="247"></line>
+<line class="ln l8" pathlength="1" x1="135" x2="280" y1="107" y2="212"></line>
+<line class="ln l9" pathlength="1" x1="135" x2="78" y1="107" y2="247"></line>
+<line class="ln l10" pathlength="1" x1="617" x2="460" y1="652" y2="644"></line>
+<line class="ln l11" pathlength="1" x1="617" x2="764" y1="652" y2="617"></line>
+<line class="ln l12" pathlength="1" x1="893" x2="986" y1="741" y2="480"></line>
+<line class="ln l13" pathlength="1" x1="893" x2="764" y1="741" y2="617"></line>
+<line class="ln l14" pathlength="1" x1="1368" x2="1208" y1="74" y2="254"></line>
+<line class="ln l15" pathlength="1" x1="1368" x2="1083" y1="74" y2="70"></line>
+<line class="ln l16" pathlength="1" x1="1208" x2="1032" y1="254" y2="253"></line>
+<line class="ln l17" pathlength="1" x1="1208" x2="1341" y1="254" y2="371"></line>
+<line class="ln l18" pathlength="1" x1="460" x2="467" y1="644" y2="473"></line>
+<line class="ln l19" pathlength="1" x1="286" x2="283" y1="470" y2="624"></line>
+<line class="ln l20" pathlength="1" x1="467" x2="395" y1="473" y2="311"></line>
+<line class="ln l21" pathlength="1" x1="656" x2="841" y1="262" y2="234"></line>
+<line class="ln l22" pathlength="1" x1="1120" x2="986" y1="557" y2="480"></line>
+<line class="ln l23" pathlength="1" x1="1120" x2="1182" y1="557" y2="739"></line>
+<line class="ln l24" pathlength="1" x1="1032" x2="986" y1="253" y2="480"></line>
+<line class="ln l25" pathlength="1" x1="1032" x2="1083" y1="253" y2="70"></line>
+<line class="ln l26" pathlength="1" x1="1182" x2="1370" y1="739" y2="733"></line>
+<line class="ln l27" pathlength="1" x1="120" x2="283" y1="608" y2="624"></line>
+<line class="ln l28" pathlength="1" x1="120" x2="127" y1="608" y2="769"></line>
+<line class="ln l29" pathlength="1" x1="280" x2="395" y1="212" y2="311"></line>
+<line class="ln l30" pathlength="1" x1="280" x2="353" y1="212" y2="63"></line>
+<line class="ln l31" pathlength="1" x1="841" x2="779" y1="234" y2="60"></line>
+<line class="ln l32" pathlength="1" x1="1336" x2="1341" y1="551" y2="371"></line>
+<line class="ln l33" pathlength="1" x1="1336" x2="1370" y1="551" y2="733"></line>
+<line class="ln l34" pathlength="1" x1="283" x2="127" y1="624" y2="769"></line>
+<polyline class="road" pathlength="1" points="127,769 283,624 467,473 395,311 480,152 656,262 841,234 1032,253 1208,254 1341,371 1336,551 1370,733" stroke="#111111"></polyline>
+<circle class="dt d0" cx="480" cy="152" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d1" cx="925" cy="94" fill="#111111" r="7"></circle>
+<circle class="dt d2" cx="119" cy="416" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d3" cx="135" cy="107" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d4" cx="617" cy="652" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d5" cx="893" cy="741" fill="#9A9A9A" r="5"></circle>
+<circle class="dt d6" cx="1368" cy="74" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d7" cx="1208" cy="254" fill="#111111" r="9"></circle>
+<circle class="dt d8" cx="460" cy="644" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d9" cx="286" cy="470" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d10" cx="467" cy="473" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d11" cx="656" cy="262" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d12" cx="1120" cy="557" fill="#111111" r="9"></circle>
+<circle class="dt d13" cx="1032" cy="253" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d14" cx="986" cy="480" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d15" cx="1182" cy="739" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d16" cx="120" cy="608" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d17" cx="280" cy="212" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d18" cx="841" cy="234" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d19" cx="1336" cy="551" fill="#111111" r="9"></circle>
+<circle class="dt d20" cx="779" cy="60" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d21" cx="395" cy="311" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d22" cx="764" cy="617" fill="#9A9A9A" r="5"></circle>
+<circle class="dt d23" cx="78" cy="247" fill="#9A9A9A" r="4"></circle>
+<circle class="dt d24" cx="1341" cy="371" fill="#111111" r="7"></circle>
+<circle class="dt d25" cx="283" cy="624" fill="#111111" r="7"></circle>
+<circle class="dt d26" cx="127" cy="769" fill="#111111" r="7"></circle>
+<circle class="dt d27" cx="353" cy="63" fill="#9A9A9A" r="6"></circle>
+<circle class="dt d28" cx="1370" cy="733" fill="#111111" r="7"></circle>
+<circle class="dt d29" cx="1083" cy="70" fill="#111111" r="7"></circle>
+</svg>
+<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 24px">
+<div style="position: relative; width: 100%; max-width: 640px; height: 260px; text-align: center; background: radial-gradient(closest-side, rgba(255,255,255,0.96), rgba(255,255,255,0.85) 60%, rgba(255,255,255,0))">
+<p class="ph p1" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>人と人。</span><span>人と地域。</span><span>人と企業。</span></p>
+<p class="ph p2" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>そして、</span><span>過去と未来。</span></p>
+<p class="ph p3" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>すべての点に、</span><span>意味がある。</span></p>
+<p class="ph p4" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>つながったとき、</span><span>それは価値になる。</span></p>
+<div class="fin" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px">
+<img alt="MICHI inc." src="assets/michi-inc-black.png" style="width: min(360px, 78%); height: auto; display: block"/>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(14px, 3.9vw, 17px); letter-spacing: 0.16em; text-align: center"><span class="nb">DOTをつなぎ、</span><span class="nb">未知なる道を創る</span></p>
+<p style="margin: 0; font-size: 11px; letter-spacing: 0.36em; color: #5A5A5A">BRAND CREATION STUDIO</p>
+</div>
+</div>
+</div>
+</section>
+<section style="max-width: 1040px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px; display: flex; flex-wrap: wrap; gap: 32px 48px">
+<div style="flex: 1 1 240px">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">PHILOSOPHY</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">企業理念</h2>
+</div>
+<div style="flex: 999 1 520px; min-width: 0; font-size: 15px; line-height: 2; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(21px, 5.6vw, 26px); line-height: 1.7; letter-spacing: 0.08em"><span style="display: inline-block">DOTをつなぎ、</span><span style="display: inline-block">未知なる道を創る</span></p>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2">人と人、人と地域、企業、そして過去と未来。ひとつひとつの点には意味があり、つながったとき、それは価値になる。</p>
+<p style="margin: 0; color: #444444">MICHI inc.は、成長しようとする人や企業、地域の点をつなぎ、誰もが自分らしく、心身ともに豊かに美しく生きられる世界に貢献するブランドクリエイションブティックです。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="concept.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">CONCEPT →</a>
+</div>
+</div>
+</section>
+<section aria-label="MIDOT" style="max-width: 1280px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 56px">
+<img alt="MIDOTのビジュアル。ドット柄の服を着たモデルたちのモノクロ写真" src="assets/midot-visual.jpg" style="flex: 1.6 1 560px; min-width: 0; aspect-ratio: 16 / 9; object-fit: cover; display: block"/>
+<div style="flex: 1 1 340px; min-width: 0; padding: 48px 8px 0; display: flex; flex-direction: column; justify-content: center">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">APPAREL BRAND</p>
+<img alt="MIDOT" src="assets/midot-logo-black.png" style="margin-top: 20px; width: 150px; height: auto; display: block"/>
+<h2 style="margin: 28px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(22px, 5.6vw, 28px); line-height: 1.7"><span class="nb">DOTを大人の分量で、</span><span class="nb">遊び心のSPICEに。</span></h2>
+<p style="margin: 20px 0 0; font-size: 15px; line-height: 2.1; color: #444444"><span class="nb">いつだって冒険できる。</span><span class="nb">好奇心は止まらない。</span><br/><span class="nb">着飾ることを鎧にするなんて</span><span class="nb">もったいない。</span><br/><span class="nb">未知なる道のワクワクを楽しめる、</span><span class="nb">大人の女性たちへ。</span></p>
+<p style="margin: 20px 0 0; font-size: 14px; color: #444444">2025年11月スタート。</p>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://midotshop.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">ONLINE SHOP</a>
+<a href="https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.1em">ブランド誕生の記事を読む</a>
+</div>
+</div>
+</div>
+</section>
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px 64px">
+<img alt="北原 規稚子" src="assets/ceo.jpg" style="flex: 1 1 320px; min-width: 0; max-width: 440px; aspect-ratio: 1 / 1; object-fit: cover; display: block"/>
+<div style="flex: 999 1 420px; min-width: 0">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">ABOUT CEO</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 40px; line-height: 1.4">北原 規稚子</h2>
+<p style="margin: 8px 0 0; font-size: 13px; letter-spacing: 0.24em; color: #444444"><span style="display: inline-block">MICHIKO KITAHARA ／</span> <span style="display: inline-block">代表取締役CEO</span></p>
+<p style="margin: 24px 0 0; font-size: 15px; line-height: 2; color: #444444">ライオン、資生堂で数々のブランドを手がけ、資生堂では副CMO・マーケティング本部長などを歴任。2025年にMICHI inc.を設立。</p>
+<ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #333333">
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社アールシーコア 社外取締役</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>フリュー株式会社 社外取締役</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社ひとまいる 社外取締役</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>一般社団法人MCA（旧マーケターキャリア協会）理事</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>MGC（マーケティングギルドコミュニティー）フェロー</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>amana主催 創造性人材循環事業「Great RIVER」顧問</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>早稲田大学経営学研究科（MBA）ゲスト講師</li>
+</ul>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<a href="about.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">PROFILE →</a>
+<a href="https://www.facebook.com/share/1BNkp1RXkc/?mibextid=wwXIfr" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; font-size: 14px">Facebook</a>
+</div>
+</div>
+</section>
+<section id="works" style="background: #F6F6F3">
+<div style="max-width: 1280px; margin: 0 auto; padding: 120px 24px">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">WORKS</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">ブランドづくりの実績</h2>
+<p style="margin: 20px 0 0; font-size: 15px; color: #444444">ブランディング・マーケティング支援、講演等</p>
+<ul style="margin: 32px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; border-top: 1px solid #DDDDD8">
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">アフラック株式会社</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">伊藤忠商事株式会社</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">株式会社NTTドコモ</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">カルビー株式会社</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">コクヨ株式会社</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">東京ガス株式会社</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">森永乳業株式会社</li>
+
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">株式会社リクルート</li>
+
+</ul>
+<a href="works.html" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 32px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">すべての実績を見る →</a>
+</div>
+</section>
+<section id="media" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div>
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">MEDIA</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">掲載記事</h2>
+</div>
+<a href="media.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">すべて見る →</a>
+</div>
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); align-items: start; gap: 24px">
+
+<a href="https://www.amazon.co.jp/s?k=9798170828333" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
+<span style="display: flex; aspect-ratio: 693 / 1000; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="" src="assets/kotler.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</span>
+
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>書籍掲載</span><span></span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">フィリップ・コトラー『Essentials of Modern Marketing, Japan Edition』に、資生堂時代に携わった「ファンデ美容液」の事例が掲載</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
+</span>
+</a>
+
+<a href="https://markezine.jp/article/detail/50159" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
+<span style="display: flex; aspect-ratio: 1200 / 800; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="" src="assets/interview.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</span>
+
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>MarkeZine</span><span>2025.12.08</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">マーケターはいても「価値創造人材」は少ない？元資生堂・北原氏がたどり着いた「最高のチーム」の作り方</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
+</span>
+</a>
+
+<a href="https://core-official.com/media/dear_woman" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
+<span style="display: flex; aspect-ratio: 1200 / 675; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="" src="assets/core-banner.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+<img alt="" src="assets/core.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</span>
+
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>CORE「Dear Woman.」</span><span></span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">時代を形づくる女性リーダー100名に選出（EMPOWERMENT LEADER）</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
+</span>
+</a>
+
+</div>
+</section>
+<section id="talks" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div>
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">TALKS</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">登壇・出演</h2>
+</div>
+<a href="talks.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">すべて見る →</a>
+</div>
+<ul aria-label="登壇予定・最近の登壇（横にスクロール）" style="margin: 32px -24px 0; padding: 0 24px 20px; list-style: none; display: flex; align-items: flex-start; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 24px">
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 1200 / 628; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="Retail Media Summit 2026" src="assets/rms2026.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+<img alt="Retail Media Summit 2026" src="assets/rms2026b.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+
+
+<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">UPCOMING</span>
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.11.11<span style="margin-left: 12px">14:50–15:20</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">Retail Media Summit 2026</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">「優れた顧客体験を生み出すこれからのマーケティングウェイ with リテールメディア」花王 山岡氏、ファンケル 京谷氏と登壇（ベルサール新宿グランド）</span>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 1200 / 630; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="ad:tech tokyo 2026 KEYNOTE" src="assets/adtech2026.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+
+<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">UPCOMING</span>
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.10.23<span style="margin-left: 12px">10:00–10:40</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">ad:tech tokyo 2026 KEYNOTE</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">マーケター・オブ・ザ・イヤー2026 審査員と語る「新しい価値はどう生み出されるのか」（東京ミッドタウン）</span>
+
+<a href="https://adtech-tokyo.com/ja/" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">DETAIL →</a>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 1200 / 630; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="ad:tech tokyo 2026" src="assets/adtech2026b.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+
+<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">UPCOMING</span>
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.10.22<span style="margin-left: 12px">16:45–17:35</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">ad:tech tokyo 2026</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">「新しい市場の発見と創造」vector 吉柳氏、NOPE 大槻氏、ブルボン 井手氏と登壇（東京ミッドタウン）</span>
+
+<a href="https://adtech-tokyo.com/ja/" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">DETAIL →</a>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 960 / 1200; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="INNER BEAUTY TALK SHOW" src="assets/innerbeauty.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+<img alt="INNER BEAUTY TALK SHOW" src="assets/innerbeauty2.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+
+
+<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">TODAY</span>
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.10.12<span style="margin-left: 12px"></span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">INNER BEAUTY TALK SHOW</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">「私らしい美しさの設計図」を語る。インスタグラマー 宮田綾子氏との特別対談（そうごう薬局 麻布十番店）</span>
+
+<a href="https://shop.sogo-pharmacy.jp/detail/434/" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">DETAIL →</a>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 1158 / 605; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="SHOPPER・X 2026" src="assets/shopperx.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.09.09–10<span style="margin-left: 12px"></span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">SHOPPER・X 2026</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">STAGE A-4「顧客の価値観・美意識との接続─デジタル購買行動から探るインサイト」eBay Japan モラーノ氏、ライオン 松井氏と登壇（リーガロイヤルホテル東京）</span>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 1151 / 950; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="MarkeZine Day 2026 Autumn" src="assets/markezineday.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.09.08<span style="margin-left: 12px">12:35–13:15</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">MarkeZine Day 2026 Autumn</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">「なぜ、その投資なのか」を問う──カルビー・求人ボックスが語る、ブランド成長を導くメディア戦略。カルビー 渡部氏、求人ボックス（カカクコム）小島氏のセッションでモデレーター（JPタワーホール＆カンファレンス）</span>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 1200 / 587; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="ビジネスパーソンがあえて熱海を選ぶ理由" src="assets/atami.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.08.26<span style="margin-left: 12px">18:30–20:30</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">ビジネスパーソンがあえて熱海を選ぶ理由</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">〜熱海で学ぶ意義と価値〜 日本コミュニケーションスキルアカデミー 大原氏と登壇（九段会館テラス）</span>
+
+</div>
+</li>
+
+<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: 726 / 780; overflow-x: auto; scroll-snap-type: x mandatory">
+
+<img alt="日経クロストレンドフォーラム2026" src="assets/xtrend.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+<img alt="日経クロストレンドフォーラム2026" src="assets/xtrend2.jpg" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start"/>
+
+</div>
+
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+
+
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.07.29<span style="margin-left: 12px">17:20–18:20</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">日経クロストレンドフォーラム2026</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">協賛講演「AI時代における“新価値創造”の在り方とは？」インテグレート 藤田氏と登壇（東京コンベンションホール）</span>
+
+</div>
+</li>
+
+</ul>
+<p aria-hidden="true" style="margin: 4px 0 0; font-size: 12px; letter-spacing: 0.2em; color: #5A5A5A">SCROLL →</p>
+</section>
+<section style="background: #111111; color: #F5F5F2">
+<div style="max-width: 1280px; margin: 0 auto; padding: 112px 24px; text-align: center">
+<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6"><span class="nb">あなたの点を、</span><span class="nb">つなぐお手伝いを。</span></h2>
+<p style="margin: 12px 0 0; font-size: 16px">お仕事のご相談は、お気軽にお問い合わせください。</p>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 36px; padding: 0 44px; background: #FFFFFF; color: #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">お問い合わせ</a>
+</div>
+</section>
+<footer style="background: #111111; color: #B5B5B5; border-top: 1px solid #2A2A2A">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px">
+<img alt="MICHI" src="assets/michi-white-noframe.png" style="width: 150px; height: auto; display: block"/>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="https://www.michi-inc.net/%E6%A6%82%E8%A6%81/" style="color: #DDDDDD">概要</a>
+<a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" style="color: #DDDDDD">プライバシーポリシー</a>
+<span>© MICHI inc.</span>
+</div>
+</div>
+</footer>
+</div>
+
+<script>
+(function(){
+  var b=document.querySelector('.mbtn'),n=document.querySelector('.gnav');if(!b||!n)return;
+  var ham=b.innerHTML,x='<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>';
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.innerHTML=o?x:ham;});
+  n.addEventListener('click',function(e){if(e.target.closest('a')&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.innerHTML=ham;}});
+})();
+</script>
+</body>
+</html>

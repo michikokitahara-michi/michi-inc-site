@@ -20,7 +20,11 @@ a{color:#111111}a:hover{color:#5A5A5A}
 
 /* MICHI design refinements */
 html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-header.site{position:sticky !important;top:0;z-index:40;background:rgba(255,255,255,0.94);box-shadow:0 0 0 100vmax rgba(255,255,255,0.94);clip-path:inset(0 -100vmax);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+header.site{position:sticky !important;top:0;z-index:40;background:#111111;max-width:none !important;padding-left:max(24px, calc((100% - 1232px) / 2)) !important;padding-right:max(24px, calc((100% - 1232px) / 2)) !important}
+header.site a,header.site .mbtn{color:#FFFFFF}
+header.site a:hover{color:#BDBDBD}
+header.site .gnav a::after{background:#FFFFFF !important}
+@media (max-width: 960px){header.site .gnav.open{background:#111111 !important;border-bottom:1px solid #2A2A2A !important;align-items:stretch !important;padding:4px 24px 24px !important}header.site .gnav.open a{border-bottom:1px solid #2A2A2A !important}}
 .dia{background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px}
 .phead{position:relative;overflow:hidden}
 .phead::before{content:"";position:absolute;top:0;right:0;width:min(48%,560px);height:100%;background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 95%);mask-image:linear-gradient(to left,#000 10%,transparent 95%);pointer-events:none}
@@ -54,7 +58,7 @@ header.site{position:sticky !important;top:0;z-index:40;background:rgba(255,255,
 <div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
 <header class="site" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
 <a aria-label="MICHI inc. ホーム" href="index.html" style="display: flex; align-items: center; min-height: 44px">
-<img alt="MICHI inc." src="assets/michi-inc-black.png" style="height: 22px; width: auto; display: block"/>
+<img alt="MICHI inc." src="assets/michi-inc-white.png" style="height: 22px; width: auto; display: block"/>
 </a>
 <button aria-expanded="false" aria-label="メニュー" class="mbtn" type="button">
 <svg aria-hidden="true" fill="none" height="24" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" width="24"><line x1="3" x2="21" y1="7" y2="7"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="17" y2="17"></line></svg>
@@ -70,7 +74,7 @@ header.site{position:sticky !important;top:0;z-index:40;background:rgba(255,255,
 <a href="contact.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
 </nav>
 </header>
-<section class="phead" style="border-top: 1px solid #EEEEEE">
+<section class="phead">
 <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 0">
 <p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">TALKS</p>
 <h1 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(28px, 6vw, 36px); line-height: 1.6">登壇・出演</h1>

@@ -96,13 +96,41 @@ a{color:#111111}a:hover{color:#5A5A5A}
 @keyframes d28{0%,15.8%{opacity:0;transform:scale(0)}18.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d28{animation:d28 16s ease-out infinite}
 @keyframes d29{0%,16.3%{opacity:0;transform:scale(0)}19.4%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}.d29{animation:d29 16s ease-out infinite}
 @media (prefers-reduced-motion: reduce){.dt,.ln,.road{animation:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}.ph{display:none}.fin{animation:none!important;opacity:1!important}}
+
+/* MICHI design refinements */
+header.site{position:sticky !important;top:0;z-index:40;background:rgba(255,255,255,0.94);box-shadow:0 0 0 100vmax rgba(255,255,255,0.94);clip-path:inset(0 -100vmax);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.dia{background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px}
+.phead{position:relative;overflow:hidden}
+.phead::before{content:"";position:absolute;top:0;right:0;width:min(48%,560px);height:100%;background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 95%);mask-image:linear-gradient(to left,#000 10%,transparent 95%);pointer-events:none}
+.phead>*{position:relative;z-index:1}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px),radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.eyebrow::after{content:"";width:36px;height:1px;background:currentColor;opacity:0.45;flex:none}
+.eyebrow.c{justify-content:center}
+.photo{position:relative}
+.photo::before{content:"";position:absolute;right:-22px;bottom:-22px;width:62%;height:62%;background-image:radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px),radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px);background-size:22px 22px;background-position:0 0,11px 11px;z-index:0}
+.photo img{position:relative;z-index:1}
+.btn-o,.btn-f,.btn-w{transition:background-color .35s ease,color .35s ease,box-shadow .35s ease}
+.btn-o:hover{background:#111111 !important;color:#FFFFFF !important}
+.btn-f:hover{background:#FFFFFF !important;color:#111111 !important;box-shadow:inset 0 0 0 1px #111111}
+.btn-w:hover{background:transparent !important;color:#FFFFFF !important;box-shadow:inset 0 0 0 1px #FFFFFF}
+.card{transition:border-color .35s ease,box-shadow .35s ease}
+.card:hover{border-color:#111111 !important;box-shadow:0 18px 40px -28px rgba(0,0,0,.45)}
+.card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.025)}
+.gnav a{position:relative}
+@media (min-width: 961px){.gnav a:not([style*="background"])::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:#111111;transform:translateX(-50%) scale(0);transition:transform .3s ease}.gnav a:hover::after,.gnav a[aria-current]::after{transform:translateX(-50%) scale(1)}.gnav a[aria-current]{text-decoration:none !important}}
 </style>
+<style>.w{display:inline-block}body{line-break:strict}.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}</style>
 </head>
 <body>
 
 
 <div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
-<header style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<header class="site" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
 <a aria-label="MICHI inc. ホーム" href="index.html" style="display: flex; align-items: center; min-height: 44px">
 <img alt="MICHI inc." src="assets/michi-inc-black.png" style="height: 22px; width: auto; display: block"/>
 </a>
@@ -205,15 +233,15 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </section>
 <section style="max-width: 1040px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px; display: flex; flex-wrap: wrap; gap: 32px 48px">
 <div style="flex: 1 1 240px">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">PHILOSOPHY</p>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">PHILOSOPHY</p>
 <h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">企業理念</h2>
 </div>
 <div style="flex: 999 1 520px; min-width: 0; font-size: 15px; line-height: 2; display: flex; flex-direction: column; gap: 20px">
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(21px, 5.6vw, 26px); line-height: 1.7; letter-spacing: 0.08em"><span style="display: inline-block">DOTをつなぎ、</span><span style="display: inline-block">未知なる道を創る</span></p>
-<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2">人と人、人と地域、企業、そして過去と未来。ひとつひとつの点には意味があり、つながったとき、それは価値になる。</p>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2"><span><span class="w">人と</span><span class="w">人、</span><span class="w">人と</span><span class="w">地域、</span><span class="w">企業、</span><span class="w">そして</span><span class="w">過去と</span><span class="w">未来。</span><span class="w">ひとつひとつの</span><span class="w">点には</span><span class="w">意味があり、</span><span class="w">つながったとき、</span><span class="w">それは</span><span class="w">価値になる。</span></span></p>
 <p style="margin: 0; color: #444444">MICHI inc.は、成長しようとする人や企業、地域の点をつなぎ、誰もが自分らしく、心身ともに豊かに美しく生きられる世界に貢献するブランドクリエイションブティックです。</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="concept.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">CONCEPT →</a>
+<a class="btn-o" href="concept.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">CONCEPT →</a>
 </div>
 </div>
 </section>
@@ -221,78 +249,78 @@ a{color:#111111}a:hover{color:#5A5A5A}
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 56px">
 <img alt="MIDOTのビジュアル。ドット柄の服を着たモデルたちのモノクロ写真" src="assets/midot-visual.jpg" style="flex: 1.6 1 560px; min-width: 0; aspect-ratio: 16 / 9; object-fit: cover; display: block"/>
 <div style="flex: 1 1 340px; min-width: 0; padding: 48px 8px 0; display: flex; flex-direction: column; justify-content: center">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">APPAREL BRAND</p>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">APPAREL BRAND</p>
 <img alt="MIDOT" src="assets/midot-logo-black.png" style="margin-top: 20px; width: 150px; height: auto; display: block"/>
 <h2 style="margin: 28px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(22px, 5.6vw, 28px); line-height: 1.7"><span class="nb">DOTを大人の分量で、</span><span class="nb">遊び心のSPICEに。</span></h2>
 <p style="margin: 20px 0 0; font-size: 15px; line-height: 2.1; color: #444444"><span class="nb">いつだって冒険できる。</span><span class="nb">好奇心は止まらない。</span><br/><span class="nb">着飾ることを鎧にするなんて</span><span class="nb">もったいない。</span><br/><span class="nb">未知なる道のワクワクを楽しめる、</span><span class="nb">大人の女性たちへ。</span></p>
-<p style="margin: 20px 0 0; font-size: 14px; color: #444444">2025年11月スタート。</p>
+<p style="margin: 20px 0 0; font-size: 14px; color: #444444"><span><span class="w">2025年11月スタート。</span></span></p>
 <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px">
-<a href="https://midotshop.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">ONLINE SHOP</a>
-<a href="https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.1em">ブランド誕生の記事を読む</a>
+<a class="btn-f" href="https://midotshop.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">ONLINE SHOP</a>
+<a class="btn-o" href="https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.1em"><span><span class="w">ブランド誕生の</span><span class="w">記事を読む</span></span></a>
 </div>
 </div>
 </div>
 </section>
 <section style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px 64px">
-<img alt="北原 規稚子" src="assets/ceo.jpg" style="flex: 1 1 320px; min-width: 0; max-width: 440px; aspect-ratio: 1 / 1; object-fit: cover; display: block"/>
+<div class="photo" style="flex: 0 1 440px; min-width: 260px; max-width: 440px; margin: 0 22px 22px 0"><img alt="北原 規稚子" src="assets/ceo.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"/></div>
 <div style="flex: 999 1 420px; min-width: 0">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">ABOUT CEO</p>
-<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 40px; line-height: 1.4">北原 規稚子</h2>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">ABOUT CEO</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 40px; line-height: 1.4"><span><span class="w">北原 規稚子</span></span></h2>
 <p style="margin: 8px 0 0; font-size: 13px; letter-spacing: 0.24em; color: #444444"><span style="display: inline-block">MICHIKO KITAHARA ／</span> <span style="display: inline-block">代表取締役CEO</span></p>
 <p style="margin: 24px 0 0; font-size: 15px; line-height: 2; color: #444444">ライオン、資生堂で数々のブランドを手がけ、資生堂では副CMO・マーケティング本部長などを歴任。2025年にMICHI inc.を設立。</p>
 <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #333333">
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社アールシーコア 社外取締役</li>
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>フリュー株式会社 社外取締役</li>
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社ひとまいる 社外取締役</li>
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>一般社団法人MCA（旧マーケターキャリア協会）理事</li>
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>MGC（マーケティングギルドコミュニティー）フェロー</li>
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>amana主催 創造性人材循環事業「Great RIVER」顧問</li>
-<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>早稲田大学経営学研究科（MBA）ゲスト講師</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">株式会社アールシーコア</span> <span class="w">社外取締役</span></span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">フリュー株式会社</span> <span class="w">社外取締役</span></span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">株式会社ひとまいる</span> <span class="w">社外取締役</span></span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">一般社団法人MCA</span><span class="w">（旧マーケターキャリア協会）理事</span></span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">MGC</span><span class="w">（マーケティングギルドコミュニティー）</span><span class="w">フェロー</span></span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">amana</span><span class="w">主催</span> <span class="w">創造性人材循環事業</span><span class="w">「Great</span> <span class="w">RIVER」顧問</span></span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><span class="w">早稲田大学経営学研究科</span><span class="w">（MBA）</span><span class="w">ゲスト講師</span></span></li>
 </ul>
 <div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
-<a href="about.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">PROFILE →</a>
+<a class="btn-o" href="about.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">PROFILE →</a>
 <a href="https://www.facebook.com/share/1BNkp1RXkc/?mibextid=wwXIfr" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; font-size: 14px">Facebook</a>
 </div>
 </div>
 </section>
-<section id="works" style="background: #F6F6F3">
+<section class="phead" id="works" style="background: #F6F6F3">
 <div style="max-width: 1280px; margin: 0 auto; padding: 120px 24px">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">WORKS</p>
-<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">ブランドづくりの実績</h2>
-<p style="margin: 20px 0 0; font-size: 15px; color: #444444">ブランディング・マーケティング支援、講演等</p>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">WORKS</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6"><span><span class="w">ブランドづくりの実績</span></span></h2>
+<p style="margin: 20px 0 0; font-size: 15px; color: #444444"><span><span class="w">ブランディング・</span><span class="w">マーケティング支援、講演等</span></span></p>
 <ul style="margin: 32px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; border-top: 1px solid #DDDDD8">
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">アフラック株式会社</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">アフラック株式会社</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">伊藤忠商事株式会社</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">伊藤忠商事株式会社</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">株式会社NTTドコモ</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">株式会社NTTドコモ</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">カルビー株式会社</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">カルビー株式会社</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">コクヨ株式会社</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">コクヨ株式会社</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">東京ガス株式会社</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">東京ガス株式会社</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">森永乳業株式会社</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">森永乳業株式会社</span></span></li>
 
-<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">株式会社リクルート</li>
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px"><span><span class="w">株式会社リクルート</span></span></li>
 
 </ul>
-<a href="works.html" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 32px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">すべての実績を見る →</a>
+<a class="btn-o" href="works.html" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 32px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em"><span><span class="w">すべての</span><span class="w">実績を</span><span class="w">見る →</span></span></a>
 </div>
 </section>
 <section id="media" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 0">
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
 <div>
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">MEDIA</p>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">MEDIA</p>
 <h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">掲載記事</h2>
 </div>
-<a href="media.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">すべて見る →</a>
+<a href="media.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em"><span><span class="w">すべて</span><span class="w">見る →</span></span></a>
 </div>
-<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); align-items: start; gap: 24px">
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; gap: 24px">
 
-<a href="https://www.amazon.co.jp/s?k=9798170828333" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<a class="card" href="https://www.amazon.co.jp/s?k=9798170828333" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
 <span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
 <span style="display: flex; aspect-ratio: 693 / 1000; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -303,12 +331,12 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </span>
 <span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
 <span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>書籍掲載</span><span></span></span>
-<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">フィリップ・コトラー『Essentials of Modern Marketing, Japan Edition』に、資生堂時代に携わった「ファンデ美容液」の事例が掲載</span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1"><span><span class="w">フィリップ・</span><span class="w">コトラー</span><span class="w">『Essentials</span> <span class="w">of</span> <span class="w">Modern</span> <span class="w">Marketing,</span> <span class="w">Japan</span> <span class="w">Edition』に、</span><span class="w">資生堂時代に</span><span class="w">携わった</span><span class="w">「ファンデ美容液」の</span><span class="w">事例が掲載</span></span></span>
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
 </span>
 </a>
 
-<a href="https://markezine.jp/article/detail/50159" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<a class="card" href="https://markezine.jp/article/detail/50159" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
 <span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
 <span style="display: flex; aspect-ratio: 1200 / 800; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -319,12 +347,12 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </span>
 <span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
 <span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>MarkeZine</span><span>2025.12.08</span></span>
-<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">マーケターはいても「価値創造人材」は少ない？元資生堂・北原氏がたどり着いた「最高のチーム」の作り方</span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1"><span><span class="w">マーケターはいても</span><span class="w">「価値創造人材」は</span><span class="w">少ない？</span><span class="w">元資生堂・</span><span class="w">北原氏がたどり着いた</span><span class="w">「最高のチーム」の作り方</span></span></span>
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
 </span>
 </a>
 
-<a href="https://core-official.com/media/dear_woman" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<a class="card" href="https://core-official.com/media/dear_woman" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
 <span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
 <span style="display: flex; aspect-ratio: 1200 / 675; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -339,7 +367,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </span>
 <span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
 <span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>CORE「Dear Woman.」</span><span></span></span>
-<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">時代を形づくる女性リーダー100名に選出（EMPOWERMENT LEADER）</span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1"><span><span class="w">時代を</span><span class="w">形づくる</span><span class="w">女性リーダー100名に</span><span class="w">選出</span><span class="w">（EMPOWERMENT</span> <span class="w">LEADER）</span></span></span>
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
 </span>
 </a>
@@ -349,14 +377,14 @@ a{color:#111111}a:hover{color:#5A5A5A}
 <section id="talks" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px">
 <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
 <div>
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">TALKS</p>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">TALKS</p>
 <h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">登壇・出演</h2>
 </div>
-<a href="talks.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">すべて見る →</a>
+<a href="talks.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em"><span><span class="w">すべて</span><span class="w">見る →</span></span></a>
 </div>
 <ul aria-label="登壇予定・最近の登壇（横にスクロール）" style="margin: 32px -24px 0; padding: 0 24px 20px; list-style: none; display: flex; align-items: flex-start; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 24px">
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 1200 / 628; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -380,7 +408,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 1200 / 630; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -402,7 +430,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 1200 / 630; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -424,7 +452,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 960 / 1200; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -450,7 +478,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 1158 / 605; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -462,13 +490,13 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
 <span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.09.09–10<span style="margin-left: 12px"></span></span>
-<span style="font-size: 16px; font-weight: 500; line-height: 1.6">SHOPPER・X 2026</span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6"><span><span class="w">SHOPPER・</span><span class="w">X</span> <span class="w">2026</span></span></span>
 <span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">STAGE A-4「顧客の価値観・美意識との接続─デジタル購買行動から探るインサイト」eBay Japan モラーノ氏、ライオン 松井氏と登壇（リーガロイヤルホテル東京）</span>
 
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 1151 / 950; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -486,7 +514,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 1200 / 587; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -498,13 +526,13 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
 <span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.08.26<span style="margin-left: 12px">18:30–20:30</span></span>
-<span style="font-size: 16px; font-weight: 500; line-height: 1.6">ビジネスパーソンがあえて熱海を選ぶ理由</span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6"><span><span class="w">ビジネスパーソンがあえて</span><span class="w">熱海を</span><span class="w">選ぶ理由</span></span></span>
 <span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">〜熱海で学ぶ意義と価値〜 日本コミュニケーションスキルアカデミー 大原氏と登壇（九段会館テラス）</span>
 
 </div>
 </li>
 
-<li style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
 <div style="position: relative; background: #F3F3F0; line-height: 0">
 <div style="display: flex; aspect-ratio: 726 / 780; overflow-x: auto; scroll-snap-type: x mandatory">
 
@@ -520,7 +548,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
 <span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">2026.07.29<span style="margin-left: 12px">17:20–18:20</span></span>
-<span style="font-size: 16px; font-weight: 500; line-height: 1.6">日経クロストレンドフォーラム2026</span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6"><span><span class="w">日経クロストレンドフォーラム2026</span></span></span>
 <span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">協賛講演「AI時代における“新価値創造”の在り方とは？」インテグレート 藤田氏と登壇（東京コンベンションホール）</span>
 
 </div>
@@ -529,20 +557,20 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </ul>
 <p aria-hidden="true" style="margin: 4px 0 0; font-size: 12px; letter-spacing: 0.2em; color: #5A5A5A">SCROLL →</p>
 </section>
-<section style="background: #111111; color: #F5F5F2">
+<section class="cta" style="background: #111111; color: #F5F5F2">
 <div style="max-width: 1280px; margin: 0 auto; padding: 112px 24px; text-align: center">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
+<p class="eyebrow c" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
 <h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6"><span class="nb">あなたの点を、</span><span class="nb">つなぐお手伝いを。</span></h2>
-<p style="margin: 12px 0 0; font-size: 16px">お仕事のご相談は、お気軽にお問い合わせください。</p>
-<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 36px; padding: 0 44px; background: #FFFFFF; color: #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">お問い合わせ</a>
+<p style="margin: 12px 0 0; font-size: 16px"><span><span class="w">お仕事のご相談は、</span><span class="w">お気軽にお問い合わせください。</span></span></p>
+<a class="btn-w" href="contact.html" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 36px; padding: 0 44px; background: #FFFFFF; color: #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em"><span><span class="w">お問い合わせ</span></span></a>
 </div>
 </section>
 <footer style="background: #111111; color: #B5B5B5; border-top: 1px solid #2A2A2A">
 <div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px">
-<img alt="MICHI" src="assets/michi-white-noframe.png" style="width: 150px; height: auto; display: block"/>
+<img alt="MICHI inc." src="assets/michi-inc-white.png" style="width: 190px; height: auto; display: block"/>
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
 <a href="https://www.michi-inc.net/%E6%A6%82%E8%A6%81/" style="color: #DDDDDD">概要</a>
-<a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" style="color: #DDDDDD">プライバシーポリシー</a>
+<a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" style="color: #DDDDDD"><span><span class="w">プライバシーポリシー</span></span></a>
 <span>© MICHI inc.</span>
 </div>
 </div>
@@ -555,6 +583,13 @@ a{color:#111111}a:hover{color:#5A5A5A}
   var ham=b.innerHTML,x='<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>';
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.innerHTML=o?x:ham;});
   n.addEventListener('click',function(e){if(e.target.closest('a')&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.innerHTML=ham;}});
+})();
+</script><script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var els=[].slice.call(document.querySelectorAll('main section, body > div > section')).slice(1);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){el.classList.add('rv');io.observe(el);});
 })();
 </script>
 </body>

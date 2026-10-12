@@ -28,12 +28,40 @@ a{color:#111111}a:hover{color:#5A5A5A}
 .sendbtn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 56px;background:#111111;color:#FFFFFF;border:0;font:inherit;font-size:14px;font-weight:700;letter-spacing:0.24em;cursor:pointer}
 .sendbtn:hover{background:#333333}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* MICHI design refinements */
+header.site{position:sticky !important;top:0;z-index:40;background:rgba(255,255,255,0.94);box-shadow:0 0 0 100vmax rgba(255,255,255,0.94);clip-path:inset(0 -100vmax);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.dia{background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px}
+.phead{position:relative;overflow:hidden}
+.phead::before{content:"";position:absolute;top:0;right:0;width:min(48%,560px);height:100%;background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 95%);mask-image:linear-gradient(to left,#000 10%,transparent 95%);pointer-events:none}
+.phead>*{position:relative;z-index:1}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px),radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.eyebrow::after{content:"";width:36px;height:1px;background:currentColor;opacity:0.45;flex:none}
+.eyebrow.c{justify-content:center}
+.photo{position:relative}
+.photo::before{content:"";position:absolute;right:-22px;bottom:-22px;width:62%;height:62%;background-image:radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px),radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px);background-size:22px 22px;background-position:0 0,11px 11px;z-index:0}
+.photo img{position:relative;z-index:1}
+.btn-o,.btn-f,.btn-w{transition:background-color .35s ease,color .35s ease,box-shadow .35s ease}
+.btn-o:hover{background:#111111 !important;color:#FFFFFF !important}
+.btn-f:hover{background:#FFFFFF !important;color:#111111 !important;box-shadow:inset 0 0 0 1px #111111}
+.btn-w:hover{background:transparent !important;color:#FFFFFF !important;box-shadow:inset 0 0 0 1px #FFFFFF}
+.card{transition:border-color .35s ease,box-shadow .35s ease}
+.card:hover{border-color:#111111 !important;box-shadow:0 18px 40px -28px rgba(0,0,0,.45)}
+.card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.025)}
+.gnav a{position:relative}
+@media (min-width: 961px){.gnav a:not([style*="background"])::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:#111111;transform:translateX(-50%) scale(0);transition:transform .3s ease}.gnav a:hover::after,.gnav a[aria-current]::after{transform:translateX(-50%) scale(1)}.gnav a[aria-current]{text-decoration:none !important}}
 </style>
+<style>.w{display:inline-block}body{line-break:strict}.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}</style>
 </head>
 <body>
 
 <div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
-<header style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<header class="site" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
 <a aria-label="MICHI inc. ホーム" href="index.html" style="display: flex; align-items: center; min-height: 44px">
 <img alt="MICHI inc." src="assets/michi-inc-black.png" style="height: 22px; width: auto; display: block"/>
 </a>
@@ -50,18 +78,18 @@ a{color:#111111}a:hover{color:#5A5A5A}
 <a aria-current="page" href="contact.html" style="text-decoration: underline; text-underline-offset: 6px; padding: 12px 0">CONTACT</a>
 </nav>
 </header>
-<section style="border-top: 1px solid #EEEEEE">
+<section class="phead" style="border-top: 1px solid #EEEEEE">
 <div style="max-width: 760px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 120px">
-<p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">CONTACT</p>
-<h1 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(28px, 6vw, 36px); line-height: 1.6">お問い合わせ</h1>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">CONTACT</p>
+<h1 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(28px, 6vw, 36px); line-height: 1.6"><span><span class="w">お問い合わせ</span></span></h1>
 <p style="margin: 20px 0 0; font-size: 15px; line-height: 2; color: #444444">ブランディング・マーケティングのご相談、講演・登壇や取材のご依頼など、お気軽にお問い合わせください。内容を確認のうえ、ご入力いただいたメールアドレスにご連絡いたします。</p>
 <form action="https://api.web3forms.com/submit" id="contact-form" method="POST" style="position: relative; margin-top: 48px; display: flex; flex-direction: column; gap: 32px">
 <input name="access_key" type="hidden" value="783f3714-3e69-469c-9e81-d63393803a58"/>
 <input name="subject" type="hidden" value="【MICHI inc. Webサイト】お問い合わせが届きました"/>
 <input name="from_name" type="hidden" value="MICHI inc. Webサイト"/>
-<div aria-hidden="true" class="hp"><label>空欄のままにしてください<input name="botcheck" tabindex="-1" type="checkbox"/></label></div>
+<div aria-hidden="true" class="hp"><label><span><span class="w">空欄のままにしてください</span></span><input name="botcheck" tabindex="-1" type="checkbox"/></label></div>
 <fieldset style="margin: 0; padding: 0; border: 0">
-<legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px">ご相談の種類 <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></legend>
+<legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px"><span><span class="w">ご相談の種類</span> </span><span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
 <label style="position: relative"><input checked="" class="rad" name="Inquiry Type" required="" type="radio" value="ブランディング・マーケティングのご相談"/><span class="chip"><span aria-hidden="true" class="dot"></span>ブランディング・マーケティングのご相談</span></label>
 <label style="position: relative"><input class="rad" name="Inquiry Type" type="radio" value="講演・登壇のご依頼"/><span class="chip"><span aria-hidden="true" class="dot"></span>講演・登壇のご依頼</span></label>
@@ -75,13 +103,13 @@ a{color:#111111}a:hover{color:#5A5A5A}
 <input autocomplete="name" class="fi" id="f-name" name="name" placeholder="例）山田 花子" required="" type="text"/>
 </div>
 <div>
-<label for="f-company" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px">会社名・団体名</label>
+<label for="f-company" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px"><span><span class="w">会社名・団体名</span></span></label>
 <input autocomplete="organization" class="fi" id="f-company" name="company" placeholder="例）株式会社〇〇" type="text"/>
 </div>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px 20px">
 <div>
-<label for="f-email" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px">メールアドレス <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></label>
+<label for="f-email" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px"><span><span class="w">メールアドレス</span> </span><span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></label>
 <input autocomplete="email" class="fi" id="f-email" inputmode="email" name="email" placeholder="例）hanako@example.com" required="" type="email"/>
 </div>
 <div>
@@ -90,30 +118,30 @@ a{color:#111111}a:hover{color:#5A5A5A}
 </div>
 </div>
 <div>
-<label for="f-message" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px">お問い合わせ内容 <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></label>
+<label for="f-message" style="display: block; font-size: 14px; font-weight: 700; margin-bottom: 10px"><span><span class="w">お問い合わせ内容</span> </span><span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></label>
 <textarea class="fi" id="f-message" name="message" placeholder="ご相談の背景やご希望の時期など、わかる範囲でご記入ください。" required="" rows="8" style="min-height: 200px; resize: vertical; line-height: 1.8"></textarea>
 </div>
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input name="Privacy Policy" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="同意する"/>
-<span><a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/">プライバシーポリシー</a>に同意のうえ、送信します。</span>
+<span><a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/"><span><span class="w">プライバシーポリシー</span></span></a><span><span class="w">に</span><span class="w">同意のうえ、</span><span class="w">送信します。</span></span></span>
 </label>
 <p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。</p><div style="text-align: center; padding-top: 8px">
 <button class="sendbtn" type="submit">送信する</button>
 </div>
 </form><div hidden="" id="contact-done" role="status" style="margin-top: 48px; padding: 56px 24px; border: 1px solid #DDDDD8; text-align: center">
 <svg aria-hidden="true" height="40" viewbox="0 0 40 40" width="40"><circle cx="8" cy="28" fill="#111111" r="5"></circle><circle cx="32" cy="12" fill="#111111" r="5"></circle><line stroke="#111111" stroke-width="1.5" x1="8" x2="32" y1="28" y2="12"></line></svg>
-<p style="margin: 20px 0 0; font-family: 'Shippori Mincho', serif; font-size: 22px; line-height: 1.7">お問い合わせありがとうございます。</p>
+<p style="margin: 20px 0 0; font-family: 'Shippori Mincho', serif; font-size: 22px; line-height: 1.7"><span><span class="w">お問い合わせありがとうございます。</span></span></p>
 <p style="margin: 12px 0 0; font-size: 15px; line-height: 2; color: #444444"><span style="display: inline-block">内容を確認のうえ、</span><span style="display: inline-block">ご入力いただいたメールアドレスに</span><span style="display: inline-block">ご連絡いたします。</span></p>
-<a href="index.html" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 28px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">トップへ戻る</a>
+<a class="btn-o" href="index.html" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 28px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em"><span><span class="w">トップへ戻る</span></span></a>
 </div>
 </div>
 </section>
 <footer style="background: #111111; color: #B5B5B5; border-top: 1px solid #2A2A2A">
 <div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px">
-<img alt="MICHI" src="assets/michi-white-noframe.png" style="width: 150px; height: auto; display: block"/>
+<img alt="MICHI inc." src="assets/michi-inc-white.png" style="width: 190px; height: auto; display: block"/>
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
 <a href="https://www.michi-inc.net/%E6%A6%82%E8%A6%81/" style="color: #DDDDDD">概要</a>
-<a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" style="color: #DDDDDD">プライバシーポリシー</a>
+<a href="https://www.michi-inc.net/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/" style="color: #DDDDDD"><span><span class="w">プライバシーポリシー</span></span></a>
 <span>© MICHI inc.</span>
 </div>
 </div>
@@ -126,6 +154,13 @@ a{color:#111111}a:hover{color:#5A5A5A}
   var ham=b.innerHTML,x='<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>';
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.innerHTML=o?x:ham;});
   n.addEventListener('click',function(e){if(e.target.closest('a')&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.innerHTML=ham;}});
+})();
+</script><script>
+(function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var els=[].slice.call(document.querySelectorAll('main section, body > div > section')).slice(1);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(el){el.classList.add('rv');io.observe(el);});
 })();
 </script><script>
 (function(){

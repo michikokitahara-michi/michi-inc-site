@@ -101,7 +101,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <span style="display: flex; flex-direction: column; gap: 12px; padding: 20px 22px 22px; flex: 1">
 <span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
 <span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
-<a href="{{a.url}}" style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111; text-decoration: none">WATCH ON YOUTUBE</a>
+<a href="{{a.url}}" style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111; text-decoration: none">{{a.linkLabel}}</a>
 </span>
 </div>
 </sc-if>
@@ -214,12 +214,11 @@ const articles = [
 { source: 'PR TIMES', date: '2025.11.18', title: '株式会社MICHI代表・北原規稚子氏、シティライツ法律事務所 水野祐氏が、GreatRIVER顧問に就任', url: 'https://prtimes.jp/main/html/rd/p/000000443.000040283.html' },
 { source: 'GreatRIVER presents〈Reframe Studio〉第7回', date: '2025.11.05', title: '「『機能』ではなく『意味』を売る。顧客に響く正しいインサイトの見つけ方」講演の録画配信', url: 'https://youtu.be/tAllLok8FKo', yt: 'tAllLok8FKo' },
 { source: 'HEAD LIGHT（タクシー広告メディア）', date: '2025.10.06', title: '「“競争の軸”を変える『新価値創造』とは」をテーマにインタビュー出演。GROWTHと連携した都内のタクシーで放映', url: 'https://youtu.be/n4VzH6XPXfM', yt: 'n4VzH6XPXfM' },
-{ source: '講談社 Cステーション', date: '2025.09.17', title: '型を熟知し、軽やかに型を破る！ライオン、資生堂を経て独立したブランドクリエイター・北原規稚子さんの情熱と感性の源泉（InterFM「J LIVE RADIO」）', url: 'https://cstation.kodansha.co.jp/article/15249', img: '/_blob/db8e8414d2caf95087d5662d0046ac87', ar: '1400 / 945' },
+{ source: '講談社 Cステーション', date: '2025.09.17', title: '型を熟知し、軽やかに型を破る！ライオン、資生堂を経て独立したブランドクリエイター・北原規稚子さんの情熱と感性の源泉（InterFM「J LIVE RADIO」）', url: 'https://cstation.kodansha.co.jp/article/15249', yt: 'guJ_bDwH0r4' },
 { source: 'PR TIMES', date: '2025.08.26', title: 'KiQ×MICHI、リアル空間と接客の価値を最大化する新プログラム「Shosa Branding Program」を開始', url: 'https://prtimes.jp/main/html/rd/p/000000014.000107116.html', img: '/_blob/6ca027182dea328efc012bbd1db9ecdc', ar: '1200 / 800' },
-{ source: 'InterFM「J LIVE RADIO」', date: '2025.08.20', title: '今週のゲストは、MICHI inc.の北原規稚子代表', url: 'https://youtu.be/guJ_bDwH0r4', yt: 'guJ_bDwH0r4' },
 { source: '書籍', date: '2025.07', title: 'トーマス・バルタ著『世界のトップマーケターだけが知っている12の成功法則』に対談・推薦コメントを掲載', url: 'https://amzn.asia/d/cTD307s', img: '/_blob/bdda47c35b1ba8d68572a53517a64289', ar: '847 / 1200', fit: 'contain' },
 { source: 'CORE', date: '2025.03', title: '会社にも子どもにも「ごめんね」と言ってない？“完璧なママ”をやめた私の、仕事と育児への向き合い方', url: 'https://core-official.com/media/interview-kitahara-michiko', img: '/_blob/10527b80a1eac9ccac3090ab35d2b04e', ar: '1200 / 628' },
-].map((a) => ({ ...a, hasVideo: !!a.yt, hasIg: !!a.ig, igSrc: a.ig ? 'https://www.instagram.com/p/' + a.ig + '/embed' : '', hasX: !!a.x, xSrc: a.x ? 'https://platform.twitter.com/embed/Tweet.html?id=' + a.x + '&hideThread=true&conversation=none&theme=light&lang=ja' : '', noVideo: !a.yt && !a.ig && !a.x, ytSrc: a.yt ? 'https://www.youtube-nocookie.com/embed/' + a.yt + '?rel=0' + (a.ytStart ? '&start=' + a.ytStart : '') : '', img: a.img || '', hasImg: !!a.img, imgs: [a.img, a.img2].filter(Boolean), multi: !!(a.img && a.img2) }));
+].map((a) => ({ ...a, hasVideo: !!a.yt, linkLabel: (a.url || '').indexOf('youtu') >= 0 ? 'WATCH ON YOUTUBE' : 'READ', hasIg: !!a.ig, igSrc: a.ig ? 'https://www.instagram.com/p/' + a.ig + '/embed' : '', hasX: !!a.x, xSrc: a.x ? 'https://platform.twitter.com/embed/Tweet.html?id=' + a.x + '&hideThread=true&conversation=none&theme=light&lang=ja' : '', noVideo: !a.yt && !a.ig && !a.x, ytSrc: a.yt ? 'https://www.youtube-nocookie.com/embed/' + a.yt + '?rel=0' + (a.ytStart ? '&start=' + a.ytStart : '') : '', img: a.img || '', hasImg: !!a.img, imgs: [a.img, a.img2].filter(Boolean), multi: !!(a.img && a.img2) }));
 return { talks, articles, navOpen: !!(this.state && this.state.navOpen), navClosed: !(this.state && this.state.navOpen), navCls: (this.state && this.state.navOpen) ? 'open' : '', navExpanded: (this.state && this.state.navOpen) ? 'true' : 'false', toggleNav: () => this.setState({ navOpen: !(this.state && this.state.navOpen) }), };
 }
 }

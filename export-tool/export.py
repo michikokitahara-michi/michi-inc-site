@@ -360,8 +360,10 @@ FORM_JS = """<script>
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){return r.json();})
       .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'});})
-      .catch(function(){err.hidden=false;btn.disabled=false;btn.textContent='送信する';});
+      .catch(function(x){var m=(x&&x.message)||'';if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=err.dataset.base+(m?' ['+m+']':'');err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});btn.disabled=false;btn.textContent='送信する';});
   });
+  var warned=false;
+  f.addEventListener('invalid',function(e){if(warned)return;warned=true;setTimeout(function(){warned=false;},500);var el=e.target;var box=el.closest('label')||el;box.scrollIntoView({behavior:'smooth',block:'center'});box.style.outline='2px solid #111111';box.style.outlineOffset='4px';setTimeout(function(){box.style.outline='';},2500);},true);
 })();
 </script>"""
 if LANG != 'ja': FORM_JS = FORM_JS.replace('送信中…', M.SENDING[LANG][0]).replace('送信する', M.SENDING[LANG][1])

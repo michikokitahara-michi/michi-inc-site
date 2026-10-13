@@ -368,6 +368,17 @@ FORM_JS = """<script>
 </script>"""
 if LANG != 'ja': FORM_JS = FORM_JS.replace('送信中…', M.SENDING[LANG][0]).replace('送信する', M.SENDING[LANG][1])
 
+BADGE_JS = """<script>
+(function(){
+  var n=new Date(Date.now()+9*3600e3),t=n.getUTCFullYear()*1e4+(n.getUTCMonth()+1)*100+n.getUTCDate();
+  [].forEach.call(document.querySelectorAll('.tbadge[data-d]'),function(b){
+    var m=b.getAttribute('data-d').match(/(\\d{4})\\.(\\d{1,2})\\.(\\d{1,2})/);if(!m)return;
+    var d=+m[1]*1e4+(+m[2])*100+(+m[3]),r=b.getAttribute('data-d').match(/[–-](\\d{1,2})$/),e=r?+m[1]*1e4+(+m[2])*100+(+r[1]):d;
+    if(d>t){b.textContent='UPCOMING';b.hidden=false;}else if(t<=e){b.textContent='TODAY';b.hidden=false;}
+  });
+})();
+</script>"""
+
 REVEAL_JS = """<script>
 (function(){
   if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -420,7 +431,7 @@ def build(src, dst, title):
     head_extra = ''.join(str(c) for c in helmet.contents if isinstance(c, Tag))
     body = ''.join(str(c) for c in xdc.contents)
 
-    extra_js = NAV_JS + REVEAL_JS
+    extra_js = NAV_JS + REVEAL_JS + (BADGE_JS if 'tbadge' in body else '')
     if src == 'Contact.dc.html':
         sent_soup = BeautifulSoup(raw, 'html.parser')
         sx = sent_soup.find('x-dc'); sx.find('helmet').extract()

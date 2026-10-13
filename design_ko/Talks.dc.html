@@ -102,7 +102,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </sc-if>
 </sc-if>
 <sc-if value="{{t.upcoming}}" hint-placeholder-val="{{ false }}">
-<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">{{t.badge}}</span>
+<span class="tbadge" data-d="{{t.date}}" hidden style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em"></span>
 </sc-if>
 </div>
 <div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 18px 20px 20px">
@@ -147,7 +147,7 @@ const talks = [
 { date: '2026.11.11', time: '14:50–15:20', img2: '/_blob/9b8e39345e7ab7a0657592bbae89dbe1', event: 'Retail Media Summit 2026', note: '「리테일 미디어로 만드는 좋은 고객 경험의 마케팅의 미래」 가오 야마오카 님, FANCL 교야 님과 함께(벨살 신주쿠 그랜드)', url: 'https://www.retailmedia-japan.com/', img: '/_blob/336d82074d465c5a376dd3990eca51ab', ar: '1200 / 628', fit: 'cover', upcoming: true },
 { date: '2026.10.23', time: '10:00–10:40', event: 'ad:tech tokyo 2026 KEYNOTE', note: '「새로운 가치는 어떻게 만들어지는가」 올해의 마케터 2026 심사위원들과 함께(도쿄 미드타운)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/cca76d39c269df2aaf85aabf46716252', ar: '1200 / 630', fit: 'cover', upcoming: true },
 { date: '2026.10.22', time: '16:45–17:35', event: 'ad:tech tokyo 2026', note: '「새로운 시장의 발견과 창조」 vector 기류 님, NOPE 오쓰키 님, 부르봉 이데 님과 함께(도쿄 미드타운)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/21e36d0212dcc6a0f52d639e017b9471', ar: '1200 / 630', fit: 'cover', upcoming: true },
-{ date: '2026.10.12', img2: '/_blob/518422eafe1ecdb6cc840ecf8a75383b', event: 'INNER BEAUTY TALK SHOW', note: '「나다운 아름다움의 설계도」 인스타그래머 미야타 아야코 님과 특별 대담(소고 약국 아자부주반)', url: 'https://shop.sogo-pharmacy.jp/detail/434/', img: '/_blob/54e587d62b2bbe59e9a420e9349a0284', ar: '960 / 1200', fit: 'cover', pos: 'center 30%', upcoming: true, badge: 'TODAY' },
+{ date: '2026.10.12', img2: '/_blob/518422eafe1ecdb6cc840ecf8a75383b', event: 'INNER BEAUTY TALK SHOW', note: '「나다운 아름다움의 설계도」 인스타그래머 미야타 아야코 님과 특별 대담(소고 약국 아자부주반)', url: 'https://shop.sogo-pharmacy.jp/detail/434/', img: '/_blob/54e587d62b2bbe59e9a420e9349a0284', ar: '960 / 1200', fit: 'cover', pos: 'center 30%', upcoming: true },
 { date: '2026.09.09–10', event: 'SHOPPER・X 2026', note: 'A-4 스테이지 「고객의 가치관과 미의식에 다가가는 법 — 디지털 구매 행동에서 얻은 인사이트」 eBay Japan 모라노 님, 라이온 마쓰이 님과 함께(리가 로열 호텔 도쿄)', url: '', img: '/_blob/2d5189aa6e2c8ef3380b4d7135f338cf', ar: '1158 / 605', fit: 'cover' },
 { date: '2026.09.08', time: '12:35–13:15', event: 'MarkeZine Day 2026 Autumn', note: '「왜 그 투자인가?」 가루비와 구인박스가 말하는 브랜드 성장을 이끄는 미디어 전략. 가루비 와타나베 님, 구인박스(가카쿠닷컴) 고지마 님과의 세션 진행(JP타워 홀 & 컨퍼런스)', url: 'https://event.shoeisha.jp/mzday/20260908/timetable', img: '/_blob/29eae3d2553628237fd8b44d0e88daed', ar: '1151 / 950', fit: 'cover', pos: 'center top' },
 { date: '2026.09.02', time: '12:50–13:30', event: '백오피스 World 2026 SUMMER 오사카', note: '특별 강연 「‘그렇지 않은 쪽’에서 힌트를 얻는 새로운 가치 창조」(인텍스 오사카 4호관)', url: 'https://prtimes.jp/main/html/rd/p/000000242.000078233.html', img: '/_blob/f229aa6578c3712ac86e8303876ad681', ar: '1400 / 735', fit: 'cover' },
@@ -167,7 +167,7 @@ const talks = [
 { date: '2025.07', event: '환경성 ‘팀 탕치’', note: 'MICHI inc. 참여', url: '', img: '/_blob/deffdf827b2822f99c8aed24c372bc50', ar: '339 / 480', fit: 'contain' },
 { date: '2025.06.12', event: 'CMO JAPAN summit 2025', note: 'JTB 가자구치 님과 공동 세션', url: 'https://www.june25.cmojapansummit.com/', img: '/_blob/03d1ad185428140d490307000d07d45d', ar: '1200 / 800', fit: 'cover' },
 { date: '2025.04.22–23', event: 'MARKETING・X 2025', note: '진행한 세션이 1위(「‘그렇지 않은 쪽’이었던 시장에서 가치를 만든다」), 2위(「소비자와 오디오 광고」)를 차지', url: 'http://2025.marketingx.jp/maiko/', img: '/_blob/5e950c32ae527de545a7889d0b4e38ba', ar: '967 / 1151', fit: 'contain' }
-].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: !!t.upcoming, badge: t.badge || (t.upcoming ? 'UPCOMING' : ''), time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
+].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: true, badge: '', time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
 const articles = [
 { source: '도서 소개', date: '', title: '시세이도 시절의 ‘파운데이션 세럼’ 사례가 필립 코틀러 『코틀러의 현대 마케팅 에센셜』 일본판에 게재', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
 { source: 'MarkeZine', date: '2025.12.08', title: '마케터는 많아도 가치를 만드는 사람은 적다? 전 시세이도 임원 기타하라가 만드는 ‘최강의 팀’', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', pos: 'center top' },

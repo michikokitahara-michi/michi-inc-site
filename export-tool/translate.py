@@ -11,7 +11,8 @@ left = {}
 for f in glob.glob(f'{src}/*.dc.html'):
     c = open(f, encoding='utf-8').read()
     # drop the Japanese rendering of the Chanel quote (EN line already present)
-    c = re.sub(r'\n<p style="margin: 16px 0 0; font-family: \'Shippori Mincho\', serif; font-size: 15px; line-height: 2; color: #444444"><span style="display: inline-block">美しさは、</span>.*?</p>', '', c)
+    if lang == 'en': c = re.sub(r'\n<p style="margin: 16px 0 0; font-family: \'Shippori Mincho\', serif; font-size: 15px; line-height: 2; color: #444444"><span style="display: inline-block">美しさは、</span>.*?</p>', '', c)
+    c = c.replace('大切にしている<br>考え方', '大切にしている考え方')
     for ja, en in items:
         if not en and en != '': continue
         attr = en.replace('&', '&amp;').replace('&amp;amp;', '&amp;').replace('"', '&quot;')

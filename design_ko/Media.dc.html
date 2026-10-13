@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>MEDIA | MICHI inc.</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#111111}a:hover{color:#5A5A5A}
+.gnav{display:flex;flex-wrap:wrap}
+.mbtn{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:0;padding:0;margin-right:-10px;cursor:pointer;color:#111111}
+@media (max-width: 960px){.mbtn{display:inline-flex}.gnav{display:none}.gnav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;background:#FFFFFF;padding:4px 24px 20px;border-bottom:1px solid #E4E4E0;z-index:20;font-size:14px}.gnav.open a{padding:14px 0 !important;border-bottom:1px solid #EEEEEE}}
+
+
+/* MICHI design refinements */
+a.rl{color:#555555 !important;text-decoration:underline !important;text-decoration-color:#B8B8B8 !important;text-decoration-thickness:1px !important;text-underline-offset:5px !important;-webkit-text-fill-color:#555555}a.rl span{text-decoration:underline;text-decoration-color:#B8B8B8;text-decoration-thickness:1px;text-underline-offset:5px}a.rl:hover span{text-decoration-color:#111111}a.rl:hover{color:#111111 !important;-webkit-text-fill-color:#111111;text-decoration-color:#111111 !important}
+.gnav .home-only{display:none}@media (max-width: 960px){.gnav.open .home-only{display:block}}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+header.site{position:sticky !important;top:0;z-index:40;background:#111111;max-width:none !important;padding-left:max(24px, calc((100% - 1232px) / 2)) !important;padding-right:max(24px, calc((100% - 1232px) / 2)) !important}
+header.site a,header.site .mbtn{color:#FFFFFF}
+header.site{padding-top:10px !important;padding-bottom:10px !important}
+header.site img{height:17px !important}
+@media (min-width: 961px){header.site{padding-top:14px !important;padding-bottom:14px !important}header.site img{height:19px !important}}
+header.site a:hover{color:#BDBDBD}
+header.site .gnav a::after{background:#FFFFFF !important}
+@media (max-width: 960px){header.site .gnav.open{background:#111111 !important;border-bottom:1px solid #2A2A2A !important;align-items:stretch !important;padding:4px 24px 24px !important}header.site .gnav.open a{border-bottom:1px solid #2A2A2A !important}}
+.dia{background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px}
+.phead{position:relative;overflow:hidden}
+.phead::before{content:"";position:absolute;top:0;right:0;width:min(48%,560px);height:min(100%,460px);background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 95%);mask-image:linear-gradient(to left,#000 10%,transparent 95%);pointer-events:none}
+.phead>*{position:relative;z-index:1}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px),radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.eyebrow::after{content:"";width:36px;height:1px;background:currentColor;opacity:0.45;flex:none}
+.eyebrow.c{justify-content:center}
+.photo{position:relative}
+.photo::before{content:"";position:absolute;right:-22px;bottom:-22px;width:62%;height:62%;background-image:radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px),radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px);background-size:22px 22px;background-position:0 0,11px 11px;z-index:0}
+.photo img{position:relative;z-index:1}
+.btn-o,.btn-f,.btn-w{transition:background-color .35s ease,color .35s ease,box-shadow .35s ease}
+.btn-o:hover{background:#111111 !important;color:#FFFFFF !important}
+.btn-f:hover{background:#FFFFFF !important;color:#111111 !important;box-shadow:inset 0 0 0 1px #111111}
+.btn-w:hover{background:transparent !important;color:#FFFFFF !important;box-shadow:inset 0 0 0 1px #FFFFFF}
+.card{transition:border-color .35s ease,box-shadow .35s ease}
+.card:hover{border-color:#111111 !important;box-shadow:0 18px 40px -28px rgba(0,0,0,.45)}
+.card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.025)}
+.gnav a{position:relative}
+@media (min-width: 961px){.gnav a:not([style*="background"])::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:#111111;transform:translateX(-50%) scale(0);transition:transform .3s ease}.gnav a:hover::after,.gnav a[aria-current]::after{transform:translateX(-50%) scale(1)}.gnav a[aria-current]{text-decoration:none !important}}
+</style>
+</helmet>
+<div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
+
+<header class="site" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" aria-label="MICHI inc. 홈" style="display: flex; align-items: center; min-height: 44px">
+<img src="/_blob/5a70e1ab78d97b163da96e4084e2b1d6" alt="MICHI inc." style="height: 22px; width: auto; display: block">
+</a>
+<button type="button" class="mbtn" aria-label="메뉴" aria-expanded="{{navExpanded}}" onClick="{{toggleNav}}">
+<sc-if value="{{navClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg></sc-if>
+<sc-if value="{{navOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></sc-if>
+</button>
+<nav aria-label="메인 메뉴" class="gnav {{navCls}}" style="align-items: center; gap: 4px 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.18em">
+<a href="Main.dc.html" class="home-only" style="text-decoration: none; padding: 12px 0">HOME</a>
+<a href="Concept.dc.html" style="text-decoration: none; padding: 12px 0">VISION</a>
+<a href="Concept.dc.html#concept" style="text-decoration: none; padding: 12px 0">CONCEPT</a>
+<a href="Concept.dc.html#service" style="text-decoration: none; padding: 12px 0">SERVICE</a>
+<a href="About.dc.html" style="text-decoration: none; padding: 12px 0">ABOUT CEO</a>
+<a href="Works.dc.html" style="text-decoration: none; padding: 12px 0">WORKS</a>
+<a href="Media.dc.html" aria-current="page" style="text-decoration: underline; text-underline-offset: 6px; padding: 12px 0">MEDIA</a>
+<a href="Talks.dc.html" style="text-decoration: none; padding: 12px 0">TALKS</a>
+<a href="Contact.dc.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
+</nav>
+</header>
+
+<section class="phead">
+<div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 32px 64px">
+<div style="flex: 1 1 320px">
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">MEDIA</p>
+<h1 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(28px, 6vw, 36px); line-height: 1.6">미디어 게재·출연</h1>
+</div>
+<div style="overflow: hidden; background: #EEEEEA; flex: 0 1 480px; width: 100%"><img src="/_blob/6c668ebc530493ccb12e3b8dc4816ce9" alt="신문, 안경, 펜, 노트북" loading="lazy" style="display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; object-position: center 55%"></div>
+</div>
+</div>
+</section>
+
+<section id="articles" style="max-width: 1280px; margin: 0 auto; padding: 40px 24px 120px">
+<div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); align-items: start; gap: 24px">
+<sc-for list="{{articles}}" as="a" hint-placeholder-count="9">
+<sc-if value="{{a.hasVideo}}" hint-placeholder-val="{{ false }}">
+<div class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8">
+<span style="position: relative; display: block; background: #111111; line-height: 0; aspect-ratio: 16 / 9">
+<iframe src="{{a.ytSrc}}" title="{{a.source}}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0"></iframe>
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 20px 22px 22px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
+<a href="{{a.url}}" style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111; text-decoration: none">{{a.linkLabel}}</a>
+</span>
+</div>
+</sc-if>
+<sc-if value="{{a.hasIg}}" hint-placeholder-val="{{ false }}">
+<div class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8">
+<span style="display: block; background: #FFFFFF; line-height: 0; border-bottom: 1px solid #EEEEEE">
+<iframe src="{{a.igSrc}}" title="{{a.source}}" loading="lazy" scrolling="no" allowtransparency="true" style="display: block; width: 100%; height: 560px; border: 0"></iframe>
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 20px 22px 22px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
+<a href="{{a.url}}" style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111; text-decoration: none">VIEW ON INSTAGRAM</a>
+</span>
+</div>
+</sc-if>
+<sc-if value="{{a.hasX}}" hint-placeholder-val="{{ false }}">
+<div class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8">
+<span style="display: block; background: #FFFFFF; line-height: 0; border-bottom: 1px solid #EEEEEE; padding: 8px 8px 0">
+<iframe src="{{a.xSrc}}" title="{{a.source}}" loading="lazy" scrolling="no" allowfullscreen style="display: block; width: 100%; height: 620px; border: 0"></iframe>
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 20px 22px 22px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
+<a href="{{a.url}}" style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111; text-decoration: none">VIEW ON X</a>
+</span>
+</div>
+</sc-if>
+<sc-if value="{{a.noVideo}}" hint-placeholder-val="{{ true }}">
+<a href="{{a.url}}" class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
+<sc-if value="{{a.hasImg}}" hint-placeholder-val="{{ true }}">
+<span style="display: flex; aspect-ratio: {{a.ar}}; overflow-x: auto; scroll-snap-type: x mandatory">
+<sc-for list="{{a.imgs}}" as="im" hint-placeholder-count="1">
+<img src="{{im}}" alt="" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start">
+</sc-for>
+</span>
+<sc-if value="{{a.multi}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+</sc-if>
+</sc-if>
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 20px 22px 22px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
+</span>
+</a>
+</sc-if>
+</sc-for>
+</div>
+</section>
+
+<section class="cta" style="background: #111111; color: #F5F5F2">
+<div style="max-width: 1280px; margin: 0 auto; padding: 96px 24px; text-align: center">
+<p class="eyebrow c" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 28px; line-height: 1.6"><span style="display: inline-block">취재·강연 의뢰는</span> <span style="display: inline-block">문의해 주세요.</span></h2>
+<a href="Contact.dc.html" class="btn-w" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 32px; padding: 0 44px; background: #FFFFFF; color: #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">문의하기</a>
+</div>
+</section>
+
+<footer style="background: #111111; color: #B5B5B5; border-top: 1px solid #2A2A2A">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px">
+<img src="/_blob/5a70e1ab78d97b163da96e4084e2b1d6" alt="MICHI inc." style="width: 140px; height: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="Company.dc.html" style="color: #DDDDDD">회사 개요</a>
+<a href="Privacy.dc.html" style="color: #DDDDDD">개인정보 처리방침</a>
+<span>© MICHI inc.</span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2800}}'>
+class Component extends DCLogic {
+renderVals() {
+const talks = [
+{ date: '2026.12.10', event: '닛케이 크로스 트렌드 마케팅 돌파숙 [차세대 리더 편] 제2기', note: '차세대 마케팅 리더를 육성하는 실천형 프로그램에서 12월 10일 회차 강사를 맡음(2026년 11월~2027년 2월)', url: 'https://info.nikkeibp.co.jp/nxr/campaign/toppajuku_next/', img: '/_blob/127f1f44a3e45848f9245c38d955604b', ar: '767 / 605', fit: 'cover', upcoming: true },
+{ date: '2026.11.11', time: '14:50–15:20', img2: '/_blob/9b8e39345e7ab7a0657592bbae89dbe1', event: 'Retail Media Summit 2026', note: '「리테일 미디어로 만드는 좋은 고객 경험의 마케팅의 미래」 가오 야마오카 님, FANCL 교야 님과 함께(벨살 신주쿠 그랜드)', url: 'https://www.retailmedia-japan.com/', img: '/_blob/336d82074d465c5a376dd3990eca51ab', ar: '1200 / 628', fit: 'cover', upcoming: true },
+{ date: '2026.10.23', time: '10:00–10:40', event: 'ad:tech tokyo 2026 KEYNOTE', note: '「새로운 가치는 어떻게 만들어지는가」 올해의 마케터 2026 심사위원들과 함께(도쿄 미드타운)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/cca76d39c269df2aaf85aabf46716252', ar: '1200 / 630', fit: 'cover', upcoming: true },
+{ date: '2026.10.22', time: '16:45–17:35', event: 'ad:tech tokyo 2026', note: '「새로운 시장의 발견과 창조」 vector 기류 님, NOPE 오쓰키 님, 부르봉 이데 님과 함께(도쿄 미드타운)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/21e36d0212dcc6a0f52d639e017b9471', ar: '1200 / 630', fit: 'cover', upcoming: true },
+{ date: '2026.10.12', img2: '/_blob/518422eafe1ecdb6cc840ecf8a75383b', event: 'INNER BEAUTY TALK SHOW', note: '「나다운 아름다움의 설계도」 인스타그래머 미야타 아야코 님과 특별 대담(소고 약국 아자부주반)', url: 'https://shop.sogo-pharmacy.jp/detail/434/', img: '/_blob/54e587d62b2bbe59e9a420e9349a0284', ar: '960 / 1200', fit: 'cover', pos: 'center 30%', upcoming: true, badge: 'TODAY' },
+{ date: '2026.09.09–10', event: 'SHOPPER・X 2026', note: 'A-4 스테이지 「고객의 가치관과 미의식에 다가가는 법 — 디지털 구매 행동에서 얻은 인사이트」 eBay Japan 모라노 님, 라이온 마쓰이 님과 함께(리가 로열 호텔 도쿄)', url: '', img: '/_blob/2d5189aa6e2c8ef3380b4d7135f338cf', ar: '1158 / 605', fit: 'cover' },
+{ date: '2026.09.08', time: '12:35–13:15', event: 'MarkeZine Day 2026 Autumn', note: '「왜 그 투자인가?」 가루비와 구인박스가 말하는 브랜드 성장을 이끄는 미디어 전략. 가루비 와타나베 님, 구인박스(가카쿠닷컴) 고지마 님과의 세션 진행(JP타워 홀 & 컨퍼런스)', url: 'https://event.shoeisha.jp/mzday/20260908/timetable', img: '/_blob/29eae3d2553628237fd8b44d0e88daed', ar: '1151 / 950', fit: 'cover', pos: 'center top' },
+{ date: '2026.09.02', time: '12:50–13:30', event: '백오피스 World 2026 SUMMER 오사카', note: '특별 강연 「‘그렇지 않은 쪽’에서 힌트를 얻는 새로운 가치 창조」(인텍스 오사카 4호관)', url: 'https://prtimes.jp/main/html/rd/p/000000242.000078233.html', img: '/_blob/f229aa6578c3712ac86e8303876ad681', ar: '1400 / 735', fit: 'cover' },
+{ date: '2026.08.26', time: '18:30–20:30', event: '비즈니스 리더는 왜 아타미를 선택하는가', note: '아타미에서 배우는 의미와 가치 — 일본 커뮤니케이션 스킬 아카데미 오하라 님과 함께(구단 회관 테라스)', url: '', img: '/_blob/6db1601405f9facaa33b9dd0f7bac055', ar: '1200 / 587', fit: 'cover' },
+{ date: '2026.07.29', time: '17:20–18:20', img2: '/_blob/b84b73ef0497e2ee967eabaa282b0c14', event: '닛케이 크로스 트렌드 포럼 2026', note: '협찬 세션 「AI 시대의 새로운 가치 창조」 Integrate 후지타 님과 함께(도쿄 컨벤션 홀)', url: 'https://prtimes.jp/main/html/rd/p/000000317.000041279.html', img: '/_blob/911dec9859ec1ade6b408c7de5832043', ar: '726 / 780', fit: 'contain' },
+{ date: '2026.06.16', time: '16:00–17:30', event: 'GreatRIVER presents Reframe Studio Vol. 12', note: '「마케팅과 브랜딩의 재정의」 시세이도 미우라 님과 함께(Incubation CANVAS TOKYO)', url: 'https://prtimes.jp/main/html/rd/p/000000514.000040283.html', img: '/_blob/573c0f3a1c7d70a52e2c4d880ab4884c', ar: '1024 / 537', fit: 'cover' },
+{ date: '2026.05.19', time: '15:00–17:00', event: '닛케이 크로스 트렌드 마케팅 돌파숙 — 체험 강좌', note: '‘올해의 마케터’에서 보는 새로운 가치 창조의 기술(오차노미즈 Tri-Edge 컨퍼런스)', url: '', img: '/_blob/d127536e95e42b813b2ca66a13259185', ar: '800 / 423', fit: 'cover' },
+{ date: '2025.11.06', event: '마케팅 길드 커뮤니티 11월 정례회', note: '「오카야마산 캐비어 ‘조자메야’의 도전 — 브랜딩으로 무엇이 바뀌는가」 클라이언트 조자메야 사노 님과 함께(스페이스마켓 본사)', url: 'https://mgcj.coorum.jp/page/2025-nov', img: '/_blob/a178545cb5c6471cb390c7ad815f387d', ar: '920 / 450', fit: 'cover' },
+{ date: '2025.10.22–24', event: 'ad:tech tokyo 2025', note: '공식 연사(도쿄 미드타운 & 리츠칼튼)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/4038b920bdf4c10401b90046867ebef4', ar: '1024 / 537', fit: 'cover' },
+{ date: '2025.10.08–09', event: 'Retail Media Summit 2025', note: '「소리로 이어지는 브랜드 경험」 Otonal 야기 님과 함께(벨살 신주쿠 그랜드)', url: 'https://www.retailmedia-japan.com/', img: '/_blob/8827d70a88b2410aa16ce18930d2b047', ar: '1024 / 535', fit: 'cover' },
+{ date: '2025.09.25', time: '9:35–10:15', img2: '/_blob/3dd3793eea78dafa0807abedabf9af13', event: 'AdverTimes Forum by KAIGI GROUP', note: '모더레이터 「고객 인사이트로 여는 상품 전략」(아카사카 인터시티 에어)', url: 'https://www.advertimes.com/?p=515378', img: '/_blob/b311ef81665a3d4fee5f72316fef1261', ar: '853 / 1152', fit: 'contain' },
+{ date: '2025.09.24', time: '17:00–18:30', event: 'GreatRIVER presents Reframe Studio Vol. 7', note: '톱 마케터에게 배우는 브랜드 구축의 진정한 의미(amana 덴노즈 오피스)', url: 'https://amana.jp/events/4228/', img: '/_blob/d92213428901d134bdc6952e8f614f02', ar: '1024 / 535', fit: 'cover' },
+{ date: '2025.09.17', time: '19:00〜', event: 'FICC 브랜드 마케팅 지식 공유회', note: '제2부 「Strategy Quadrant®」 — 나만의 마케팅 전략 도출하기', url: 'https://www.ficc.jp/news/20250818/', img: '/_blob/d7ead871af5f7e1ff4e5c95329574b53', ar: '1200 / 633', fit: 'cover' },
+{ date: '2025.09.05', img2: '/_blob/410a64372e34d2576574cf46481e1eb2', event: 'imedia BRAND SUMMIT 2025 DAY3', note: '헤랄보니 마쓰다 님, 스타벅스 요시다 님과의 세션 진행(비와코 오쓰 프린스 호텔)', url: 'https://brand.summit-japan.com/', img: '/_blob/0b678d7212e4a0a95d1b946e84e2fd04', ar: '1024 / 536', fit: 'cover' },
+{ date: '2025.08.27 / 09.09', time: '(오사카 8.27) 9:30–10:10', img2: '/_blob/2f6cc41ec4891c92f741e4a0274dc001', event: 'Marketing & Sales World 2025', note: '「새로운 가치 창조를 가능하게 하는 브랜딩 사고」 오사카·도쿄', url: 'https://www.bizcrew.jp/expo/marketing-sales-tokyo', img: '/_blob/49cc742bf816a03c40a1a9b1e1efeb56', ar: '1056 / 1152', fit: 'contain' },
+{ date: '2025.08.20 / 27', event: 'InterFM「J LIVE RADIO」', note: '2주 연속 게스트 출연', url: '', img: '/_blob/9e3b764f374ec39d35c984ef66b1375e', ar: '480 / 288', fit: 'cover' },
+{ date: '2025.07', event: '환경성 ‘팀 탕치’', note: 'MICHI inc. 참여', url: '', img: '/_blob/deffdf827b2822f99c8aed24c372bc50', ar: '339 / 480', fit: 'contain' },
+{ date: '2025.06.12', event: 'CMO JAPAN summit 2025', note: 'JTB 가자구치 님과 공동 세션', url: 'https://www.june25.cmojapansummit.com/', img: '/_blob/03d1ad185428140d490307000d07d45d', ar: '1200 / 800', fit: 'cover' },
+{ date: '2025.04.22–23', event: 'MARKETING・X 2025', note: '진행한 세션이 1위(「‘그렇지 않은 쪽’이었던 시장에서 가치를 만든다」), 2위(「소비자와 오디오 광고」)를 차지', url: 'http://2025.marketingx.jp/maiko/', img: '/_blob/5e950c32ae527de545a7889d0b4e38ba', ar: '967 / 1151', fit: 'contain' }
+].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: !!t.upcoming, badge: t.badge || (t.upcoming ? 'UPCOMING' : ''), time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
+const articles = [
+{ source: '도서 소개', date: '2026.08.30', title: '시세이도 시절의 ‘파운데이션 세럼’ 사례가 필립 코틀러 『코틀러의 현대 마케팅 에센셜』 일본판에 게재', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
+{ source: '닛케이 크로스 트렌드', date: '2026.08.05', title: '닛케이 크로스 트렌드 ‘마케팅 돌파숙’ 온라인 설명회 강사', url: 'https://xtrend.nikkei.com/info/18/00006/00443/', img: '/_blob/07e38e2e01125b1d27e8f7ce62675b84', ar: '600 / 337' },
+{ source: 'AnotherADdress', date: '2026.06.23', title: 'MIDOT 디자이너 기타하라 미치코 인터뷰', url: 'https://www.anotheraddress.jp/topics/1346/detail', img: '/_blob/97fab58dca688becf6e2b35a3444cda9', ar: '1000 / 667' },
+{ source: 'TV도쿄 「캄브리아 궁전」', date: '2026.06.18', title: '「Umios의 재탄생 전략」에 고객 중심 상품 개발 지원 사례로 소개', url: 'https://youtu.be/MARyk_CMgkQ?t=103', yt: 'MARyk_CMgkQ', ytStart: 103 },
+{ source: '닛케이 크로스 트렌드', date: '2026.06.17', title: '전 시세이도 임원 기타하라가 말하는 ‘그렇지 않은 쪽’ 시장에서의 새로운 가치 창조', url: 'https://xtrend.nikkei.com/atcl/contents/18/01406/00005/' },
+{ source: 'CORE「Dear Woman.」', date: '2025.12.11', title: '시대를 이끄는 여성 리더 100인 선정(EMPOWERMENT LEADER)', url: 'https://core-official.com/media/dear_woman', img: '/_blob/6b9b94fec0eb67a35e9cb062ed23debc', ar: '1200 / 675', img2: '/_blob/8ffa9796beabf0775f6874b36c7fa92d', pos: 'center' },
+{ source: 'MarkeZine', date: '2025.12.08', title: '마케터는 많아도 가치를 만드는 사람은 적다? 전 시세이도 임원 기타하라가 만드는 ‘최강의 팀’', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', pos: 'center top' },
+{ source: 'DIGIDAY [Glossy]', date: '2025.12', title: '전 시세이도 마케터 기타하라 미치코, 어패럴 브랜드 MIDOT 론칭', url: 'https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/', img: '/_blob/634b54562aa19fa59f077f2f0f50b05e', ar: '1200 / 675', pos: 'center top' },
+{ source: 'AdverTimes.(선전회의)', date: '2025.11.28', title: '감각형 마케터의 머릿속을 아름답게 언어화한 책 — 『욕망의 본질』 신판에 대하여', url: 'https://www.advertimes.com/20251128/article525251/' },
+{ source: 'PR TIMES', date: '2025.11.18', title: 'MICHI inc. 기타하라 미치코, City Lights Law 미즈노 다스쿠가 Great RIVER 고문으로 취임', url: 'https://prtimes.jp/main/html/rd/p/000000443.000040283.html' },
+{ source: 'GreatRIVER presents Reframe Studio Vol. 7', date: '2025.11.05', title: '녹화 강의 「기능이 아니라 의미를 판다 — 고객에게 진정으로 닿는 인사이트 찾는 법」', url: 'https://youtu.be/tAllLok8FKo', yt: 'tAllLok8FKo' },
+{ source: 'HEAD LIGHT(택시 내 미디어)', date: '2025.10.06', title: 'GROWTH 제휴 도쿄 택시 내에서 방영된 「경쟁의 축을 바꾸는 새로운 가치 창조」 인터뷰', url: 'https://youtu.be/n4VzH6XPXfM', yt: 'n4VzH6XPXfM' },
+{ source: '고단샤 C Station', date: '2025.09.17', title: '수파리 — 라이온, 시세이도를 거쳐 독립한 브랜드 크리에이터 기타하라 미치코의 열정과 감성의 원천(InterFM 「J LIVE RADIO」)', url: 'https://cstation.kodansha.co.jp/article/15249', yt: 'guJ_bDwH0r4' },
+{ source: 'PR TIMES', date: '2025.08.26', title: 'KiQ × MICHI, 공간과 접객의 가치를 극대화하는 ‘쇼사 브랜딩 프로그램’ 제공 시작', url: 'https://prtimes.jp/main/html/rd/p/000000014.000107116.html', img: '/_blob/6ca027182dea328efc012bbd1db9ecdc', ar: '1200 / 800' },
+{ source: '도서', date: '2025.07', title: '토마스 바르타 『마케팅 리더의 12가지 힘』 일본어판에 대담·추천사 게재', url: 'https://amzn.asia/d/cTD307s', img: '/_blob/bdda47c35b1ba8d68572a53517a64289', ar: '847 / 1200', fit: 'contain' },
+{ source: 'CORE', date: '2025.03', title: '일에도 아이에게도 ‘미안해’만 하고 있나요? ‘완벽한 엄마’를 포기한 뒤 마주한 일과 육아', url: 'https://core-official.com/media/interview-kitahara-michiko', img: '/_blob/10527b80a1eac9ccac3090ab35d2b04e', ar: '1200 / 628' },
+].map((a) => ({ ...a, hasVideo: !!a.yt, linkLabel: (a.url || '').indexOf('youtu') >= 0 ? 'WATCH ON YOUTUBE' : 'READ', hasIg: !!a.ig, igSrc: a.ig ? 'https://www.instagram.com/p/' + a.ig + '/embed' : '', hasX: !!a.x, xSrc: a.x ? 'https://platform.twitter.com/embed/Tweet.html?id=' + a.x + '&hideThread=true&conversation=none&theme=light&lang=ja' : '', noVideo: !a.yt && !a.ig && !a.x, ytSrc: a.yt ? 'https://www.youtube-nocookie.com/embed/' + a.yt + '?rel=0' + (a.ytStart ? '&start=' + a.ytStart : '') : '', img: a.img || '', hasImg: !!a.img, imgs: [a.img, a.img2].filter(Boolean), multi: !!(a.img && a.img2) }));
+return { talks, articles, navOpen: !!(this.state && this.state.navOpen), navClosed: !(this.state && this.state.navOpen), navCls: (this.state && this.state.navOpen) ? 'open' : '', navExpanded: (this.state && this.state.navOpen) ? 'true' : 'false', toggleNav: () => this.setState({ navOpen: !(this.state && this.state.navOpen) }), };
+}
+}
+</script>
+</body>
+</html>

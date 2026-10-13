@@ -11,7 +11,9 @@ OUT_ROOT = f'{SCR}/site'
 OUT = OUT_ROOT if LANG == 'ja' else f'{OUT_ROOT}/{LANG}'
 PFX = '' if LANG == 'ja' else '../'
 LPATH = '' if LANG == 'ja' else f'{LANG}/'
-LANGS = ['ja', 'en']
+LANGS = ['ja', 'en', 'fr', 'ko', 'zh']
+sys.path.insert(0, f'{SCR}/export-tool/i18n')
+import meta as M
 ACCESS_KEY = os.environ.get('W3F_KEY', 'YOUR_WEB3FORMS_ACCESS_KEY')
 
 PAGES = {
@@ -269,7 +271,7 @@ def page_links(html):
 
 
 EXT_ICON = '<svg class="ext-ic" aria-hidden="true" viewBox="0 0 12 12" width="0.85em" height="0.85em" style="display:inline-block;vertical-align:-0.06em;margin-left:0.45em;flex:none" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1.5h3.5V5"/><path d="M10.5 1.5 5.5 6.5"/><path d="M9 7.5v2.25a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1-.75-.75v-6A.75.75 0 0 1 2.25 3H4.5"/></svg><span style="display:inline-block;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;vertical-align:top">（新しいタブで開きます）</span>'
-if LANG == 'en': EXT_ICON = EXT_ICON.replace('（新しいタブで開きます）', ' (opens in a new tab)')
+if LANG != 'ja': EXT_ICON = EXT_ICON.replace('（新しいタブで開きます）', M.NEW_TAB[LANG])
 
 
 def external_links(html):
@@ -320,6 +322,7 @@ def map_blobs(html):
 
 
 NAV_JS = """<script>
+document.addEventListener('click',function(e){var d=document.querySelector('details.lsw');if(d&&d.open&&!d.contains(e.target))d.open=false;});
 (function(){
   var b=document.querySelector('.mbtn'),n=document.querySelector('.gnav');if(!b||!n)return;
   var ham=b.innerHTML,x='<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>';
@@ -361,7 +364,7 @@ FORM_JS = """<script>
   });
 })();
 </script>"""
-if LANG == 'en': FORM_JS = FORM_JS.replace('送信中…', 'Sending…').replace('送信する', 'Send')
+if LANG != 'ja': FORM_JS = FORM_JS.replace('送信中…', M.SENDING[LANG][0]).replace('送信する', M.SENDING[LANG][1])
 
 REVEAL_JS = """<script>
 (function(){
@@ -375,7 +378,7 @@ REVEAL_JS = """<script>
 FAVICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#fff"/><line x1="8" y1="22" x2="24" y2="10" stroke="#111" stroke-width="2"/><circle cx="8" cy="22" r="5" fill="#111"/><circle cx="24" cy="10" r="5" fill="#111"/></svg>'
 
 
-LSW_CSS = '.lsw{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:0.14em;order:3}.lsw a{text-decoration:none;padding:12px 2px;color:inherit;opacity:.45}.lsw a[aria-current]{opacity:1}.lsw i{font-style:normal;opacity:.35}@media (max-width: 960px){.lsw{order:1;margin-left:auto;margin-right:4px}header .mbtn{order:2}}'
+LSW_CSS = '.lsw{position:relative;order:3;font-size:11px;font-weight:500;letter-spacing:0.14em}.lsw summary{list-style:none;cursor:pointer;color:#FFFFFF;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 4px}.lsw summary::-webkit-details-marker{display:none}.lsw-m{position:absolute;right:0;top:100%;z-index:30;background:#111111;border:1px solid #2A2A2A;min-width:150px;padding:6px 0;display:flex;flex-direction:column}.lsw-m a{color:#FFFFFF !important;text-decoration:none;padding:11px 18px;font-size:13px;letter-spacing:0.06em;opacity:.6}.lsw-m a[aria-current],.lsw-m a:hover{opacity:1}.lsw-m a[aria-current]::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#FFFFFF;margin:0 8px 2px -13px}@media (max-width: 960px){.lsw{order:1;margin-left:auto;margin-right:2px}header .mbtn{order:2}}'
 
 
 def lang_url(lang, dst):
@@ -383,26 +386,26 @@ def lang_url(lang, dst):
 
 
 def lang_switch(dst):
-    page = './' if dst == 'index.html' else dst
-    out = []
+    items = []
     for l in LANGS:
-        if l == LANG:
-            out.append(f'<a href="{page}" lang="{l}" aria-current="true">{l.upper()}</a>')
-        else:
-            href = ('../' if LANG != 'ja' else '') + ('' if l == 'ja' else l + '/') + ('' if dst == 'index.html' else dst)
-            out.append(f'<a href="{href or "./"}" lang="{l}" hreflang="{l}">{l.upper()}</a>')
-    return '<div class="lsw" aria-label="' + ('言語' if LANG == 'ja' else 'Language') + '">' + '<i>/</i>'.join(out) + '</div>'
+        href = ('../' if LANG != 'ja' else '') + ('' if l == 'ja' else l + '/') + ('' if dst == 'index.html' else dst)
+        if l == LANG: href = './' if dst == 'index.html' else dst
+        cur = ' aria-current="true"' if l == LANG else ''
+        items.append(f'<a href="{href or "./"}" lang="{M.HTML_LANG[l]}" hreflang="{M.HTML_LANG[l]}"{cur}>{M.LABEL[l]}</a>')
+    globe = '<svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>'
+    return (f'<details class="lsw"><summary aria-label="{M.LANG_ARIA[LANG]}">{globe}<span>{M.SHORT[LANG]}</span></summary>'
+            f'<div class="lsw-m">{"".join(items)}</div></details>')
 
 
 def build(src, dst, title):
-    if LANG == 'en':
-        title = TITLES_EN.get(dst, title)
-    pdesc = (PAGE_DESC if LANG == 'ja' else PAGE_DESC_EN)[dst]
+    if LANG != 'ja':
+        title = M.TITLES[LANG].get(dst, title)
+    pdesc = (PAGE_DESC if LANG == 'ja' else M.PAGE_DESC[LANG])[dst]
     _ld = []
     if dst in ('index.html', 'company.html'): _ld.append(ORG_LD)
     if dst == 'about.html': _ld.append(PERSON_LD)
     if LANG != 'ja':
-        _ld = [dict(x, description=DESC_EN, name='MICHI inc.') if x is ORG_LD else dict(x, name='Michiko Kitahara', alternateName='北原規稚子', jobTitle='CEO') for x in _ld]
+        _ld = [dict(x, description=M.DESC[LANG], name='MICHI inc.') if x is ORG_LD else dict(x, name='Michiko Kitahara', alternateName='北原規稚子', jobTitle='CEO') for x in _ld]
     LD = ''.join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + '</script>\n' for x in _ld)
     path = f'{PROJ}/{src}'
     raw = open(path, encoding='utf-8').read()
@@ -411,7 +414,7 @@ def build(src, dst, title):
     helmet = xdc.find('helmet').extract()
     scope = vals(path)
     render_children(xdc, scope)
-    wrap_phrases(xdc)
+    if LANG == 'ja': wrap_phrases(xdc)
     head_extra = ''.join(str(c) for c in helmet.contents if isinstance(c, Tag))
     body = ''.join(str(c) for c in xdc.contents)
 
@@ -420,7 +423,7 @@ def build(src, dst, title):
         sent_soup = BeautifulSoup(raw, 'html.parser')
         sx = sent_soup.find('x-dc'); sx.find('helmet').extract()
         render_children(sx, vals(path, {'sent': True}))
-        wrap_phrases(sx)
+        if LANG == 'ja': wrap_phrases(sx)
         status = sx.find(attrs={'role': 'status'})
         status['id'] = 'contact-done'; status['hidden'] = ''
         b2 = BeautifulSoup(body, 'html.parser')
@@ -429,7 +432,7 @@ def build(src, dst, title):
         form['action'] = 'https://api.web3forms.com/submit'
         form['method'] = 'POST'
         form.find('input', attrs={'name': 'access_key'})['value'] = ACCESS_KEY
-        err = BeautifulSoup('<p id="contact-error" role="alert" hidden style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">' + ('送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。' if LANG == 'ja' else 'Your message could not be sent. Please try again later, or email michiko.kitahara@michi-inc.com directly.') + '</p>', 'html.parser')
+        err = BeautifulSoup('<p id="contact-error" role="alert" hidden style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">' + ('送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。' if LANG == 'ja' else M.FORM_ERR[LANG]) + '</p>', 'html.parser')
         form.find('button', attrs={'type': 'submit'}).parent.insert_before(err)
         form.insert_after(copy.copy(status))
         body = str(b2)
@@ -439,7 +442,7 @@ def build(src, dst, title):
         extra_js += ACC_JS
 
     html = f"""<!doctype html>
-<html lang="{LANG}">
+<html lang="{M.HTML_LANG[LANG]}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -452,7 +455,7 @@ def build(src, dst, title):
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="{lang_url(LANG, dst)}">
-<meta property="og:locale" content="{'ja_JP' if LANG == 'ja' else 'en_US'}">
+<meta property="og:locale" content="{M.OG_LOCALE[LANG]}">
 <meta property="og:site_name" content="MICHI inc.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{PFX}assets/favicon.svg" type="image/svg+xml">
@@ -462,7 +465,7 @@ def build(src, dst, title):
 <meta name="apple-mobile-web-app-title" content="MICHI inc.">
 <meta name="theme-color" content="#111111">
 {LD}<link rel="canonical" href="{lang_url(LANG, dst)}">
-{''.join(f'<link rel="alternate" hreflang="{l}" href="{lang_url(l, dst)}">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{lang_url('ja', dst)}">
+{''.join(f'<link rel="alternate" hreflang="{M.HTML_LANG[l]}" href="{lang_url(l, dst)}">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{lang_url('ja', dst)}">
 <script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,'',location.pathname.replace(/index\.html$/,'')+location.search+location.hash)</script>
 {head_extra}
 <style>{LSW_CSS}.w{{display:inline-block}}body{{line-break:strict}}.rv{{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}}.rv.in{{opacity:1;transform:none}}</style>
@@ -474,6 +477,8 @@ def build(src, dst, title):
 </html>
 """
     html = html.replace('</nav>\n</header>', '</nav>\n' + lang_switch(dst) + '\n</header>', 1)
+    for a, b in M.FONTS.get(LANG, {}).items():
+        html = html.replace(a, b).replace(a.replace(' ', '+'), b.replace(' ', '+'))
     if 'class="lsw"' not in html: raise SystemExit(f'{src}: no lang switch slot')
     html = page_links(map_blobs(html))
     leftover = HOLE.findall(html)
@@ -521,7 +526,7 @@ if __name__ == '__main__':
         open(f'{OUT}/{d}/index.html', 'w', encoding='utf-8').write(f'<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=../{target}"><link rel="canonical" href="../{target}"><title>MICHI inc.</title></head><body><a href="../{target}">MICHI inc.</a></body></html>')
     import datetime
     today = datetime.date.today().isoformat()
-    alts = lambda d: ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{lang_url(l, d)}"/>' for l in LANGS)
+    alts = lambda d: ''.join(f'<xhtml:link rel="alternate" hreflang="{M.HTML_LANG[l]}" href="{lang_url(l, d)}"/>' for l in LANGS)
     urls = ''.join(f'<url><loc>{lang_url(l, d)}</loc><lastmod>{today}</lastmod>{alts(d)}</url>' for l in LANGS for d, _ in PAGES.values())
     open(f'{OUT}/sitemap.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">{urls}</urlset>\n')
     open(f'{OUT}/robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://michi-inc.net/sitemap.xml\n')

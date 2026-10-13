@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>MICHI inc. 首页</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#111111}a:hover{color:#5A5A5A}
+.gnav{display:flex;flex-wrap:wrap}
+.mbtn{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:0;padding:0;margin-right:-10px;cursor:pointer;color:#111111}
+@media (max-width: 960px){.mbtn{display:inline-flex}.gnav{display:none}.gnav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;background:#FFFFFF;padding:4px 24px 20px;border-bottom:1px solid #E4E4E0;z-index:20;font-size:14px}.gnav.open a{padding:14px 0 !important;border-bottom:1px solid #EEEEEE}}
+
+.cam{transform-origin:560px 600px;transform-box:view-box;animation:cam 16s cubic-bezier(.45,0,.2,1) infinite}
+@keyframes cam{0%{transform:scale(3.6)}42%,100%{transform:scale(1)}}
+.soft{animation:soft 16s ease infinite}@keyframes soft{0%,6%{opacity:1}34%,100%{opacity:0}}
+.crisp{animation:crisp 16s ease infinite}@keyframes crisp{0%,6%{opacity:0}34%,96.2%{opacity:1}100%{opacity:0}}
+.e{stroke:#C9C9C9;stroke-width:1;fill:none;stroke-dasharray:1;stroke-dashoffset:1}
+.v{transform-box:fill-box;transform-origin:center;opacity:0}
+.e0{animation:e0 16s linear infinite}@keyframes e0{0%,1.5%{stroke-dashoffset:1}8.5%,100%{stroke-dashoffset:0}}
+.v0{animation:v0 16s ease-out infinite}@keyframes v0{0%,0.0%{opacity:0;transform:scale(0)}3.5%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e1{animation:e1 16s linear infinite}@keyframes e1{0%,5.1%{stroke-dashoffset:1}12.1%,100%{stroke-dashoffset:0}}
+.v1{animation:v1 16s ease-out infinite}@keyframes v1{0%,2.6%{opacity:0;transform:scale(0)}6.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e2{animation:e2 16s linear infinite}@keyframes e2{0%,8.7%{stroke-dashoffset:1}15.7%,100%{stroke-dashoffset:0}}
+.v2{animation:v2 16s ease-out infinite}@keyframes v2{0%,5.2%{opacity:0;transform:scale(0)}8.7%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e3{animation:e3 16s linear infinite}@keyframes e3{0%,12.3%{stroke-dashoffset:1}19.3%,100%{stroke-dashoffset:0}}
+.v3{animation:v3 16s ease-out infinite}@keyframes v3{0%,7.8%{opacity:0;transform:scale(0)}11.3%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e4{animation:e4 16s linear infinite}@keyframes e4{0%,15.9%{stroke-dashoffset:1}22.9%,100%{stroke-dashoffset:0}}
+.v4{animation:v4 16s ease-out infinite}@keyframes v4{0%,10.4%{opacity:0;transform:scale(0)}13.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e5{animation:e5 16s linear infinite}@keyframes e5{0%,19.5%{stroke-dashoffset:1}26.5%,100%{stroke-dashoffset:0}}
+.v5{animation:v5 16s ease-out infinite}@keyframes v5{0%,13.0%{opacity:0;transform:scale(0)}16.5%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e6{animation:e6 16s linear infinite}@keyframes e6{0%,23.1%{stroke-dashoffset:1}30.1%,100%{stroke-dashoffset:0}}
+.v6{animation:v6 16s ease-out infinite}@keyframes v6{0%,15.6%{opacity:0;transform:scale(0)}19.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e7{animation:e7 16s linear infinite}@keyframes e7{0%,26.7%{stroke-dashoffset:1}33.7%,100%{stroke-dashoffset:0}}
+.v7{animation:v7 16s ease-out infinite}@keyframes v7{0%,18.2%{opacity:0;transform:scale(0)}21.7%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e8{animation:e8 16s linear infinite}@keyframes e8{0%,30.3%{stroke-dashoffset:1}37.3%,100%{stroke-dashoffset:0}}
+.v8{animation:v8 16s ease-out infinite}@keyframes v8{0%,20.8%{opacity:0;transform:scale(0)}24.3%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e9{animation:e9 16s linear infinite}@keyframes e9{0%,33.9%{stroke-dashoffset:1}40.9%,100%{stroke-dashoffset:0}}
+.v9{animation:v9 16s ease-out infinite}@keyframes v9{0%,23.4%{opacity:0;transform:scale(0)}26.9%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e10{animation:e10 16s linear infinite}@keyframes e10{0%,37.5%{stroke-dashoffset:1}44.5%,100%{stroke-dashoffset:0}}
+.v10{animation:v10 16s ease-out infinite}@keyframes v10{0%,26.0%{opacity:0;transform:scale(0)}29.5%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.e11{animation:e11 16s linear infinite}@keyframes e11{0%,41.1%{stroke-dashoffset:1}48.1%,100%{stroke-dashoffset:0}}
+.v11{animation:v11 16s ease-out infinite}@keyframes v11{0%,28.6%{opacity:0;transform:scale(0)}32.1%,96.2%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.vk.v0{animation:v0 16s ease-out infinite,vk 16s ease infinite}
+.ek.e0{animation:e0 16s linear infinite,ek 16s ease infinite}
+.vk.v1{animation:v1 16s ease-out infinite,vk 16s ease infinite}
+.ek.e1{animation:e1 16s linear infinite,ek 16s ease infinite}
+.vk.v2{animation:v2 16s ease-out infinite,vk 16s ease infinite}
+.ek.e2{animation:e2 16s linear infinite,ek 16s ease infinite}
+.vk.v3{animation:v3 16s ease-out infinite,vk 16s ease infinite}
+.ek.e3{animation:e3 16s linear infinite,ek 16s ease infinite}
+.vk.v4{animation:v4 16s ease-out infinite,vk 16s ease infinite}
+.ek.e4{animation:e4 16s linear infinite,ek 16s ease infinite}
+.vk.v5{animation:v5 16s ease-out infinite,vk 16s ease infinite}
+.ek.e5{animation:e5 16s linear infinite,ek 16s ease infinite}
+.vk.v6{animation:v6 16s ease-out infinite,vk 16s ease infinite}
+.ek.e6{animation:e6 16s linear infinite,ek 16s ease infinite}
+.vk.v7{animation:v7 16s ease-out infinite,vk 16s ease infinite}
+.ek.e7{animation:e7 16s linear infinite,ek 16s ease infinite}
+.vk.v8{animation:v8 16s ease-out infinite,vk 16s ease infinite}
+.ek.e8{animation:e8 16s linear infinite,ek 16s ease infinite}
+.vk.v9{animation:v9 16s ease-out infinite,vk 16s ease infinite}
+.ek.e9{animation:e9 16s linear infinite,ek 16s ease infinite}
+.vk.v10{animation:v10 16s ease-out infinite,vk 16s ease infinite}
+.ek.e10{animation:e10 16s linear infinite,ek 16s ease infinite}
+.vk.v11{animation:v11 16s ease-out infinite,vk 16s ease infinite}
+.ek.e11{animation:e11 16s linear infinite,ek 16s ease infinite}
+@keyframes vk{0%,63%{fill:#A6A6A6}73%,100%{fill:#111111}}
+@keyframes ek{0%,63%{stroke:#C9C9C9}73%,100%{stroke:#7A7A7A}}
+@media (prefers-reduced-motion: reduce){.cam,.soft,.crisp,.e,.v{animation:none!important}.cam{transform:none}.soft{opacity:0}.crisp{opacity:1}.e{stroke-dashoffset:0}.v{opacity:1;transform:none}.crisp .vk{fill:#111111}.crisp .ek{stroke:#7A7A7A}.ph{display:none}.fin{animation:none!important;opacity:1!important}}
+.ph{position:absolute;inset:0;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;column-gap:0;row-gap:4px;opacity:0}
+.ph span,.nb{display:inline-block}
+.p1{animation:p1 16s ease infinite}.p2{animation:p2 16s ease infinite}.p3{animation:p3 16s ease infinite}.p4{animation:p4 16s ease infinite}
+@keyframes p1{0%,3.7%{opacity:0;transform:translateY(8px)}6.2%,20%{opacity:1;transform:none}22.5%,100%{opacity:0;transform:none}}
+@keyframes p2{0%,23.7%{opacity:0;transform:translateY(8px)}26.2%,40%{opacity:1;transform:none}42.5%,100%{opacity:0;transform:none}}
+@keyframes p3{0%,43.7%{opacity:0;transform:translateY(8px)}46.2%,60%{opacity:1;transform:none}62.5%,100%{opacity:0;transform:none}}
+@keyframes p4{0%,62.5%{opacity:0;transform:translateY(8px)}65%,76%{opacity:1;transform:none}78%,100%{opacity:0;transform:none}}
+.fin{opacity:0;animation:fin 16s ease infinite}
+@keyframes fin{0%,78.7%{opacity:0;transform:scale(.97)}82.5%,96.2%{opacity:1;transform:none}100%{opacity:0;transform:none}}
+
+/* MICHI design refinements */
+a.rl{color:#555555 !important;text-decoration:underline !important;text-decoration-color:#B8B8B8 !important;text-decoration-thickness:1px !important;text-underline-offset:5px !important;-webkit-text-fill-color:#555555}a.rl span{text-decoration:underline;text-decoration-color:#B8B8B8;text-decoration-thickness:1px;text-underline-offset:5px}a.rl:hover span{text-decoration-color:#111111}a.rl:hover{color:#111111 !important;-webkit-text-fill-color:#111111;text-decoration-color:#111111 !important}
+.gnav .home-only{display:none}@media (max-width: 960px){.gnav.open .home-only{display:block}}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+header.site{position:sticky !important;top:0;z-index:40;background:#111111;max-width:none !important;padding-left:max(24px, calc((100% - 1232px) / 2)) !important;padding-right:max(24px, calc((100% - 1232px) / 2)) !important}
+header.site a,header.site .mbtn{color:#FFFFFF}
+header.site{padding-top:10px !important;padding-bottom:10px !important}
+header.site img{height:17px !important}
+@media (min-width: 961px){header.site{padding-top:14px !important;padding-bottom:14px !important}header.site img{height:19px !important}}
+header.site a:hover{color:#BDBDBD}
+header.site .gnav a::after{background:#FFFFFF !important}
+@media (max-width: 960px){header.site .gnav.open{background:#111111 !important;border-bottom:1px solid #2A2A2A !important;align-items:stretch !important;padding:4px 24px 24px !important}header.site .gnav.open a{border-bottom:1px solid #2A2A2A !important}}
+.dia{background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px}
+.phead{position:relative;overflow:hidden}
+.phead::before{content:"";position:absolute;top:0;right:0;width:min(48%,560px);height:min(100%,460px);background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 95%);mask-image:linear-gradient(to left,#000 10%,transparent 95%);pointer-events:none}
+.phead>*{position:relative;z-index:1}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px),radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.eyebrow::after{content:"";width:36px;height:1px;background:currentColor;opacity:0.45;flex:none}
+.eyebrow.c{justify-content:center}
+.photo{position:relative}
+.photo::before{content:"";position:absolute;right:-22px;bottom:-22px;width:62%;height:62%;background-image:radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px),radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px);background-size:22px 22px;background-position:0 0,11px 11px;z-index:0}
+.photo img{position:relative;z-index:1}
+.btn-o,.btn-f,.btn-w{transition:background-color .35s ease,color .35s ease,box-shadow .35s ease}
+.btn-o:hover{background:#111111 !important;color:#FFFFFF !important}
+.btn-f:hover{background:#FFFFFF !important;color:#111111 !important;box-shadow:inset 0 0 0 1px #111111}
+.btn-w:hover{background:transparent !important;color:#FFFFFF !important;box-shadow:inset 0 0 0 1px #FFFFFF}
+.card{transition:border-color .35s ease,box-shadow .35s ease}
+.card:hover{border-color:#111111 !important;box-shadow:0 18px 40px -28px rgba(0,0,0,.45)}
+.card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.025)}
+.gnav a{position:relative}
+@media (min-width: 961px){.gnav a:not([style*="background"])::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:#111111;transform:translateX(-50%) scale(0);transition:transform .3s ease}.gnav a:hover::after,.gnav a[aria-current]::after{transform:translateX(-50%) scale(1)}.gnav a[aria-current]{text-decoration:none !important}}
+</style>
+</helmet>
+<div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
+
+<header class="site" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" aria-label="MICHI inc. 首页" style="display: flex; align-items: center; min-height: 44px">
+<img src="/_blob/5a70e1ab78d97b163da96e4084e2b1d6" alt="MICHI inc." style="height: 22px; width: auto; display: block">
+</a>
+<button type="button" class="mbtn" aria-label="菜单" aria-expanded="{{navExpanded}}" onClick="{{toggleNav}}">
+<sc-if value="{{navClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg></sc-if>
+<sc-if value="{{navOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></sc-if>
+</button>
+<nav aria-label="主菜单" class="gnav {{navCls}}" style="align-items: center; gap: 4px 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.18em">
+<a href="Main.dc.html" class="home-only" style="text-decoration: none; padding: 12px 0">HOME</a>
+<a href="Concept.dc.html" style="text-decoration: none; padding: 12px 0">VISION</a>
+<a href="Concept.dc.html#concept" style="text-decoration: none; padding: 12px 0">CONCEPT</a>
+<a href="Concept.dc.html#service" style="text-decoration: none; padding: 12px 0">SERVICE</a>
+<a href="About.dc.html" style="text-decoration: none; padding: 12px 0">ABOUT CEO</a>
+<a href="Works.dc.html" style="text-decoration: none; padding: 12px 0">WORKS</a>
+<a href="Media.dc.html" style="text-decoration: none; padding: 12px 0">MEDIA</a>
+<a href="Talks.dc.html" style="text-decoration: none; padding: 12px 0">TALKS</a>
+<a href="Contact.dc.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
+</nav>
+</header>
+
+<section aria-label="连接每一个点，开创未知之路。" style="position: relative; contain: paint; height: clamp(540px, 56vw, 780px); overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #EEEEEE">
+<svg class="net" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden">
+<defs><filter id="dof" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3.2"></feGaussianBlur></filter></defs>
+<g class="cam">
+<g class="soft" filter="url(#dof)">
+<line class="e e10 ek" x1="1337" y1="80" x2="1320" y2="-28" pathLength="1"></line>
+<line class="e e10" x1="1320" y1="-28" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e8 ek" x1="1167" y1="169" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e8" x1="1433" y1="765" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e10" x1="1464" y1="-34" x2="1320" y2="-28" pathLength="1"></line>
+<line class="e e3" x1="211" y1="581" x2="89" y2="603" pathLength="1"></line>
+<line class="e e4" x1="728" y1="172" x2="716" y2="64" pathLength="1"></line>
+<line class="e e6" x1="716" y1="64" x2="736" y2="-37" pathLength="1"></line>
+<line class="e e8" x1="1476" y1="625" x2="1381" y2="594" pathLength="1"></line>
+<line class="e e6" x1="-35" y1="294" x2="66" y2="264" pathLength="1"></line>
+<line class="e e4 ek" x1="195" y1="696" x2="246" y2="825" pathLength="1"></line>
+<line class="e e0 ek" x1="560" y1="600" x2="708" y2="605" pathLength="1"></line>
+<line class="e e9" x1="1476" y1="625" x2="1433" y2="765" pathLength="1"></line>
+<line class="e e6 ek" x1="1234" y1="676" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e4 ek" x1="1107" y1="647" x2="999" y2="568" pathLength="1"></line>
+<line class="e e8" x1="1232" y1="7" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e4" x1="426" y1="53" x2="425" y2="161" pathLength="1"></line>
+<line class="e e3 ek" x1="288" y1="673" x2="246" y2="825" pathLength="1"></line>
+<line class="e e6" x1="1167" y1="169" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e6" x1="104" y1="45" x2="147" y2="176" pathLength="1"></line>
+<line class="e e3 ek" x1="211" y1="581" x2="288" y2="673" pathLength="1"></line>
+<line class="e e4" x1="245" y1="323" x2="165" y2="271" pathLength="1"></line>
+<line class="e e5 ek" x1="1107" y1="647" x2="1234" y2="676" pathLength="1"></line>
+<line class="e e1" x1="763" y1="681" x2="612" y2="677" pathLength="1"></line>
+<line class="e e9 ek" x1="1276" y1="171" x2="1337" y2="80" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="633" y2="208" pathLength="1"></line>
+<line class="e e4" x1="245" y1="323" x2="214" y2="454" pathLength="1"></line>
+<line class="e e8 ek" x1="1326" y1="822" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e8" x1="1407" y1="292" x2="1302" y2="286" pathLength="1"></line>
+<line class="e e5 ek" x1="1107" y1="647" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e3" x1="343" y1="823" x2="246" y2="825" pathLength="1"></line>
+<line class="e e3" x1="728" y1="172" x2="746" y2="310" pathLength="1"></line>
+<line class="e e9" x1="1232" y1="7" x2="1128" y2="-31" pathLength="1"></line>
+<line class="e e2 ek" x1="489" y1="794" x2="368" y2="730" pathLength="1"></line>
+<line class="e e9" x1="1407" y1="292" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e7 ek" x1="1234" y1="676" x2="1214" y2="827" pathLength="1"></line>
+<line class="e e3" x1="771" y1="778" x2="832" y2="859" pathLength="1"></line>
+<line class="e e5 ek" x1="647" y1="1" x2="523" y2="53" pathLength="1"></line>
+<line class="e e6" x1="235" y1="113" x2="147" y2="176" pathLength="1"></line>
+<line class="e e9" x1="1407" y1="292" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e8 ek" x1="1302" y1="286" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e4 ek" x1="531" y1="182" x2="633" y2="208" pathLength="1"></line>
+<line class="e e5" x1="1141" y1="297" x2="1018" y2="332" pathLength="1"></line>
+<line class="e e5" x1="102" y1="484" x2="24" y2="393" pathLength="1"></line>
+<line class="e e8" x1="1" y1="44" x2="60" y2="-37" pathLength="1"></line>
+<line class="e e5" x1="89" y1="603" x2="-39" y2="624" pathLength="1"></line>
+<line class="e e6" x1="1052" y1="854" x2="1214" y2="827" pathLength="1"></line>
+<line class="e e5 ek" x1="1107" y1="647" x2="1041" y2="746" pathLength="1"></line>
+<line class="e e3 ek" x1="211" y1="581" x2="195" y2="696" pathLength="1"></line>
+<line class="e e2" x1="343" y1="823" x2="368" y2="730" pathLength="1"></line>
+<line class="e e5" x1="89" y1="603" x2="102" y2="484" pathLength="1"></line>
+<line class="e e8 ek" x1="1167" y1="169" x2="1276" y2="171" pathLength="1"></line>
+<line class="e e2" x1="579" y1="850" x2="650" y2="765" pathLength="1"></line>
+<line class="e e7" x1="956" y1="74" x2="1030" y2="145" pathLength="1"></line>
+<line class="e e3" x1="297" y1="508" x2="341" y2="397" pathLength="1"></line>
+<line class="e e7" x1="1188" y1="421" x2="1141" y2="297" pathLength="1"></line>
+<line class="e e5" x1="1094" y1="391" x2="1018" y2="332" pathLength="1"></line>
+<line class="e e6" x1="558" y1="-37" x2="647" y2="1" pathLength="1"></line>
+<line class="e e3" x1="211" y1="581" x2="297" y2="508" pathLength="1"></line>
+<line class="e e4" x1="598" y1="114" x2="633" y2="208" pathLength="1"></line>
+<line class="e e2 ek" x1="489" y1="794" x2="579" y2="850" pathLength="1"></line>
+<line class="e e6" x1="-35" y1="294" x2="24" y2="393" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="1094" y2="391" pathLength="1"></line>
+<line class="e e6 ek" x1="1290" y1="514" x2="1190" y2="539" pathLength="1"></line>
+<line class="e e8 ek" x1="1276" y1="171" x2="1302" y2="286" pathLength="1"></line>
+<line class="e e2 ek" x1="246" y1="825" x2="368" y2="730" pathLength="1"></line>
+<line class="e e7" x1="956" y1="74" x2="955" y2="-21" pathLength="1"></line>
+<line class="e e4" x1="352" y1="221" x2="242" y2="217" pathLength="1"></line>
+<line class="e e6 ek" x1="-4" y1="494" x2="24" y2="393" pathLength="1"></line>
+<line class="e e5" x1="598" y1="114" x2="647" y2="1" pathLength="1"></line>
+<line class="e e1 ek" x1="843" y1="617" x2="708" y2="605" pathLength="1"></line>
+<line class="e e6" x1="1188" y1="421" x2="1094" y2="391" pathLength="1"></line>
+<line class="e e7 ek" x1="314" y1="-2" x2="462" y2="-39" pathLength="1"></line>
+<line class="e e5" x1="848" y1="191" x2="799" y2="105" pathLength="1"></line>
+<line class="e e3" x1="691" y1="851" x2="832" y2="859" pathLength="1"></line>
+<line class="e e0" x1="560" y1="600" x2="612" y2="677" pathLength="1"></line>
+<line class="e e6 ek" x1="66" y1="264" x2="3" y2="151" pathLength="1"></line>
+<line class="e e6 ek" x1="1214" y1="827" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e9" x1="1232" y1="7" x2="1337" y2="80" pathLength="1"></line>
+<line class="e e3" x1="843" y1="617" x2="852" y2="485" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="523" y2="704" pathLength="1"></line>
+<line class="e e2" x1="650" y1="765" x2="691" y2="851" pathLength="1"></line>
+<line class="e e8" x1="1433" y1="765" x2="1326" y2="822" pathLength="1"></line>
+<line class="e e5" x1="558" y1="-37" x2="523" y2="53" pathLength="1"></line>
+<line class="e e5" x1="146" y1="389" x2="24" y2="393" pathLength="1"></line>
+<line class="e e8" x1="1302" y1="402" x2="1302" y2="286" pathLength="1"></line>
+<line class="e e5 ek" x1="60" y1="692" x2="55" y2="816" pathLength="1"></line>
+<line class="e e9" x1="1421" y1="491" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e3" x1="925" y1="391" x2="852" y2="485" pathLength="1"></line>
+<line class="e e4" x1="1052" y1="854" x2="920" y2="827" pathLength="1"></line>
+<line class="e e4 ek" x1="195" y1="696" x2="60" y2="692" pathLength="1"></line>
+<line class="e e2" x1="650" y1="765" x2="771" y2="778" pathLength="1"></line>
+<line class="e e5 ek" x1="55" y1="816" x2="-39" y2="839" pathLength="1"></line>
+<line class="e e5 ek" x1="235" y1="113" x2="340" y2="118" pathLength="1"></line>
+<line class="e e8" x1="1476" y1="625" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e4" x1="146" y1="389" x2="214" y2="454" pathLength="1"></line>
+<line class="e e5" x1="146" y1="389" x2="165" y2="271" pathLength="1"></line>
+<line class="e e9 ek" x1="1276" y1="171" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e1" x1="649" y1="457" x2="708" y2="605" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="1018" y2="332" pathLength="1"></line>
+<line class="e e7" x1="1188" y1="421" x2="1290" y2="514" pathLength="1"></line>
+<line class="e e7" x1="1167" y1="169" x2="1141" y2="297" pathLength="1"></line>
+<line class="e e5 ek" x1="1041" y1="746" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e7 ek" x1="1290" y1="514" x2="1381" y2="594" pathLength="1"></line>
+<line class="e e9" x1="1476" y1="625" x2="1421" y2="491" pathLength="1"></line>
+<line class="e e7" x1="850" y1="22" x2="956" y2="74" pathLength="1"></line>
+<line class="e e2" x1="489" y1="794" x2="343" y2="823" pathLength="1"></line>
+<line class="e e1" x1="489" y1="794" x2="523" y2="704" pathLength="1"></line>
+<line class="e e6" x1="1052" y1="854" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e5 ek" x1="165" y1="271" x2="242" y2="217" pathLength="1"></line>
+<line class="e e4" x1="1041" y1="746" x2="920" y2="827" pathLength="1"></line>
+<line class="e e7" x1="104" y1="45" x2="60" y2="-37" pathLength="1"></line>
+<line class="e e8" x1="1302" y1="286" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e4 ek" x1="999" y1="568" x2="1062" y2="495" pathLength="1"></line>
+<line class="e e6" x1="1188" y1="421" x2="1190" y2="539" pathLength="1"></line>
+<line class="e e7" x1="314" y1="-2" x2="196" y2="-32" pathLength="1"></line>
+<line class="e e10" x1="1449" y1="191" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e4" x1="245" y1="323" x2="242" y2="217" pathLength="1"></line>
+<line class="e e11" x1="1464" y1="-34" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e3" x1="352" y1="221" x2="457" y2="256" pathLength="1"></line>
+<line class="e e5" x1="848" y1="191" x2="956" y2="74" pathLength="1"></line>
+<line class="e e1" x1="579" y1="850" x2="523" y2="704" pathLength="1"></line>
+<line class="e e7 ek" x1="1234" y1="676" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e3 ek" x1="843" y1="617" x2="939" y2="727" pathLength="1"></line>
+<line class="e e6 ek" x1="66" y1="264" x2="24" y2="393" pathLength="1"></line>
+<line class="e e4" x1="728" y1="172" x2="799" y2="105" pathLength="1"></line>
+<line class="e e3" x1="920" y1="827" x2="771" y2="778" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="368" y2="730" pathLength="1"></line>
+<line class="e e10 ek" x1="1337" y1="80" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e7" x1="104" y1="45" x2="196" y2="-32" pathLength="1"></line>
+<line class="e e3" x1="297" y1="508" x2="214" y2="454" pathLength="1"></line>
+<line class="e e4" x1="352" y1="221" x2="340" y2="118" pathLength="1"></line>
+<line class="e e6 ek" x1="314" y1="-2" x2="235" y2="113" pathLength="1"></line>
+<line class="e e6" x1="-27" y1="741" x2="-39" y2="839" pathLength="1"></line>
+<line class="e e3" x1="352" y1="221" x2="383" y2="314" pathLength="1"></line>
+<line class="e e7" x1="1" y1="44" x2="3" y2="151" pathLength="1"></line>
+<line class="e e7 ek" x1="1290" y1="514" x2="1421" y2="491" pathLength="1"></line>
+<line class="e e3 ek" x1="531" y1="182" x2="457" y2="256" pathLength="1"></line>
+<line class="e e5" x1="716" y1="64" x2="799" y2="105" pathLength="1"></line>
+<line class="e e1" x1="650" y1="765" x2="612" y2="677" pathLength="1"></line>
+<line class="e e1" x1="649" y1="457" x2="746" y2="310" pathLength="1"></line>
+<line class="e e5 ek" x1="848" y1="191" x2="942" y2="243" pathLength="1"></line>
+<line class="e e4 ek" x1="150" y1="795" x2="246" y2="825" pathLength="1"></line>
+<line class="e e4" x1="214" y1="454" x2="102" y2="484" pathLength="1"></line>
+<line class="e e5" x1="1030" y1="145" x2="942" y2="243" pathLength="1"></line>
+<line class="e e5" x1="426" y1="53" x2="340" y2="118" pathLength="1"></line>
+<line class="e e5" x1="60" y1="692" x2="-27" y2="741" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="531" y2="182" pathLength="1"></line>
+<line class="e e5" x1="-4" y1="494" x2="102" y2="484" pathLength="1"></line>
+<line class="e e9" x1="1276" y1="171" x2="1232" y2="7" pathLength="1"></line>
+<line class="e e4" x1="531" y1="182" x2="598" y2="114" pathLength="1"></line>
+<line class="e e6" x1="1141" y1="297" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e5" x1="1052" y1="854" x2="1041" y2="746" pathLength="1"></line>
+<line class="e e2" x1="481" y1="396" x2="383" y2="314" pathLength="1"></line>
+<line class="e e6" x1="716" y1="64" x2="647" y2="1" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="942" y2="243" pathLength="1"></line>
+<line class="e e4 ek" x1="195" y1="696" x2="150" y2="795" pathLength="1"></line>
+<line class="e e7 ek" x1="1326" y1="822" x2="1214" y2="827" pathLength="1"></line>
+<line class="e e4" x1="531" y1="182" x2="425" y2="161" pathLength="1"></line>
+<line class="e e5" x1="942" y1="243" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e3" x1="245" y1="323" x2="341" y2="397" pathLength="1"></line>
+<line class="e e3" x1="457" y1="256" x2="425" y2="161" pathLength="1"></line>
+<line class="e e5" x1="1018" y1="332" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e5" x1="-4" y1="494" x2="89" y2="603" pathLength="1"></line>
+<line class="e e1" x1="649" y1="457" x2="481" y2="396" pathLength="1"></line>
+<line class="e e5 ek" x1="462" y1="-39" x2="523" y2="53" pathLength="1"></line>
+<line class="e e2" x1="297" y1="508" x2="336" y2="594" pathLength="1"></line>
+<line class="e e5" x1="60" y1="692" x2="89" y2="603" pathLength="1"></line>
+<line class="e e4 ek" x1="150" y1="795" x2="55" y2="816" pathLength="1"></line>
+<line class="e e5 ek" x1="66" y1="264" x2="165" y2="271" pathLength="1"></line>
+<line class="e e4 ek" x1="999" y1="568" x2="939" y2="727" pathLength="1"></line>
+<line class="e e1" x1="341" y1="397" x2="410" y2="497" pathLength="1"></line>
+<line class="e e3" x1="771" y1="778" x2="691" y2="851" pathLength="1"></line>
+<line class="e e7" x1="1188" y1="421" x2="1302" y2="402" pathLength="1"></line>
+<line class="e e3 ek" x1="843" y1="617" x2="999" y2="568" pathLength="1"></line>
+<line class="e e6" x1="558" y1="-37" x2="462" y2="-39" pathLength="1"></line>
+<line class="e e8 ek" x1="1381" y1="594" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e0" x1="560" y1="600" x2="431" y2="590" pathLength="1"></line>
+<line class="e e5" x1="850" y1="22" x2="799" y2="105" pathLength="1"></line>
+<line class="e e5 ek" x1="1094" y1="391" x2="1062" y2="495" pathLength="1"></line>
+<line class="e e8 ek" x1="1128" y1="-31" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e5" x1="147" y1="176" x2="165" y2="271" pathLength="1"></line>
+<line class="e e6 ek" x1="647" y1="1" x2="736" y2="-37" pathLength="1"></line>
+<line class="e e5" x1="736" y1="-37" x2="799" y2="105" pathLength="1"></line>
+<line class="e e4" x1="939" y1="727" x2="920" y2="827" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="1062" y2="495" pathLength="1"></line>
+<line class="e e6" x1="1030" y1="145" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e5" x1="716" y1="64" x2="598" y2="114" pathLength="1"></line>
+<line class="e e7" x1="1167" y1="169" x2="1030" y2="145" pathLength="1"></line>
+<line class="e e7" x1="956" y1="74" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e4" x1="728" y1="172" x2="633" y2="208" pathLength="1"></line>
+<line class="e e9" x1="1232" y1="7" x2="1320" y2="-28" pathLength="1"></line>
+<line class="e e6" x1="558" y1="-37" x2="736" y2="-37" pathLength="1"></line>
+<line class="e e6" x1="66" y1="264" x2="147" y2="176" pathLength="1"></line>
+<line class="e e1" x1="523" y1="704" x2="612" y2="677" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="746" y2="310" pathLength="1"></line>
+<line class="e e2" x1="771" y1="778" x2="763" y2="681" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="457" y2="256" pathLength="1"></line>
+<line class="e e4" x1="340" y1="118" x2="425" y2="161" pathLength="1"></line>
+<line class="e e10" x1="1337" y1="80" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e3 ek" x1="848" y1="191" x2="746" y2="310" pathLength="1"></line>
+<line class="e e2 ek" x1="288" y1="673" x2="368" y2="730" pathLength="1"></line>
+<line class="e e5" x1="60" y1="692" x2="-39" y2="624" pathLength="1"></line>
+<line class="e e8" x1="1302" y1="402" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e8" x1="1326" y1="822" x2="1469" y2="854" pathLength="1"></line>
+<line class="e e7" x1="1290" y1="514" x2="1302" y2="402" pathLength="1"></line>
+<line class="e e6" x1="1141" y1="297" x2="1094" y2="391" pathLength="1"></line>
+<line class="e e3 ek" x1="457" y1="256" x2="383" y2="314" pathLength="1"></line>
+<line class="e e3" x1="214" y1="454" x2="341" y2="397" pathLength="1"></line>
+<line class="e e3" x1="999" y1="568" x2="852" y2="485" pathLength="1"></line>
+<line class="e e1" x1="708" y1="605" x2="612" y2="677" pathLength="1"></line>
+<line class="e e5" x1="146" y1="389" x2="102" y2="484" pathLength="1"></line>
+<line class="e e5" x1="598" y1="114" x2="523" y2="53" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="336" y2="594" pathLength="1"></line>
+<line class="e e1 ek" x1="708" y1="605" x2="763" y2="681" pathLength="1"></line>
+<line class="e e6" x1="314" y1="-2" x2="426" y2="53" pathLength="1"></line>
+<line class="e e6" x1="426" y1="53" x2="462" y2="-39" pathLength="1"></line>
+<line class="e e8 ek" x1="1421" y1="491" x2="1381" y2="594" pathLength="1"></line>
+<line class="e e1" x1="481" y1="396" x2="410" y2="497" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="410" y2="497" pathLength="1"></line>
+<line class="e e7" x1="196" y1="-32" x2="60" y2="-37" pathLength="1"></line>
+<line class="e e7" x1="1030" y1="145" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e5" x1="1018" y1="332" x2="942" y2="243" pathLength="1"></line>
+<line class="e e4" x1="352" y1="221" x2="425" y2="161" pathLength="1"></line>
+<line class="e e5 ek" x1="1062" y1="495" x2="1190" y2="539" pathLength="1"></line>
+<line class="e e6" x1="-4" y1="494" x2="-39" y2="624" pathLength="1"></line>
+<line class="e e7 ek" x1="3" y1="151" x2="104" y2="45" pathLength="1"></line>
+<line class="e e1" x1="336" y1="594" x2="410" y2="497" pathLength="1"></line>
+<line class="e e4" x1="146" y1="389" x2="245" y2="323" pathLength="1"></line>
+<line class="e e5" x1="55" y1="816" x2="-27" y2="741" pathLength="1"></line>
+<line class="e e3 ek" x1="288" y1="673" x2="195" y2="696" pathLength="1"></line>
+<line class="e e4 ek" x1="939" y1="727" x2="1041" y2="746" pathLength="1"></line>
+<line class="e e0" x1="560" y1="600" x2="523" y2="704" pathLength="1"></line>
+<line class="e e7" x1="-35" y1="294" x2="3" y2="151" pathLength="1"></line>
+<circle class="v v0" cx="560" cy="600" r="9" fill="#111111"></circle>
+<circle class="v v3 vk" cx="211" cy="581" r="4" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="925" cy="391" r="5" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="288" cy="673" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="1188" cy="421" r="3" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="728" cy="172" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="-35" cy="294" r="3" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="850" cy="22" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v8" cx="1167" cy="169" r="5" fill="#111111"></circle>
+<circle class="v v7 vk" cx="314" cy="-2" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1476" cy="625" r="3" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="1290" cy="514" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="716" cy="64" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1407" cy="292" r="4" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="195" cy="696" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="150" cy="795" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="649" cy="457" r="4" fill="#A6A6A6"></circle>
+<circle class="v v2" cx="481" cy="396" r="3" fill="#A6A6A6"></circle>
+<circle class="v v9 vk" cx="1276" cy="171" r="5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1433" cy="765" r="4" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="1107" cy="647" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="843" cy="617" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="146" cy="389" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="583" cy="289" r="6" fill="#111111"></circle>
+<circle class="v v8" cx="1" cy="44" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="1052" cy="854" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="297" cy="508" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="235" cy="113" r="6" fill="#111111"></circle>
+<circle class="v v2" cx="489" cy="794" r="6" fill="#111111"></circle>
+<circle class="v v6" cx="426" cy="53" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="60" cy="692" r="5" fill="#111111"></circle>
+<circle class="v v7" cx="1141" cy="297" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="999" cy="568" r="7" fill="#111111"></circle>
+<circle class="v v8" cx="1326" cy="822" r="6" fill="#111111"></circle>
+<circle class="v v2 vk" cx="579" cy="850" r="3" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1421" cy="491" r="7" fill="#111111"></circle>
+<circle class="v v8" cx="1302" cy="402" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="531" cy="182" r="4" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1232" cy="7" r="5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="352" cy="221" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="598" cy="114" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="66" cy="264" r="7" fill="#111111"></circle>
+<circle class="v v6 vk" cx="1094" cy="391" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="343" cy="823" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="3" cy="151" r="5" fill="#111111"></circle>
+<circle class="v v7 vk" cx="1234" cy="676" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v9 vk" cx="1128" cy="-31" r="4" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="-4" cy="494" r="7" fill="#111111"></circle>
+<circle class="v v4 vk" cx="939" cy="727" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="848" cy="191" r="4" fill="#A6A6A6"></circle>
+<circle class="v v10 vk" cx="1337" cy="80" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="104" cy="45" r="4" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="956" cy="74" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="1041" cy="746" r="4" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="431" cy="590" r="3" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="746" cy="310" r="3" fill="#A6A6A6"></circle>
+<circle class="v v2" cx="336" cy="594" r="5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="920" cy="827" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="708" cy="605" r="7" fill="#111111"></circle>
+<circle class="v v7 vk" cx="1214" cy="827" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v11" cx="1464" cy="-34" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="1030" cy="145" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="246" cy="825" r="5" fill="#111111"></circle>
+<circle class="v v8" cx="1381" cy="594" r="5" fill="#111111"></circle>
+<circle class="v v2" cx="650" cy="765" r="5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="245" cy="323" r="3" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="771" cy="778" r="5" fill="#A6A6A6"></circle>
+<circle class="v v8 vk" cx="1302" cy="286" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="147" cy="176" r="3" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="558" cy="-37" r="3" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="523" cy="704" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="1018" cy="332" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="955" cy="-21" r="5" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="1062" cy="495" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="852" cy="485" r="3" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="457" cy="256" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="1161" cy="745" r="5" fill="#A6A6A6"></circle>
+<circle class="v v10 vk" cx="1449" cy="191" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="165" cy="271" r="5" fill="#111111"></circle>
+<circle class="v v5" cx="89" cy="603" r="3" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="214" cy="454" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="55" cy="816" r="6" fill="#111111"></circle>
+<circle class="v v5" cx="102" cy="484" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="341" cy="397" r="4" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="942" cy="243" r="4" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="196" cy="-32" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="24" cy="393" r="3" fill="#A6A6A6"></circle>
+<circle class="v v8" cx="60" cy="-37" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v8 vk" cx="1334" cy="694" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="-27" cy="741" r="5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1444" cy="384" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="647" cy="1" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="691" cy="851" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="340" cy="118" r="7" fill="#111111"></circle>
+<circle class="v v8 vk" cx="1088" cy="60" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="-39" cy="624" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v2" cx="368" cy="730" r="5" fill="#111111"></circle>
+<circle class="v v7 vk" cx="736" cy="-37" r="3" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="1190" cy="539" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="410" cy="497" r="5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="242" cy="217" r="6" fill="#111111"></circle>
+<circle class="v v10 vk" cx="1320" cy="-28" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v11" cx="1465" cy="62" r="3" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="1047" cy="238" r="3" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="425" cy="161" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v2 vk" cx="763" cy="681" r="5" fill="#A6A6A6"></circle>
+<circle class="v v10" cx="1469" cy="854" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="832" cy="859" r="3" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="612" cy="677" r="4" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="633" cy="208" r="5" fill="#111111"></circle>
+<circle class="v v7" cx="462" cy="-39" r="6" fill="#111111"></circle>
+<circle class="v v5" cx="523" cy="53" r="6" fill="#111111"></circle>
+<circle class="v v5" cx="799" cy="105" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="-39" cy="839" r="5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="383" cy="314" r="7" fill="#111111"></circle>
+</g>
+<g class="crisp">
+<line class="e e10 ek" x1="1337" y1="80" x2="1320" y2="-28" pathLength="1"></line>
+<line class="e e10" x1="1320" y1="-28" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e8 ek" x1="1167" y1="169" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e8" x1="1433" y1="765" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e10" x1="1464" y1="-34" x2="1320" y2="-28" pathLength="1"></line>
+<line class="e e3" x1="211" y1="581" x2="89" y2="603" pathLength="1"></line>
+<line class="e e4" x1="728" y1="172" x2="716" y2="64" pathLength="1"></line>
+<line class="e e6" x1="716" y1="64" x2="736" y2="-37" pathLength="1"></line>
+<line class="e e8" x1="1476" y1="625" x2="1381" y2="594" pathLength="1"></line>
+<line class="e e6" x1="-35" y1="294" x2="66" y2="264" pathLength="1"></line>
+<line class="e e4 ek" x1="195" y1="696" x2="246" y2="825" pathLength="1"></line>
+<line class="e e0 ek" x1="560" y1="600" x2="708" y2="605" pathLength="1"></line>
+<line class="e e9" x1="1476" y1="625" x2="1433" y2="765" pathLength="1"></line>
+<line class="e e6 ek" x1="1234" y1="676" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e4 ek" x1="1107" y1="647" x2="999" y2="568" pathLength="1"></line>
+<line class="e e8" x1="1232" y1="7" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e4" x1="426" y1="53" x2="425" y2="161" pathLength="1"></line>
+<line class="e e3 ek" x1="288" y1="673" x2="246" y2="825" pathLength="1"></line>
+<line class="e e6" x1="1167" y1="169" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e6" x1="104" y1="45" x2="147" y2="176" pathLength="1"></line>
+<line class="e e3 ek" x1="211" y1="581" x2="288" y2="673" pathLength="1"></line>
+<line class="e e4" x1="245" y1="323" x2="165" y2="271" pathLength="1"></line>
+<line class="e e5 ek" x1="1107" y1="647" x2="1234" y2="676" pathLength="1"></line>
+<line class="e e1" x1="763" y1="681" x2="612" y2="677" pathLength="1"></line>
+<line class="e e9 ek" x1="1276" y1="171" x2="1337" y2="80" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="633" y2="208" pathLength="1"></line>
+<line class="e e4" x1="245" y1="323" x2="214" y2="454" pathLength="1"></line>
+<line class="e e8 ek" x1="1326" y1="822" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e8" x1="1407" y1="292" x2="1302" y2="286" pathLength="1"></line>
+<line class="e e5 ek" x1="1107" y1="647" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e3" x1="343" y1="823" x2="246" y2="825" pathLength="1"></line>
+<line class="e e3" x1="728" y1="172" x2="746" y2="310" pathLength="1"></line>
+<line class="e e9" x1="1232" y1="7" x2="1128" y2="-31" pathLength="1"></line>
+<line class="e e2 ek" x1="489" y1="794" x2="368" y2="730" pathLength="1"></line>
+<line class="e e9" x1="1407" y1="292" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e7 ek" x1="1234" y1="676" x2="1214" y2="827" pathLength="1"></line>
+<line class="e e3" x1="771" y1="778" x2="832" y2="859" pathLength="1"></line>
+<line class="e e5 ek" x1="647" y1="1" x2="523" y2="53" pathLength="1"></line>
+<line class="e e6" x1="235" y1="113" x2="147" y2="176" pathLength="1"></line>
+<line class="e e9" x1="1407" y1="292" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e8 ek" x1="1302" y1="286" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e4 ek" x1="531" y1="182" x2="633" y2="208" pathLength="1"></line>
+<line class="e e5" x1="1141" y1="297" x2="1018" y2="332" pathLength="1"></line>
+<line class="e e5" x1="102" y1="484" x2="24" y2="393" pathLength="1"></line>
+<line class="e e8" x1="1" y1="44" x2="60" y2="-37" pathLength="1"></line>
+<line class="e e5" x1="89" y1="603" x2="-39" y2="624" pathLength="1"></line>
+<line class="e e6" x1="1052" y1="854" x2="1214" y2="827" pathLength="1"></line>
+<line class="e e5 ek" x1="1107" y1="647" x2="1041" y2="746" pathLength="1"></line>
+<line class="e e3 ek" x1="211" y1="581" x2="195" y2="696" pathLength="1"></line>
+<line class="e e2" x1="343" y1="823" x2="368" y2="730" pathLength="1"></line>
+<line class="e e5" x1="89" y1="603" x2="102" y2="484" pathLength="1"></line>
+<line class="e e8 ek" x1="1167" y1="169" x2="1276" y2="171" pathLength="1"></line>
+<line class="e e2" x1="579" y1="850" x2="650" y2="765" pathLength="1"></line>
+<line class="e e7" x1="956" y1="74" x2="1030" y2="145" pathLength="1"></line>
+<line class="e e3" x1="297" y1="508" x2="341" y2="397" pathLength="1"></line>
+<line class="e e7" x1="1188" y1="421" x2="1141" y2="297" pathLength="1"></line>
+<line class="e e5" x1="1094" y1="391" x2="1018" y2="332" pathLength="1"></line>
+<line class="e e6" x1="558" y1="-37" x2="647" y2="1" pathLength="1"></line>
+<line class="e e3" x1="211" y1="581" x2="297" y2="508" pathLength="1"></line>
+<line class="e e4" x1="598" y1="114" x2="633" y2="208" pathLength="1"></line>
+<line class="e e2 ek" x1="489" y1="794" x2="579" y2="850" pathLength="1"></line>
+<line class="e e6" x1="-35" y1="294" x2="24" y2="393" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="1094" y2="391" pathLength="1"></line>
+<line class="e e6 ek" x1="1290" y1="514" x2="1190" y2="539" pathLength="1"></line>
+<line class="e e8 ek" x1="1276" y1="171" x2="1302" y2="286" pathLength="1"></line>
+<line class="e e2 ek" x1="246" y1="825" x2="368" y2="730" pathLength="1"></line>
+<line class="e e7" x1="956" y1="74" x2="955" y2="-21" pathLength="1"></line>
+<line class="e e4" x1="352" y1="221" x2="242" y2="217" pathLength="1"></line>
+<line class="e e6 ek" x1="-4" y1="494" x2="24" y2="393" pathLength="1"></line>
+<line class="e e5" x1="598" y1="114" x2="647" y2="1" pathLength="1"></line>
+<line class="e e1 ek" x1="843" y1="617" x2="708" y2="605" pathLength="1"></line>
+<line class="e e6" x1="1188" y1="421" x2="1094" y2="391" pathLength="1"></line>
+<line class="e e7 ek" x1="314" y1="-2" x2="462" y2="-39" pathLength="1"></line>
+<line class="e e5" x1="848" y1="191" x2="799" y2="105" pathLength="1"></line>
+<line class="e e3" x1="691" y1="851" x2="832" y2="859" pathLength="1"></line>
+<line class="e e0" x1="560" y1="600" x2="612" y2="677" pathLength="1"></line>
+<line class="e e6 ek" x1="66" y1="264" x2="3" y2="151" pathLength="1"></line>
+<line class="e e6 ek" x1="1214" y1="827" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e9" x1="1232" y1="7" x2="1337" y2="80" pathLength="1"></line>
+<line class="e e3" x1="843" y1="617" x2="852" y2="485" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="523" y2="704" pathLength="1"></line>
+<line class="e e2" x1="650" y1="765" x2="691" y2="851" pathLength="1"></line>
+<line class="e e8" x1="1433" y1="765" x2="1326" y2="822" pathLength="1"></line>
+<line class="e e5" x1="558" y1="-37" x2="523" y2="53" pathLength="1"></line>
+<line class="e e5" x1="146" y1="389" x2="24" y2="393" pathLength="1"></line>
+<line class="e e8" x1="1302" y1="402" x2="1302" y2="286" pathLength="1"></line>
+<line class="e e5 ek" x1="60" y1="692" x2="55" y2="816" pathLength="1"></line>
+<line class="e e9" x1="1421" y1="491" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e3" x1="925" y1="391" x2="852" y2="485" pathLength="1"></line>
+<line class="e e4" x1="1052" y1="854" x2="920" y2="827" pathLength="1"></line>
+<line class="e e4 ek" x1="195" y1="696" x2="60" y2="692" pathLength="1"></line>
+<line class="e e2" x1="650" y1="765" x2="771" y2="778" pathLength="1"></line>
+<line class="e e5 ek" x1="55" y1="816" x2="-39" y2="839" pathLength="1"></line>
+<line class="e e5 ek" x1="235" y1="113" x2="340" y2="118" pathLength="1"></line>
+<line class="e e8" x1="1476" y1="625" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e4" x1="146" y1="389" x2="214" y2="454" pathLength="1"></line>
+<line class="e e5" x1="146" y1="389" x2="165" y2="271" pathLength="1"></line>
+<line class="e e9 ek" x1="1276" y1="171" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e1" x1="649" y1="457" x2="708" y2="605" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="1018" y2="332" pathLength="1"></line>
+<line class="e e7" x1="1188" y1="421" x2="1290" y2="514" pathLength="1"></line>
+<line class="e e7" x1="1167" y1="169" x2="1141" y2="297" pathLength="1"></line>
+<line class="e e5 ek" x1="1041" y1="746" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e7 ek" x1="1290" y1="514" x2="1381" y2="594" pathLength="1"></line>
+<line class="e e9" x1="1476" y1="625" x2="1421" y2="491" pathLength="1"></line>
+<line class="e e7" x1="850" y1="22" x2="956" y2="74" pathLength="1"></line>
+<line class="e e2" x1="489" y1="794" x2="343" y2="823" pathLength="1"></line>
+<line class="e e1" x1="489" y1="794" x2="523" y2="704" pathLength="1"></line>
+<line class="e e6" x1="1052" y1="854" x2="1161" y2="745" pathLength="1"></line>
+<line class="e e5 ek" x1="165" y1="271" x2="242" y2="217" pathLength="1"></line>
+<line class="e e4" x1="1041" y1="746" x2="920" y2="827" pathLength="1"></line>
+<line class="e e7" x1="104" y1="45" x2="60" y2="-37" pathLength="1"></line>
+<line class="e e8" x1="1302" y1="286" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e4 ek" x1="999" y1="568" x2="1062" y2="495" pathLength="1"></line>
+<line class="e e6" x1="1188" y1="421" x2="1190" y2="539" pathLength="1"></line>
+<line class="e e7" x1="314" y1="-2" x2="196" y2="-32" pathLength="1"></line>
+<line class="e e10" x1="1449" y1="191" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e4" x1="245" y1="323" x2="242" y2="217" pathLength="1"></line>
+<line class="e e11" x1="1464" y1="-34" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e3" x1="352" y1="221" x2="457" y2="256" pathLength="1"></line>
+<line class="e e5" x1="848" y1="191" x2="956" y2="74" pathLength="1"></line>
+<line class="e e1" x1="579" y1="850" x2="523" y2="704" pathLength="1"></line>
+<line class="e e7 ek" x1="1234" y1="676" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e3 ek" x1="843" y1="617" x2="939" y2="727" pathLength="1"></line>
+<line class="e e6 ek" x1="66" y1="264" x2="24" y2="393" pathLength="1"></line>
+<line class="e e4" x1="728" y1="172" x2="799" y2="105" pathLength="1"></line>
+<line class="e e3" x1="920" y1="827" x2="771" y2="778" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="368" y2="730" pathLength="1"></line>
+<line class="e e10 ek" x1="1337" y1="80" x2="1449" y2="191" pathLength="1"></line>
+<line class="e e7" x1="104" y1="45" x2="196" y2="-32" pathLength="1"></line>
+<line class="e e3" x1="297" y1="508" x2="214" y2="454" pathLength="1"></line>
+<line class="e e4" x1="352" y1="221" x2="340" y2="118" pathLength="1"></line>
+<line class="e e6 ek" x1="314" y1="-2" x2="235" y2="113" pathLength="1"></line>
+<line class="e e6" x1="-27" y1="741" x2="-39" y2="839" pathLength="1"></line>
+<line class="e e3" x1="352" y1="221" x2="383" y2="314" pathLength="1"></line>
+<line class="e e7" x1="1" y1="44" x2="3" y2="151" pathLength="1"></line>
+<line class="e e7 ek" x1="1290" y1="514" x2="1421" y2="491" pathLength="1"></line>
+<line class="e e3 ek" x1="531" y1="182" x2="457" y2="256" pathLength="1"></line>
+<line class="e e5" x1="716" y1="64" x2="799" y2="105" pathLength="1"></line>
+<line class="e e1" x1="650" y1="765" x2="612" y2="677" pathLength="1"></line>
+<line class="e e1" x1="649" y1="457" x2="746" y2="310" pathLength="1"></line>
+<line class="e e5 ek" x1="848" y1="191" x2="942" y2="243" pathLength="1"></line>
+<line class="e e4 ek" x1="150" y1="795" x2="246" y2="825" pathLength="1"></line>
+<line class="e e4" x1="214" y1="454" x2="102" y2="484" pathLength="1"></line>
+<line class="e e5" x1="1030" y1="145" x2="942" y2="243" pathLength="1"></line>
+<line class="e e5" x1="426" y1="53" x2="340" y2="118" pathLength="1"></line>
+<line class="e e5" x1="60" y1="692" x2="-27" y2="741" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="531" y2="182" pathLength="1"></line>
+<line class="e e5" x1="-4" y1="494" x2="102" y2="484" pathLength="1"></line>
+<line class="e e9" x1="1276" y1="171" x2="1232" y2="7" pathLength="1"></line>
+<line class="e e4" x1="531" y1="182" x2="598" y2="114" pathLength="1"></line>
+<line class="e e6" x1="1141" y1="297" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e5" x1="1052" y1="854" x2="1041" y2="746" pathLength="1"></line>
+<line class="e e2" x1="481" y1="396" x2="383" y2="314" pathLength="1"></line>
+<line class="e e6" x1="716" y1="64" x2="647" y2="1" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="942" y2="243" pathLength="1"></line>
+<line class="e e4 ek" x1="195" y1="696" x2="150" y2="795" pathLength="1"></line>
+<line class="e e7 ek" x1="1326" y1="822" x2="1214" y2="827" pathLength="1"></line>
+<line class="e e4" x1="531" y1="182" x2="425" y2="161" pathLength="1"></line>
+<line class="e e5" x1="942" y1="243" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e3" x1="245" y1="323" x2="341" y2="397" pathLength="1"></line>
+<line class="e e3" x1="457" y1="256" x2="425" y2="161" pathLength="1"></line>
+<line class="e e5" x1="1018" y1="332" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e5" x1="-4" y1="494" x2="89" y2="603" pathLength="1"></line>
+<line class="e e1" x1="649" y1="457" x2="481" y2="396" pathLength="1"></line>
+<line class="e e5 ek" x1="462" y1="-39" x2="523" y2="53" pathLength="1"></line>
+<line class="e e2" x1="297" y1="508" x2="336" y2="594" pathLength="1"></line>
+<line class="e e5" x1="60" y1="692" x2="89" y2="603" pathLength="1"></line>
+<line class="e e4 ek" x1="150" y1="795" x2="55" y2="816" pathLength="1"></line>
+<line class="e e5 ek" x1="66" y1="264" x2="165" y2="271" pathLength="1"></line>
+<line class="e e4 ek" x1="999" y1="568" x2="939" y2="727" pathLength="1"></line>
+<line class="e e1" x1="341" y1="397" x2="410" y2="497" pathLength="1"></line>
+<line class="e e3" x1="771" y1="778" x2="691" y2="851" pathLength="1"></line>
+<line class="e e7" x1="1188" y1="421" x2="1302" y2="402" pathLength="1"></line>
+<line class="e e3 ek" x1="843" y1="617" x2="999" y2="568" pathLength="1"></line>
+<line class="e e6" x1="558" y1="-37" x2="462" y2="-39" pathLength="1"></line>
+<line class="e e8 ek" x1="1381" y1="594" x2="1334" y2="694" pathLength="1"></line>
+<line class="e e0" x1="560" y1="600" x2="431" y2="590" pathLength="1"></line>
+<line class="e e5" x1="850" y1="22" x2="799" y2="105" pathLength="1"></line>
+<line class="e e5 ek" x1="1094" y1="391" x2="1062" y2="495" pathLength="1"></line>
+<line class="e e8 ek" x1="1128" y1="-31" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e5" x1="147" y1="176" x2="165" y2="271" pathLength="1"></line>
+<line class="e e6 ek" x1="647" y1="1" x2="736" y2="-37" pathLength="1"></line>
+<line class="e e5" x1="736" y1="-37" x2="799" y2="105" pathLength="1"></line>
+<line class="e e4" x1="939" y1="727" x2="920" y2="827" pathLength="1"></line>
+<line class="e e4" x1="925" y1="391" x2="1062" y2="495" pathLength="1"></line>
+<line class="e e6" x1="1030" y1="145" x2="1047" y2="238" pathLength="1"></line>
+<line class="e e5" x1="716" y1="64" x2="598" y2="114" pathLength="1"></line>
+<line class="e e7" x1="1167" y1="169" x2="1030" y2="145" pathLength="1"></line>
+<line class="e e7" x1="956" y1="74" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e4" x1="728" y1="172" x2="633" y2="208" pathLength="1"></line>
+<line class="e e9" x1="1232" y1="7" x2="1320" y2="-28" pathLength="1"></line>
+<line class="e e6" x1="558" y1="-37" x2="736" y2="-37" pathLength="1"></line>
+<line class="e e6" x1="66" y1="264" x2="147" y2="176" pathLength="1"></line>
+<line class="e e1" x1="523" y1="704" x2="612" y2="677" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="746" y2="310" pathLength="1"></line>
+<line class="e e2" x1="771" y1="778" x2="763" y2="681" pathLength="1"></line>
+<line class="e e3 ek" x1="583" y1="289" x2="457" y2="256" pathLength="1"></line>
+<line class="e e4" x1="340" y1="118" x2="425" y2="161" pathLength="1"></line>
+<line class="e e10" x1="1337" y1="80" x2="1465" y2="62" pathLength="1"></line>
+<line class="e e3 ek" x1="848" y1="191" x2="746" y2="310" pathLength="1"></line>
+<line class="e e2 ek" x1="288" y1="673" x2="368" y2="730" pathLength="1"></line>
+<line class="e e5" x1="60" y1="692" x2="-39" y2="624" pathLength="1"></line>
+<line class="e e8" x1="1302" y1="402" x2="1444" y2="384" pathLength="1"></line>
+<line class="e e8" x1="1326" y1="822" x2="1469" y2="854" pathLength="1"></line>
+<line class="e e7" x1="1290" y1="514" x2="1302" y2="402" pathLength="1"></line>
+<line class="e e6" x1="1141" y1="297" x2="1094" y2="391" pathLength="1"></line>
+<line class="e e3 ek" x1="457" y1="256" x2="383" y2="314" pathLength="1"></line>
+<line class="e e3" x1="214" y1="454" x2="341" y2="397" pathLength="1"></line>
+<line class="e e3" x1="999" y1="568" x2="852" y2="485" pathLength="1"></line>
+<line class="e e1" x1="708" y1="605" x2="612" y2="677" pathLength="1"></line>
+<line class="e e5" x1="146" y1="389" x2="102" y2="484" pathLength="1"></line>
+<line class="e e5" x1="598" y1="114" x2="523" y2="53" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="336" y2="594" pathLength="1"></line>
+<line class="e e1 ek" x1="708" y1="605" x2="763" y2="681" pathLength="1"></line>
+<line class="e e6" x1="314" y1="-2" x2="426" y2="53" pathLength="1"></line>
+<line class="e e6" x1="426" y1="53" x2="462" y2="-39" pathLength="1"></line>
+<line class="e e8 ek" x1="1421" y1="491" x2="1381" y2="594" pathLength="1"></line>
+<line class="e e1" x1="481" y1="396" x2="410" y2="497" pathLength="1"></line>
+<line class="e e1" x1="431" y1="590" x2="410" y2="497" pathLength="1"></line>
+<line class="e e7" x1="196" y1="-32" x2="60" y2="-37" pathLength="1"></line>
+<line class="e e7" x1="1030" y1="145" x2="1088" y2="60" pathLength="1"></line>
+<line class="e e5" x1="1018" y1="332" x2="942" y2="243" pathLength="1"></line>
+<line class="e e4" x1="352" y1="221" x2="425" y2="161" pathLength="1"></line>
+<line class="e e5 ek" x1="1062" y1="495" x2="1190" y2="539" pathLength="1"></line>
+<line class="e e6" x1="-4" y1="494" x2="-39" y2="624" pathLength="1"></line>
+<line class="e e7 ek" x1="3" y1="151" x2="104" y2="45" pathLength="1"></line>
+<line class="e e1" x1="336" y1="594" x2="410" y2="497" pathLength="1"></line>
+<line class="e e4" x1="146" y1="389" x2="245" y2="323" pathLength="1"></line>
+<line class="e e5" x1="55" y1="816" x2="-27" y2="741" pathLength="1"></line>
+<line class="e e3 ek" x1="288" y1="673" x2="195" y2="696" pathLength="1"></line>
+<line class="e e4 ek" x1="939" y1="727" x2="1041" y2="746" pathLength="1"></line>
+<line class="e e0" x1="560" y1="600" x2="523" y2="704" pathLength="1"></line>
+<line class="e e7" x1="-35" y1="294" x2="3" y2="151" pathLength="1"></line>
+<circle class="v v0" cx="560" cy="600" r="9" fill="#111111"></circle>
+<circle class="v v3 vk" cx="211" cy="581" r="4" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="925" cy="391" r="5" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="288" cy="673" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="1188" cy="421" r="3" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="728" cy="172" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="-35" cy="294" r="3" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="850" cy="22" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v8" cx="1167" cy="169" r="5" fill="#111111"></circle>
+<circle class="v v7 vk" cx="314" cy="-2" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1476" cy="625" r="3" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="1290" cy="514" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="716" cy="64" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1407" cy="292" r="4" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="195" cy="696" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="150" cy="795" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="649" cy="457" r="4" fill="#A6A6A6"></circle>
+<circle class="v v2" cx="481" cy="396" r="3" fill="#A6A6A6"></circle>
+<circle class="v v9 vk" cx="1276" cy="171" r="5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1433" cy="765" r="4" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="1107" cy="647" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="843" cy="617" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="146" cy="389" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="583" cy="289" r="6" fill="#111111"></circle>
+<circle class="v v8" cx="1" cy="44" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="1052" cy="854" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="297" cy="508" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="235" cy="113" r="6" fill="#111111"></circle>
+<circle class="v v2" cx="489" cy="794" r="6" fill="#111111"></circle>
+<circle class="v v6" cx="426" cy="53" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="60" cy="692" r="5" fill="#111111"></circle>
+<circle class="v v7" cx="1141" cy="297" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="999" cy="568" r="7" fill="#111111"></circle>
+<circle class="v v8" cx="1326" cy="822" r="6" fill="#111111"></circle>
+<circle class="v v2 vk" cx="579" cy="850" r="3" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1421" cy="491" r="7" fill="#111111"></circle>
+<circle class="v v8" cx="1302" cy="402" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="531" cy="182" r="4" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1232" cy="7" r="5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="352" cy="221" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="598" cy="114" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="66" cy="264" r="7" fill="#111111"></circle>
+<circle class="v v6 vk" cx="1094" cy="391" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="343" cy="823" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="3" cy="151" r="5" fill="#111111"></circle>
+<circle class="v v7 vk" cx="1234" cy="676" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v9 vk" cx="1128" cy="-31" r="4" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="-4" cy="494" r="7" fill="#111111"></circle>
+<circle class="v v4 vk" cx="939" cy="727" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="848" cy="191" r="4" fill="#A6A6A6"></circle>
+<circle class="v v10 vk" cx="1337" cy="80" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="104" cy="45" r="4" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="956" cy="74" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="1041" cy="746" r="4" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="431" cy="590" r="3" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="746" cy="310" r="3" fill="#A6A6A6"></circle>
+<circle class="v v2" cx="336" cy="594" r="5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="920" cy="827" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="708" cy="605" r="7" fill="#111111"></circle>
+<circle class="v v7 vk" cx="1214" cy="827" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v11" cx="1464" cy="-34" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="1030" cy="145" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="246" cy="825" r="5" fill="#111111"></circle>
+<circle class="v v8" cx="1381" cy="594" r="5" fill="#111111"></circle>
+<circle class="v v2" cx="650" cy="765" r="5" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="245" cy="323" r="3" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="771" cy="778" r="5" fill="#A6A6A6"></circle>
+<circle class="v v8 vk" cx="1302" cy="286" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="147" cy="176" r="3" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="558" cy="-37" r="3" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="523" cy="704" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="1018" cy="332" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="955" cy="-21" r="5" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="1062" cy="495" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="852" cy="485" r="3" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="457" cy="256" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="1161" cy="745" r="5" fill="#A6A6A6"></circle>
+<circle class="v v10 vk" cx="1449" cy="191" r="3" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="165" cy="271" r="5" fill="#111111"></circle>
+<circle class="v v5" cx="89" cy="603" r="3" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="214" cy="454" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="55" cy="816" r="6" fill="#111111"></circle>
+<circle class="v v5" cx="102" cy="484" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3 vk" cx="341" cy="397" r="4" fill="#A6A6A6"></circle>
+<circle class="v v5 vk" cx="942" cy="243" r="4" fill="#A6A6A6"></circle>
+<circle class="v v7" cx="196" cy="-32" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="24" cy="393" r="3" fill="#A6A6A6"></circle>
+<circle class="v v8" cx="60" cy="-37" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v8 vk" cx="1334" cy="694" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="-27" cy="741" r="5" fill="#A6A6A6"></circle>
+<circle class="v v9" cx="1444" cy="384" r="5" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="647" cy="1" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="691" cy="851" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="340" cy="118" r="7" fill="#111111"></circle>
+<circle class="v v8 vk" cx="1088" cy="60" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="-39" cy="624" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v2" cx="368" cy="730" r="5" fill="#111111"></circle>
+<circle class="v v7 vk" cx="736" cy="-37" r="3" fill="#A6A6A6"></circle>
+<circle class="v v6 vk" cx="1190" cy="539" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="410" cy="497" r="5" fill="#A6A6A6"></circle>
+<circle class="v v5" cx="242" cy="217" r="6" fill="#111111"></circle>
+<circle class="v v10 vk" cx="1320" cy="-28" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v11" cx="1465" cy="62" r="3" fill="#A6A6A6"></circle>
+<circle class="v v6" cx="1047" cy="238" r="3" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="425" cy="161" r="4.5" fill="#A6A6A6"></circle>
+<circle class="v v2 vk" cx="763" cy="681" r="5" fill="#A6A6A6"></circle>
+<circle class="v v10" cx="1469" cy="854" r="3.5" fill="#A6A6A6"></circle>
+<circle class="v v4 vk" cx="832" cy="859" r="3" fill="#A6A6A6"></circle>
+<circle class="v v1" cx="612" cy="677" r="4" fill="#A6A6A6"></circle>
+<circle class="v v4" cx="633" cy="208" r="5" fill="#111111"></circle>
+<circle class="v v7" cx="462" cy="-39" r="6" fill="#111111"></circle>
+<circle class="v v5" cx="523" cy="53" r="6" fill="#111111"></circle>
+<circle class="v v5" cx="799" cy="105" r="5" fill="#A6A6A6"></circle>
+<circle class="v v7 vk" cx="-39" cy="839" r="5" fill="#A6A6A6"></circle>
+<circle class="v v3" cx="383" cy="314" r="7" fill="#111111"></circle>
+</g>
+</g>
+</svg>
+<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 0 24px">
+<div style="position: relative; width: 100%; max-width: 640px; height: 260px; text-align: center; background: radial-gradient(closest-side, rgba(255,255,255,0.96), rgba(255,255,255,0.85) 60%, rgba(255,255,255,0))">
+<p class="ph p1" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>人与人。</span><span>人与地方。</span><span>人与企业。</span></p>
+<p class="ph p2" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>以及</span><span>过去与未来。</span></p>
+<p class="ph p3" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>每一个点</span><span>都有意义。</span></p>
+<p class="ph p4" style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(20px, 5.4vw, 32px); line-height: 1.7; letter-spacing: 0.12em"><span>一旦连接，</span><span>便成为价值。</span></p>
+<div class="fin" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px">
+<h1 style="margin: 0; width: min(360px, 78%); line-height: 0"><img src="/_blob/404a83901f49b3f231f10536e1263f9a" alt="MICHI inc." style="width: 100%; height: auto; display: block"></h1>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(14px, 3.9vw, 17px); letter-spacing: 0.16em; text-align: center"><span class="nb">连接每一个点，</span><span class="nb">开创未知之路。</span></p>
+<p style="margin: 0; font-size: 11px; letter-spacing: 0.36em; color: #5A5A5A">BRAND CREATION STUDIO</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1040px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px; display: flex; flex-wrap: wrap; gap: 32px 48px">
+<div style="flex: 1 1 240px">
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">PHILOSOPHY</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">企业理念</h2>
+<div style="margin-top: 32px"><div style="position: relative; z-index: 1; overflow: hidden; background: #EEEEEA"><img src="/_blob/faf6f00bfbb2924255927d37e13d8d8d" alt="在聚光灯下走秀的身影" loading="lazy" style="display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; object-position: center 62%"></div></div>
+</div>
+<div style="flex: 999 1 520px; min-width: 0; font-size: 15px; line-height: 2; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: clamp(21px, 5.6vw, 26px); line-height: 1.7; letter-spacing: 0.08em"><span style="display: inline-block">连接每一个点，</span><span style="display: inline-block">开创未知之路。</span></p>
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 2">人与人、人与地区与企业、过去与未来。每一个点都有意义，连接起来，便成为价值。</p>
+<p style="margin: 0; font-size: 15px; line-height: 2; color: #444444">MICHI inc. 是一家品牌创造工作室，连接努力成长的人、企业与地区的点，致力于让每个人都能活出自我、身心丰盈而美丽地生活。</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="Concept.dc.html" class="btn-o" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">CONCEPT →</a>
+</div>
+</div>
+</section>
+
+<section aria-label="MIDOT" style="max-width: 1280px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 32px 56px">
+<div style="flex: 1.6 1 560px; min-width: 0">
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">APPAREL BRAND</p>
+<img src="/_blob/7151b594c12ef93b40c9e6d1bb2498b7" alt="MIDOT" style="margin-top: 20px; width: 150px; height: auto; display: block">
+<img src="/_blob/3b112f729e1fc247e25ba9968dafde69" alt="MIDOT视觉：身穿圆点服装的模特黑白照片" style="margin-top: 28px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block">
+</div>
+<div style="flex: 1 1 340px; min-width: 0; padding: 0 8px; display: flex; flex-direction: column; justify-content: center">
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(22px, 5.6vw, 28px); line-height: 1.7"><span class="nb">以成熟的分寸感，让圆点</span><span class="nb">成为俏皮的点缀（SPICE）。</span></h2>
+<p style="margin: 20px 0 0; font-size: 15px; line-height: 2.1; color: #444444"><span class="nb">冒险，永远近在身边。</span><span class="nb">好奇心永不停歇。</span><br><span class="nb">若把时尚当作铠甲</span><span class="nb">那就太可惜了。</span><br><span class="nb">献给享受未知之路之乐趣的</span><span class="nb">成熟女性。</span></p>
+<p style="margin: 20px 0 0; font-size: 14px; color: #444444">2025年11月上线。</p>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://midotshop.com" class="btn-f" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; background: #111111; color: #FFFFFF; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">ONLINE SHOP</a>
+<a href="https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/" class="btn-o" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.1em">阅读品牌上线故事</a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 10vw, 128px) 24px; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 32px 64px">
+<div style="flex: 0 1 440px; min-width: 260px; max-width: 440px">
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">ABOUT CEO</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">CEO简介</h2>
+<div class="photo" style="margin: 28px 22px 22px 0"><img src="/_blob/66b776f20b5c6ece3c2b63f11e857aaa" alt="北原规稚子" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"></div>
+</div>
+<div style="flex: 999 1 420px; min-width: 0; padding-bottom: 22px">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 26px; line-height: 1.5; letter-spacing: 0.08em">北原规稚子</p>
+<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">CEO</span></p>
+<p style="margin: 0; font-size: 15px; line-height: 2; color: #444444">曾在狮王与资生堂打造众多品牌，在资生堂历任副CMO、营销本部长等职。2025年创立MICHI inc.。</p>
+<ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #333333">
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社R.C.CORE 独立董事</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社FURYU 独立董事</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社Hitomile 独立董事</li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><a class="rl" href="https://marketercareer.jp/member/" style="color: #6B6B6B; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #C8C8C8">MCA（原营销人职业协会）</a>理事</span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><a class="rl" href="https://prtimes.jp/main/html/rd/p/000000002.000148892.html" style="color: #6B6B6B; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #C8C8C8">MGC（Marketing Guild Community）</a>Fellow</span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span><span><a class="rl" href="https://greatriver.amana.jp/" style="color: #6B6B6B; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #C8C8C8">Great RIVER——amana的创意人才循环项目</a>顾问</span></li>
+<li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>早稻田大学商学院（MBA）客座讲师</li>
+</ul>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<a href="About.dc.html" class="btn-o" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">PROFILE →</a>
+<a href="https://www.facebook.com/share/1BNkp1RXkc/?mibextid=wwXIfr" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 8px; font-size: 14px">Facebook</a>
+</div>
+</div>
+</section>
+
+<section id="works" class="phead" style="background: #F6F6F3">
+<div style="max-width: 1280px; margin: 0 auto; padding: 120px 24px">
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">WORKS</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">品牌建设业绩</h2>
+<p style="margin: 20px 0 0; font-size: 15px; color: #444444">品牌与营销支持、演讲等</p>
+<ul style="margin: 32px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0; border-top: 1px solid #DDDDD8">
+<sc-for list="{{clientsTop}}" as="c" hint-placeholder-count="8">
+<li style="padding: 16px 4px; border-bottom: 1px solid #DDDDD8; font-size: 14px">{{c}}</li>
+</sc-for>
+</ul>
+<a href="Works.dc.html" class="btn-o" style="display: inline-flex; align-items: center; min-height: 48px; margin-top: 32px; padding: 0 32px; border: 1px solid #111111; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.2em">查看全部业绩 →</a>
+</div>
+</section>
+
+<section id="media" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">MEDIA</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">媒体报道与出演</h2>
+</div>
+<a href="Media.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">查看全部 →</a>
+</div>
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); align-items: start; gap: 24px">
+<sc-for list="{{articlesTop}}" as="a" hint-placeholder-count="3">
+<sc-if value="{{a.hasVideo}}" hint-placeholder-val="{{ false }}">
+<div class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8">
+<span style="position: relative; display: block; background: #111111; line-height: 0; aspect-ratio: 16 / 9">
+<iframe src="{{a.ytSrc}}" title="{{a.source}}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0"></iframe>
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
+<a href="{{a.url}}" style="align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111; text-decoration: none">WATCH ON YOUTUBE</a>
+</span>
+</div>
+</sc-if>
+<sc-if value="{{a.noVideo}}" hint-placeholder-val="{{ true }}">
+<a href="{{a.url}}" class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8; text-decoration: none">
+<span style="position: relative; display: block; background: #F3F3F0; line-height: 0">
+<span style="display: flex; aspect-ratio: {{a.ar}}; overflow-x: auto; scroll-snap-type: x mandatory">
+<sc-for list="{{a.imgs}}" as="im" hint-placeholder-count="1">
+<img src="{{im}}" alt="" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start">
+</sc-for>
+</span>
+<sc-if value="{{a.multi}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+</sc-if>
+</span>
+<span style="display: flex; flex-direction: column; gap: 12px; padding: 22px 24px 24px; flex: 1">
+<span style="display: flex; justify-content: space-between; gap: 12px; font-size: 12px; letter-spacing: 0.12em; color: #5A5A5A"><span>{{a.source}}</span><span>{{a.date}}</span></span>
+<span style="font-family: 'Shippori Mincho', serif; font-size: 17px; line-height: 1.7; color: #111111; flex: 1">{{a.title}}</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.2em; color: #111111">READ →</span>
+</span>
+</a>
+</sc-if>
+</sc-for>
+</div>
+</section>
+
+<section id="talks" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div>
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">TALKS</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6">演讲与出演</h2>
+</div>
+<a href="Talks.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">查看全部 →</a>
+</div>
+<ul aria-label="即将举行及近期的演讲（可横向滑动）" style="margin: 32px -24px 0; padding: 0 24px 20px; list-style: none; display: flex; align-items: flex-start; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-left: 24px">
+<sc-for list="{{talksTop}}" as="t" hint-placeholder-count="6">
+<li class="card" style="flex: 0 0 clamp(260px, 78vw, 340px); scroll-snap-align: start; display: flex; flex-direction: column; border: 1px solid #DDDDD8; background: #FFFFFF">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<div style="display: flex; aspect-ratio: {{t.ar}}; overflow-x: auto; scroll-snap-type: x mandatory">
+<sc-for list="{{t.imgs}}" as="im" hint-placeholder-count="1">
+<img src="{{im}}" alt="{{t.event}}" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start">
+</sc-for>
+</div>
+<sc-if value="{{t.multi}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+</sc-if>
+<sc-if value="{{t.upcoming}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">{{t.badge}}</span>
+</sc-if>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 20px 22px 22px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">{{t.date}}<span style="margin-left: 12px">{{t.time}}</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">{{t.event}}</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">{{t.note}}</span>
+<sc-if value="{{t.hasUrl}}" hint-placeholder-val="{{ true }}">
+<a href="{{t.url}}" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">DETAIL →</a>
+</sc-if>
+</div>
+</li>
+</sc-for>
+</ul>
+<p aria-hidden="true" style="margin: 4px 0 0; font-size: 12px; letter-spacing: 0.2em; color: #5A5A5A">SCROLL →</p>
+</section>
+
+<section class="cta" style="background: #111111; color: #F5F5F2">
+<div style="max-width: 1280px; margin: 0 auto; padding: 112px 24px; text-align: center">
+<p class="eyebrow c" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 32px; line-height: 1.6"><span class="nb">让我们一起连接</span><span class="nb">您的点。</span></h2>
+<p style="margin: 12px 0 0; font-size: 16px"><span class="nb">业务咨询，</span><span class="nb">欢迎随时与我们联系。</span></p>
+<a href="Contact.dc.html" class="btn-w" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 36px; padding: 0 44px; background: #FFFFFF; color: #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">联系我们</a>
+</div>
+</section>
+
+<footer style="background: #111111; color: #B5B5B5; border-top: 1px solid #2A2A2A">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px">
+<img src="/_blob/5a70e1ab78d97b163da96e4084e2b1d6" alt="MICHI inc." style="width: 140px; height: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="Company.dc.html" style="color: #DDDDDD">公司概况</a>
+<a href="Privacy.dc.html" style="color: #DDDDDD">隐私政策</a>
+<span>© MICHI inc.</span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#111111","options":["#111111","#555555","#9A9A9A"]},"$preview":{"width":1440,"height":5800}}'>
+class Component extends DCLogic {
+renderVals() {
+const talks = [
+{ date: '2026.12.10', event: '日经Cross Trend 营销突破塾【新一代领导者篇】第2期', note: '担任这一培养新一代营销领导者的实践课程12月10日一讲的讲师（2026年11月—2027年2月）', url: 'https://info.nikkeibp.co.jp/nxr/campaign/toppajuku_next/', img: '/_blob/127f1f44a3e45848f9245c38d955604b', ar: '767 / 605', fit: 'cover', upcoming: true },
+{ date: '2026.11.11', time: '14:50–15:20', img2: '/_blob/9b8e39345e7ab7a0657592bbae89dbe1', event: 'Retail Media Summit 2026', note: '“借助零售媒体创造优质顾客体验的营销未来”，与花王山冈先生、FANCL京屋先生（Bellesalle新宿Grand）', url: 'https://www.retailmedia-japan.com/', img: '/_blob/336d82074d465c5a376dd3990eca51ab', ar: '1200 / 628', fit: 'cover', upcoming: true },
+{ date: '2026.10.23', time: '10:00–10:40', event: 'ad:tech tokyo 2026 KEYNOTE', note: '“新价值是如何创造的？”，与2026年度营销人评委对谈（东京中城）', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/cca76d39c269df2aaf85aabf46716252', ar: '1200 / 630', fit: 'cover', upcoming: true },
+{ date: '2026.10.22', time: '16:45–17:35', event: 'ad:tech tokyo 2026', note: '“发现与创造新市场”，与vector桐生女士、NOPE大槻先生、Bourbon井出先生（东京中城）', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/21e36d0212dcc6a0f52d639e017b9471', ar: '1200 / 630', fit: 'cover', upcoming: true },
+{ date: '2026.10.12', img2: '/_blob/518422eafe1ecdb6cc840ecf8a75383b', event: 'INNER BEAUTY TALK SHOW', note: '“真正属于我的美的蓝图”——与Instagram博主宫田绫子的特别对谈（SOGO药局麻布十番）', url: 'https://shop.sogo-pharmacy.jp/detail/434/', img: '/_blob/54e587d62b2bbe59e9a420e9349a0284', ar: '960 / 1200', fit: 'cover', pos: 'center 30%', upcoming: true, badge: 'TODAY' },
+{ date: '2026.09.09–10', event: 'SHOPPER・X 2026', note: 'A-4舞台：“贴近顾客的价值观与审美——从数字化购买行为中获得的洞察”，与eBay Japan的Morano先生、狮王的松井先生（东京丽嘉皇家酒店）', url: '', img: '/_blob/2d5189aa6e2c8ef3380b4d7135f338cf', ar: '1158 / 605', fit: 'cover' },
+{ date: '2026.09.08', time: '12:35–13:15', event: 'MarkeZine Day 2026 Autumn', note: '“为什么投在那里？”——卡乐比与求人Box谈推动品牌成长的媒体策略。担任主持，对谈卡乐比渡边女士与求人Box（价格.com）小岛先生（JP Tower Hall & Conference）', url: 'https://event.shoeisha.jp/mzday/20260908/timetable', img: '/_blob/29eae3d2553628237fd8b44d0e88daed', ar: '1151 / 950', fit: 'cover', pos: 'center top' },
+{ date: '2026.09.02', time: '12:50–13:30', event: 'Back Office World 2026 Summer 大阪', note: '特别演讲：“从‘另一方’获得启发的新价值创造”（INTEX大阪4号馆）', url: 'https://prtimes.jp/main/html/rd/p/000000242.000078233.html', img: '/_blob/f229aa6578c3712ac86e8303876ad681', ar: '1400 / 735', fit: 'cover' },
+{ date: '2026.08.26', time: '18:30–20:30', event: '为什么商务人士选择热海', note: '在热海学习的意义与价值——与日本沟通能力学院大原先生（九段会馆Terrace）', url: '', img: '/_blob/6db1601405f9facaa33b9dd0f7bac055', ar: '1200 / 587', fit: 'cover' },
+{ date: '2026.07.29', time: '17:20–18:20', img2: '/_blob/b84b73ef0497e2ee967eabaa282b0c14', event: '日经Cross Trend Forum 2026', note: '赞助讲座：“AI时代的新价值创造”，与Integrate藤田先生（东京Convention Hall）', url: 'https://prtimes.jp/main/html/rd/p/000000317.000041279.html', img: '/_blob/911dec9859ec1ade6b408c7de5832043', ar: '726 / 780', fit: 'contain' },
+{ date: '2026.06.16', time: '16:00–17:30', event: 'GreatRIVER presents Reframe Studio Vol. 12', note: '“重新定义营销与品牌塑造”，与资生堂三浦先生（Incubation CANVAS TOKYO）', url: 'https://prtimes.jp/main/html/rd/p/000000514.000040283.html', img: '/_blob/573c0f3a1c7d70a52e2c4d880ab4884c', ar: '1024 / 537', fit: 'cover' },
+{ date: '2026.05.19', time: '15:00–17:00', event: '日经Cross Trend 营销突破塾——体验讲座', note: '从“年度营销人”看新价值创造之道（御茶水 Tri-Edge Conference）', url: '', img: '/_blob/d127536e95e42b813b2ca66a13259185', ar: '800 / 423', fit: 'cover' },
+{ date: '2025.11.06', event: 'Marketing Guild Community 11月例会', note: '“冈山国产鱼子酱‘蝶鲛屋’的挑战——品牌塑造会改变什么？”，与客户蝶鲛屋佐野先生（Spacemarket总部）', url: 'https://mgcj.coorum.jp/page/2025-nov', img: '/_blob/a178545cb5c6471cb390c7ad815f387d', ar: '920 / 450', fit: 'cover' },
+{ date: '2025.10.22–24', event: 'ad:tech tokyo 2025', note: '官方演讲嘉宾（东京中城＆丽思卡尔顿）', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/4038b920bdf4c10401b90046867ebef4', ar: '1024 / 537', fit: 'cover' },
+{ date: '2025.10.08–09', event: 'Retail Media Summit 2025', note: '“以声音连接的品牌体验”，与Otonal八木先生（Bellesalle新宿Grand）', url: 'https://www.retailmedia-japan.com/', img: '/_blob/8827d70a88b2410aa16ce18930d2b047', ar: '1024 / 535', fit: 'cover' },
+{ date: '2025.09.25', time: '9:35–10:15', img2: '/_blob/3dd3793eea78dafa0807abedabf9af13', event: 'AdverTimes Forum by KAIGI GROUP', note: '主持：“由顾客洞察打开的产品战略”（赤坂Intercity Air）', url: 'https://www.advertimes.com/?p=515378', img: '/_blob/b311ef81665a3d4fee5f72316fef1261', ar: '853 / 1152', fit: 'contain' },
+{ date: '2025.09.24', time: '17:00–18:30', event: 'GreatRIVER presents Reframe Studio Vol. 7', note: '向顶尖营销人学习品牌建设的真正意义（amana天王洲办公室）', url: 'https://amana.jp/events/4228/', img: '/_blob/d92213428901d134bdc6952e8f614f02', ar: '1024 / 535', fit: 'cover' },
+{ date: '2025.09.17', time: '19:00〜', event: 'FICC 品牌营销分享会', note: '第2部分：“Strategy Quadrant®”——推导出属于自己的营销战略', url: 'https://www.ficc.jp/news/20250818/', img: '/_blob/d7ead871af5f7e1ff4e5c95329574b53', ar: '1200 / 633', fit: 'cover' },
+{ date: '2025.09.05', img2: '/_blob/410a64372e34d2576574cf46481e1eb2', event: 'imedia BRAND SUMMIT 2025 DAY3', note: '担任主持，对谈HERALBONY松田先生与星巴克吉田女士（琵琶湖大津王子酒店）', url: 'https://brand.summit-japan.com/', img: '/_blob/0b678d7212e4a0a95d1b946e84e2fd04', ar: '1024 / 536', fit: 'cover' },
+{ date: '2025.08.27 / 09.09', time: '（大阪 8.27）9:30–10:10', img2: '/_blob/2f6cc41ec4891c92f741e4a0274dc001', event: 'Marketing & Sales World 2025', note: '“让新价值创造成为可能的品牌思维”，于大阪与东京', url: 'https://www.bizcrew.jp/expo/marketing-sales-tokyo', img: '/_blob/49cc742bf816a03c40a1a9b1e1efeb56', ar: '1056 / 1152', fit: 'contain' },
+{ date: '2025.08.20 / 27', event: 'InterFM「J LIVE RADIO」', note: '连续两周担任嘉宾', url: '', img: '/_blob/9e3b764f374ec39d35c984ef66b1375e', ar: '480 / 288', fit: 'cover' },
+{ date: '2025.07', event: '环境省“Team汤治”', note: 'MICHI inc. 参与', url: '', img: '/_blob/deffdf827b2822f99c8aed24c372bc50', ar: '339 / 480', fit: 'contain' },
+{ date: '2025.06.12', event: 'CMO JAPAN summit 2025', note: '与JTB风口先生的联合讲座', url: 'https://www.june25.cmojapansummit.com/', img: '/_blob/03d1ad185428140d490307000d07d45d', ar: '1200 / 800', fit: 'cover' },
+{ date: '2025.04.22–23', event: 'MARKETING・X 2025', note: '主持的讲座分获第1名（“在曾经的‘另一方’市场中创造价值”）与第2名（“消费者与音频广告”）', url: 'http://2025.marketingx.jp/maiko/', img: '/_blob/5e950c32ae527de545a7889d0b4e38ba', ar: '967 / 1151', fit: 'contain' }
+].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: !!t.upcoming, badge: t.badge || (t.upcoming ? 'UPCOMING' : ''), time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
+const articles = [
+{ source: 'GreatRIVER presents Reframe Studio Vol. 7', date: '2025.11.05', title: '录播讲座：“卖意义，而不是卖功能——如何找到真正打动顾客的洞察”', url: 'https://youtu.be/tAllLok8FKo', yt: 'tAllLok8FKo' },
+{ source: '书籍介绍', date: '', title: '资生堂时期的“Foundation Serum”案例收录于菲利普·科特勒《现代营销精要》日本版', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
+{ source: 'MarkeZine', date: '2025.12.08', title: '营销人很多，价值创造者却很少？前资生堂高管北原如何打造“最强团队”', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', fit: 'cover', pos: 'center top' },
+{ source: 'CORE「Dear Woman.」', date: '', title: '入选“引领时代的100位女性领导者”（EMPOWERMENT LEADER）', url: 'https://core-official.com/media/dear_woman', img: '/_blob/6b9b94fec0eb67a35e9cb062ed23debc', ar: '1200 / 675', img2: '/_blob/8ffa9796beabf0775f6874b36c7fa92d', fit: 'cover', pos: 'center' },
+{ source: 'PR TIMES', date: '2025.08.26', title: 'KiQ × MICHI 推出“所作品牌塑造项目”，最大化实体空间与待客服务的价值', url: 'https://prtimes.jp/main/html/rd/p/000000014.000107116.html', img: '/_blob/6ca027182dea328efc012bbd1db9ecdc', ar: '1200 / 800', fit: 'cover' },
+{ source: '书籍', date: '2025.07', title: '在托马斯·巴塔《营销领导者的12种力量》日文版中收录对谈与推荐', url: 'https://amzn.asia/d/cTD307s', img: '/_blob/bdda47c35b1ba8d68572a53517a64289', ar: '847 / 1200', fit: 'contain' },
+{ source: '日经Cross Trend', date: '', title: '带动众人的领导力“3P”', url: 'https://xtrend.nikkei.com/atcl/contents/18/00894/00009/' },
+{ source: '宣传会议', date: '', title: '“成为创造改变常识之价值的营销人”——学生时代的相遇如何成就我的挑战', url: 'https://advanced.massmedian.co.jp/article/detail/id=10595' },
+{ source: 'DIGIDAY [Glossy]', date: '2025.12', title: '前资生堂营销人北原规稚子推出服装品牌MIDOT', url: 'https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/', img: '/_blob/634b54562aa19fa59f077f2f0f50b05e', ar: '1200 / 675', fit: 'cover', pos: 'center top' }
+];
+return {
+navOpen: !!(this.state && this.state.navOpen), navClosed: !(this.state && this.state.navOpen), navCls: (this.state && this.state.navOpen) ? 'open' : '', navExpanded: (this.state && this.state.navOpen) ? 'true' : 'false', toggleNav: () => this.setState({ navOpen: !(this.state && this.state.navOpen) }),
+accent: this.props.accent ?? '#111111',
+talksTop: talks.filter((t) => t.hasImg).slice(0, 8),
+articlesTop: ['amazon.co.jp/s?k=', 'markezine.jp/article/detail/50159', 'youtu.be/tAllLok8FKo'].map((k) => articles.find((a) => a.url.indexOf(k) >= 0)).filter(Boolean).map((a) => ({ ...a, imgs: [a.img, a.img2].filter(Boolean), multi: !!(a.img && a.img2), hasVideo: !!a.yt, noVideo: !a.yt, ytSrc: a.yt ? 'https://www.youtube-nocookie.com/embed/' + a.yt + '?rel=0' : '' })),
+clientsTop: ['Aflac生命保险','伊藤忠商事株式会社','NTT DOCOMO株式会社','卡乐比株式会社','国誉株式会社','东京燃气株式会社','森永乳业株式会社','瑞可利株式会社']
+};
+}
+}
+</script>
+</body>
+</html>

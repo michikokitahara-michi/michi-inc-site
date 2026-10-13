@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>TALKS | MICHI inc.</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#111111}a:hover{color:#5A5A5A}
+.gnav{display:flex;flex-wrap:wrap}
+.mbtn{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:0;padding:0;margin-right:-10px;cursor:pointer;color:#111111}
+@media (max-width: 960px){.mbtn{display:inline-flex}.gnav{display:none}.gnav.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;left:0;right:0;top:100%;background:#FFFFFF;padding:4px 24px 20px;border-bottom:1px solid #E4E4E0;z-index:20;font-size:14px}.gnav.open a{padding:14px 0 !important;border-bottom:1px solid #EEEEEE}}
+
+
+/* MICHI design refinements */
+a.rl{color:#555555 !important;text-decoration:underline !important;text-decoration-color:#B8B8B8 !important;text-decoration-thickness:1px !important;text-underline-offset:5px !important;-webkit-text-fill-color:#555555}a.rl span{text-decoration:underline;text-decoration-color:#B8B8B8;text-decoration-thickness:1px;text-underline-offset:5px}a.rl:hover span{text-decoration-color:#111111}a.rl:hover{color:#111111 !important;-webkit-text-fill-color:#111111;text-decoration-color:#111111 !important}
+.gnav .home-only{display:none}@media (max-width: 960px){.gnav.open .home-only{display:block}}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+header.site{position:sticky !important;top:0;z-index:40;background:#111111;max-width:none !important;padding-left:max(24px, calc((100% - 1232px) / 2)) !important;padding-right:max(24px, calc((100% - 1232px) / 2)) !important}
+header.site a,header.site .mbtn{color:#FFFFFF}
+header.site{padding-top:10px !important;padding-bottom:10px !important}
+header.site img{height:17px !important}
+@media (min-width: 961px){header.site{padding-top:14px !important;padding-bottom:14px !important}header.site img{height:19px !important}}
+header.site a:hover{color:#BDBDBD}
+header.site .gnav a::after{background:#FFFFFF !important}
+@media (max-width: 960px){header.site .gnav.open{background:#111111 !important;border-bottom:1px solid #2A2A2A !important;align-items:stretch !important;padding:4px 24px 24px !important}header.site .gnav.open a{border-bottom:1px solid #2A2A2A !important}}
+.dia{background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px}
+.phead{position:relative;overflow:hidden}
+.phead::before{content:"";position:absolute;top:0;right:0;width:min(48%,560px);height:min(100%,460px);background-image:radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px),radial-gradient(circle,#D6D6D2 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 95%);mask-image:linear-gradient(to left,#000 10%,transparent 95%);pointer-events:none}
+.phead>*{position:relative;z-index:1}
+.cta{position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px),radial-gradient(circle,#2E2E2E 2.2px,transparent 2.8px);background-size:28px 28px;background-position:0 0,14px 14px;-webkit-mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);mask-image:radial-gradient(ellipse at center,transparent 35%,#000 85%);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.eyebrow::after{content:"";width:36px;height:1px;background:currentColor;opacity:0.45;flex:none}
+.eyebrow.c{justify-content:center}
+.photo{position:relative}
+.photo::before{content:"";position:absolute;right:-22px;bottom:-22px;width:62%;height:62%;background-image:radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px),radial-gradient(circle,#BDBDB8 2.2px,transparent 2.8px);background-size:22px 22px;background-position:0 0,11px 11px;z-index:0}
+.photo img{position:relative;z-index:1}
+.btn-o,.btn-f,.btn-w{transition:background-color .35s ease,color .35s ease,box-shadow .35s ease}
+.btn-o:hover{background:#111111 !important;color:#FFFFFF !important}
+.btn-f:hover{background:#FFFFFF !important;color:#111111 !important;box-shadow:inset 0 0 0 1px #111111}
+.btn-w:hover{background:transparent !important;color:#FFFFFF !important;box-shadow:inset 0 0 0 1px #FFFFFF}
+.card{transition:border-color .35s ease,box-shadow .35s ease}
+.card:hover{border-color:#111111 !important;box-shadow:0 18px 40px -28px rgba(0,0,0,.45)}
+.card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.025)}
+.gnav a{position:relative}
+@media (min-width: 961px){.gnav a:not([style*="background"])::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:#111111;transform:translateX(-50%) scale(0);transition:transform .3s ease}.gnav a:hover::after,.gnav a[aria-current]::after{transform:translateX(-50%) scale(1)}.gnav a[aria-current]{text-decoration:none !important}}
+</style>
+</helmet>
+<div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
+
+<header class="site" style="position: relative; max-width: 1280px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" aria-label="MICHI inc. – Accueil" style="display: flex; align-items: center; min-height: 44px">
+<img src="/_blob/5a70e1ab78d97b163da96e4084e2b1d6" alt="MICHI inc." style="height: 22px; width: auto; display: block">
+</a>
+<button type="button" class="mbtn" aria-label="Menu" aria-expanded="{{navExpanded}}" onClick="{{toggleNav}}">
+<sc-if value="{{navClosed}}" hint-placeholder-val="{{ true }}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="17" x2="21" y2="17"></line></svg></sc-if>
+<sc-if value="{{navOpen}}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></sc-if>
+</button>
+<nav aria-label="Menu principal" class="gnav {{navCls}}" style="align-items: center; gap: 4px 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.18em">
+<a href="Main.dc.html" class="home-only" style="text-decoration: none; padding: 12px 0">HOME</a>
+<a href="Concept.dc.html" style="text-decoration: none; padding: 12px 0">VISION</a>
+<a href="Concept.dc.html#concept" style="text-decoration: none; padding: 12px 0">CONCEPT</a>
+<a href="Concept.dc.html#service" style="text-decoration: none; padding: 12px 0">SERVICE</a>
+<a href="About.dc.html" style="text-decoration: none; padding: 12px 0">ABOUT CEO</a>
+<a href="Works.dc.html" style="text-decoration: none; padding: 12px 0">WORKS</a>
+<a href="Media.dc.html" style="text-decoration: none; padding: 12px 0">MEDIA</a>
+<a href="Talks.dc.html" aria-current="page" style="text-decoration: underline; text-underline-offset: 6px; padding: 12px 0">TALKS</a>
+<a href="Contact.dc.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
+</nav>
+</header>
+
+<section class="phead">
+<div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 0">
+<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">TALKS</p>
+<h1 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(28px, 6vw, 36px); line-height: 1.6">Conférences et interventions</h1>
+</div>
+</section>
+
+<section id="talks" style="max-width: 1280px; margin: 0 auto; padding: 40px 24px 120px">
+<ul style="margin: 28px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); align-items: start; gap: 24px">
+<sc-for list="{{talks}}" as="t" hint-placeholder-count="17">
+<li class="card" style="display: flex; flex-direction: column; border: 1px solid #DDDDD8">
+<div style="position: relative; background: #F3F3F0; line-height: 0">
+<sc-if value="{{t.hasImg}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; aspect-ratio: {{t.ar}}; overflow-x: auto; scroll-snap-type: x mandatory">
+<sc-for list="{{t.imgs}}" as="im" hint-placeholder-count="1">
+<img src="{{im}}" alt="{{t.event}}" style="flex: 0 0 100%; width: 100%; height: 100%; object-fit: contain; display: block; scroll-snap-align: start">
+</sc-for>
+</div>
+<sc-if value="{{t.multi}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; right: 10px; bottom: 10px; background: rgba(17,17,17,0.82); color: #FFFFFF; padding: 5px 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; line-height: 1.4">2 PHOTOS ⇄</span>
+</sc-if>
+</sc-if>
+<sc-if value="{{t.upcoming}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; left: 0; top: 0; background: #111111; color: #FFFFFF; padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.24em">{{t.badge}}</span>
+</sc-if>
+</div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 18px 20px 20px">
+<span style="font-size: 12px; letter-spacing: 0.1em; color: #5A5A5A">{{t.date}}<span style="margin-left: 12px">{{t.time}}</span></span>
+<span style="font-size: 16px; font-weight: 500; line-height: 1.6">{{t.event}}</span>
+<span style="font-size: 13px; line-height: 1.7; color: #444444; flex: 1">{{t.note}}</span>
+<sc-if value="{{t.hasUrl}}" hint-placeholder-val="{{ true }}">
+<a href="{{t.url}}" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em">DETAIL →</a>
+</sc-if>
+</div>
+</li>
+</sc-for>
+</ul>
+</section>
+
+<section class="cta" style="background: #111111; color: #F5F5F2">
+<div style="max-width: 1280px; margin: 0 auto; padding: 96px 24px; text-align: center">
+<p class="eyebrow c" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
+<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 28px; line-height: 1.6">Pour les demandes d’intervention, <span style="display: inline-block">contactez-nous.</span></h2>
+<a href="Contact.dc.html" class="btn-w" style="display: inline-flex; align-items: center; min-height: 52px; margin-top: 32px; padding: 0 44px; background: #FFFFFF; color: #111111; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.2em">Contact</a>
+</div>
+</section>
+
+<footer style="background: #111111; color: #B5B5B5; border-top: 1px solid #2A2A2A">
+<div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px">
+<img src="/_blob/5a70e1ab78d97b163da96e4084e2b1d6" alt="MICHI inc." style="width: 140px; height: auto; display: block">
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="Company.dc.html" style="color: #DDDDDD">Entreprise</a>
+<a href="Privacy.dc.html" style="color: #DDDDDD">Politique de confidentialité</a>
+<span>© MICHI inc.</span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4400}}'>
+class Component extends DCLogic {
+renderVals() {
+const talks = [
+{ date: '2026.12.10', event: 'Nikkei Cross Trend Marketing Breakthrough School : leaders de nouvelle génération, 2e promotion', note: 'Intervenante de la séance du 10 décembre de ce programme pratique qui forme la prochaine génération de leaders marketing (novembre 2026 – février 2027)', url: 'https://info.nikkeibp.co.jp/nxr/campaign/toppajuku_next/', img: '/_blob/127f1f44a3e45848f9245c38d955604b', ar: '767 / 605', fit: 'cover', upcoming: true },
+{ date: '2026.11.11', time: '14:50–15:20', img2: '/_blob/9b8e39345e7ab7a0657592bbae89dbe1', event: 'Retail Media Summit 2026', note: '« L’avenir du marketing qui crée de belles expériences client, avec le retail media », avec M. Yamaoka (Kao) et M. Kyoya (FANCL) (Bellesalle Shinjuku Grand)', url: 'https://www.retailmedia-japan.com/', img: '/_blob/336d82074d465c5a376dd3990eca51ab', ar: '1200 / 628', fit: 'cover', upcoming: true },
+{ date: '2026.10.23', time: '10:00–10:40', event: 'ad:tech tokyo 2026 KEYNOTE', note: '« Comment naît une nouvelle valeur ? », avec les membres du jury du Marketer of the Year 2026 (Tokyo Midtown)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/cca76d39c269df2aaf85aabf46716252', ar: '1200 / 630', fit: 'cover', upcoming: true },
+{ date: '2026.10.22', time: '16:45–17:35', event: 'ad:tech tokyo 2026', note: '« Découvrir et créer de nouveaux marchés », avec Mme Kiryu (vector), M. Otsuki (NOPE) et M. Ide (Bourbon) (Tokyo Midtown)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/21e36d0212dcc6a0f52d639e017b9471', ar: '1200 / 630', fit: 'cover', upcoming: true },
+{ date: '2026.10.12', img2: '/_blob/518422eafe1ecdb6cc840ecf8a75383b', event: 'INNER BEAUTY TALK SHOW', note: '« Un plan de beauté vraiment à moi » — conversation spéciale avec l’instagrammeuse Ayako Miyata (Sogo Pharmacy Azabu-Juban)', url: 'https://shop.sogo-pharmacy.jp/detail/434/', img: '/_blob/54e587d62b2bbe59e9a420e9349a0284', ar: '960 / 1200', fit: 'cover', pos: 'center 30%', upcoming: true, badge: 'TODAY' },
+{ date: '2026.09.09–10', event: 'SHOPPER・X 2026', note: 'Scène A-4 : « Rejoindre les valeurs et l’esthétique des clients — enseignements des comportements d’achat numériques », avec M. Morano (eBay Japan) et M. Matsui (Lion) (Rihga Royal Hotel Tokyo)', url: '', img: '/_blob/2d5189aa6e2c8ef3380b4d7135f338cf', ar: '1158 / 605', fit: 'cover' },
+{ date: '2026.09.08', time: '12:35–13:15', event: 'MarkeZine Day 2026 Autumn', note: '« Pourquoi cet investissement ? » — Stratégies médias au service de la croissance des marques, avec Calbee et Kyujin Box. Modération d’une séance avec Mme Watanabe (Calbee) et M. Kojima (Kyujin Box, Kakaku.com) (JP Tower Hall & Conference)', url: 'https://event.shoeisha.jp/mzday/20260908/timetable', img: '/_blob/29eae3d2553628237fd8b44d0e88daed', ar: '1151 / 950', fit: 'cover', pos: 'center top' },
+{ date: '2026.09.02', time: '12:50–13:30', event: 'Back Office World 2026 Summer Osaka', note: 'Conférence spéciale : « Créer une nouvelle valeur en s’inspirant de “l’autre” » (INTEX Osaka, Hall 4)', url: 'https://prtimes.jp/main/html/rd/p/000000242.000078233.html', img: '/_blob/f229aa6578c3712ac86e8303876ad681', ar: '1400 / 735', fit: 'cover' },
+{ date: '2026.08.26', time: '18:30–20:30', event: 'Pourquoi les professionnels choisissent Atami', note: 'Le sens et la valeur d’apprendre à Atami — avec M. Ohara (Japan Communication Skills Academy) (Kudan Kaikan Terrace)', url: '', img: '/_blob/6db1601405f9facaa33b9dd0f7bac055', ar: '1200 / 587', fit: 'cover' },
+{ date: '2026.07.29', time: '17:20–18:20', img2: '/_blob/b84b73ef0497e2ee967eabaa282b0c14', event: 'Nikkei Cross Trend Forum 2026', note: 'Séance sponsorisée : « La création de valeur à l’ère de l’IA », avec M. Fujita (Integrate) (Tokyo Convention Hall)', url: 'https://prtimes.jp/main/html/rd/p/000000317.000041279.html', img: '/_blob/911dec9859ec1ade6b408c7de5832043', ar: '726 / 780', fit: 'contain' },
+{ date: '2026.06.16', time: '16:00–17:30', event: 'GreatRIVER presents Reframe Studio Vol. 12', note: '« Redéfinir le marketing et le branding », avec M. Miura (Shiseido) (Incubation CANVAS TOKYO)', url: 'https://prtimes.jp/main/html/rd/p/000000514.000040283.html', img: '/_blob/573c0f3a1c7d70a52e2c4d880ab4884c', ar: '1024 / 537', fit: 'cover' },
+{ date: '2026.05.19', time: '15:00–17:00', event: 'Nikkei Cross Trend Marketing Breakthrough School — séance d’essai', note: 'L’art de créer une nouvelle valeur, vu à travers le « Marketer of the Year » (Ochanomizu Tri-Edge Conference)', url: '', img: '/_blob/d127536e95e42b813b2ca66a13259185', ar: '800 / 423', fit: 'cover' },
+{ date: '2025.11.06', event: 'Marketing Guild Community – rencontre de novembre', note: '« Le défi de Chouzameya, caviar japonais d’Okayama — que change le branding ? », avec notre client M. Sano (Chouzameya) (siège de Spacemarket)', url: 'https://mgcj.coorum.jp/page/2025-nov', img: '/_blob/a178545cb5c6471cb390c7ad815f387d', ar: '920 / 450', fit: 'cover' },
+{ date: '2025.10.22–24', event: 'ad:tech tokyo 2025', note: 'Intervenante officielle (Tokyo Midtown & The Ritz-Carlton)', url: 'https://adtech-tokyo.com/ja/', img: '/_blob/4038b920bdf4c10401b90046867ebef4', ar: '1024 / 537', fit: 'cover' },
+{ date: '2025.10.08–09', event: 'Retail Media Summit 2025', note: '« Des expériences de marque reliées par le son », avec M. Yagi (Otonal) (Bellesalle Shinjuku Grand)', url: 'https://www.retailmedia-japan.com/', img: '/_blob/8827d70a88b2410aa16ce18930d2b047', ar: '1024 / 535', fit: 'cover' },
+{ date: '2025.09.25', time: '9:35–10:15', img2: '/_blob/3dd3793eea78dafa0807abedabf9af13', event: 'AdverTimes Forum by KAIGI GROUP', note: 'Modération : « La stratégie produit révélée par l’insight client » (Akasaka Intercity Air)', url: 'https://www.advertimes.com/?p=515378', img: '/_blob/b311ef81665a3d4fee5f72316fef1261', ar: '853 / 1152', fit: 'contain' },
+{ date: '2025.09.24', time: '17:00–18:30', event: 'GreatRIVER presents Reframe Studio Vol. 7', note: 'Le vrai sens de la construction de marque, appris auprès de grands marketeurs (amana, bureau de Tennozu)', url: 'https://amana.jp/events/4228/', img: '/_blob/d92213428901d134bdc6952e8f614f02', ar: '1024 / 535', fit: 'cover' },
+{ date: '2025.09.17', time: '19:00〜', event: 'FICC – Séance de partage sur le brand marketing', note: 'Partie 2 : « Strategy Quadrant® » — construire sa propre stratégie marketing', url: 'https://www.ficc.jp/news/20250818/', img: '/_blob/d7ead871af5f7e1ff4e5c95329574b53', ar: '1200 / 633', fit: 'cover' },
+{ date: '2025.09.05', img2: '/_blob/410a64372e34d2576574cf46481e1eb2', event: 'imedia BRAND SUMMIT 2025 DAY3', note: 'Modération d’une séance avec M. Matsuda (HERALBONY) et Mme Yoshida (Starbucks) (Biwako Otsu Prince Hotel)', url: 'https://brand.summit-japan.com/', img: '/_blob/0b678d7212e4a0a95d1b946e84e2fd04', ar: '1024 / 536', fit: 'cover' },
+{ date: '2025.08.27 / 09.09', time: '(Osaka 27/08) 9 h 30 – 10 h 10', img2: '/_blob/2f6cc41ec4891c92f741e4a0274dc001', event: 'Marketing & Sales World 2025', note: '« Un état d’esprit de marque qui rend possible la création de nouvelle valeur », à Osaka et Tokyo', url: 'https://www.bizcrew.jp/expo/marketing-sales-tokyo', img: '/_blob/49cc742bf816a03c40a1a9b1e1efeb56', ar: '1056 / 1152', fit: 'contain' },
+{ date: '2025.08.20 / 27', event: 'InterFM「J LIVE RADIO」', note: 'Invitée pendant deux semaines', url: '', img: '/_blob/9e3b764f374ec39d35c984ef66b1375e', ar: '480 / 288', fit: 'cover' },
+{ date: '2025.07', event: 'Ministère de l’Environnement, « Team Toji »', note: 'Participation de MICHI inc.', url: '', img: '/_blob/deffdf827b2822f99c8aed24c372bc50', ar: '339 / 480', fit: 'contain' },
+{ date: '2025.06.12', event: 'CMO JAPAN summit 2025', note: 'Séance commune avec M. Kazeguchi de JTB', url: 'https://www.june25.cmojapansummit.com/', img: '/_blob/03d1ad185428140d490307000d07d45d', ar: '1200 / 800', fit: 'cover' },
+{ date: '2025.04.22–23', event: 'MARKETING・X 2025', note: 'Séances modérées classées n° 1 (« Créer de la valeur sur les marchés de “l’autre” ») et n° 2 (« Les consommateurs et la publicité audio »)', url: 'http://2025.marketingx.jp/maiko/', img: '/_blob/5e950c32ae527de545a7889d0b4e38ba', ar: '967 / 1151', fit: 'contain' }
+].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: !!t.upcoming, badge: t.badge || (t.upcoming ? 'UPCOMING' : ''), time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
+const articles = [
+{ source: 'Livre', date: '', title: 'Le cas du « Foundation Serum », issu de ses années chez Shiseido, présenté dans « Essentials of Modern Marketing, édition japonaise » de Philip Kotler', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
+{ source: 'MarkeZine', date: '2025.12.08', title: 'Beaucoup de marketeurs, peu de créateurs de valeur ? Comment Kitahara, ex-dirigeante de Shiseido, bâtit « la meilleure équipe »', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', pos: 'center top' },
+{ source: 'CORE「Dear Woman.」', date: '', title: 'Sélectionnée parmi les 100 femmes leaders qui font l’époque (EMPOWERMENT LEADER)', url: 'https://core-official.com/media/dear_woman', img: '/_blob/8ffa9796beabf0775f6874b36c7fa92d', ar: '558 / 744', pos: 'center 20%' },
+{ source: 'PR TIMES', date: '2025.08.26', title: 'KiQ × MICHI lancent le « Shosa Branding Program » pour maximiser la valeur des lieux physiques et du service client', url: 'https://prtimes.jp/main/html/rd/p/000000014.000107116.html', img: '/_blob/6ca027182dea328efc012bbd1db9ecdc', ar: '1200 / 800' },
+{ source: 'Livre', date: '2025.07', title: 'Dialogue et recommandation dans l’édition japonaise de « The 12 Powers of a Marketing Leader » de Thomas Barta', url: 'https://amzn.asia/d/cTD307s', img: '/_blob/bdda47c35b1ba8d68572a53517a64289', ar: '847 / 1200', fit: 'contain' },
+{ source: 'Nikkei Cross Trend', date: '', title: 'Les « 3 P » d’un leadership qui entraîne les autres', url: 'https://xtrend.nikkei.com/atcl/contents/18/00894/00009/' },
+{ source: 'Sendenkaigi', date: '', title: '« Devenir une marketeuse qui crée une valeur capable de changer les conventions » — les rencontres d’étudiante à l’origine de mes défis', url: 'https://advanced.massmedian.co.jp/article/detail/id=10595' },
+{ source: 'DIGIDAY [Glossy]', date: '2025.12', title: 'Michiko Kitahara, ex-marketeuse de Shiseido, lance la marque de mode MIDOT', url: 'https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/', img: '/_blob/634b54562aa19fa59f077f2f0f50b05e', ar: '1200 / 675', pos: 'center top' }
+].map((a) => ({ ...a, img: a.img || '', hasImg: !!a.img, fit: a.fit || 'cover', pos: a.pos || 'center' }));
+return { talks, articles, navOpen: !!(this.state && this.state.navOpen), navClosed: !(this.state && this.state.navOpen), navCls: (this.state && this.state.navOpen) ? 'open' : '', navExpanded: (this.state && this.state.navOpen) ? 'true' : 'false', toggleNav: () => this.setState({ navOpen: !(this.state && this.state.navOpen) }), };
+}
+}
+</script>
+</body>
+</html>

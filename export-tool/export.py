@@ -244,7 +244,7 @@ def page_links(html):
     return html
 
 
-EXT_ICON = '<svg class="ext-ic" aria-hidden="true" viewBox="0 0 12 12" width="0.85em" height="0.85em" style="display:inline-block;vertical-align:-0.06em;margin-left:0.45em;flex:none" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1.5h3.5V5"/><path d="M10.5 1.5 5.5 6.5"/><path d="M9 7.5v2.25a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1-.75-.75v-6A.75.75 0 0 1 2.25 3H4.5"/></svg><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">（新しいタブで開きます）</span>'
+EXT_ICON = '<svg class="ext-ic" aria-hidden="true" viewBox="0 0 12 12" width="0.85em" height="0.85em" style="display:inline-block;vertical-align:-0.06em;margin-left:0.45em;flex:none" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1.5h3.5V5"/><path d="M10.5 1.5 5.5 6.5"/><path d="M9 7.5v2.25a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1-.75-.75v-6A.75.75 0 0 1 2.25 3H4.5"/></svg><span style="display:inline-block;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;vertical-align:top">（新しいタブで開きます）</span>'
 
 
 def external_links(html):
@@ -255,6 +255,8 @@ def external_links(html):
             continue
         a['target'] = '_blank'
         a['rel'] = 'noopener noreferrer'
+        if 'rl' in (a.get('class') or []):
+            continue
         done = False
         for t in a.find_all(string=True):
             if t.strip().endswith('→'):

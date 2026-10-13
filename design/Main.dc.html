@@ -86,7 +86,7 @@ a{color:#111111}a:hover{color:#5A5A5A}
 
 /* MICHI design refinements */
 .gnav .home-only{display:none}@media (max-width: 960px){.gnav.open .home-only{display:block}}
-html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
 header.site{position:sticky !important;top:0;z-index:40;background:#111111;max-width:none !important;padding-left:max(24px, calc((100% - 1232px) / 2)) !important;padding-right:max(24px, calc((100% - 1232px) / 2)) !important}
 header.site a,header.site .mbtn{color:#FFFFFF}
 header.site{padding-top:10px !important;padding-bottom:10px !important}
@@ -143,8 +143,8 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </nav>
 </header>
 
-<section aria-label="DOTをつなぎ、未知なる道を創る" style="position: relative; height: clamp(540px, 56vw, 780px); overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #EEEEEE">
-<svg class="net" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<section aria-label="DOTをつなぎ、未知なる道を創る" style="position: relative; contain: paint; height: clamp(540px, 56vw, 780px); overflow: hidden; background: #FFFFFF; border-bottom: 1px solid #EEEEEE">
+<svg class="net" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden">
 <defs><filter id="dof" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3.2"></feGaussianBlur></filter></defs>
 <g class="cam">
 <g class="soft" filter="url(#dof)">

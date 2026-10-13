@@ -23,7 +23,7 @@
 <meta content="MICHI inc." name="apple-mobile-web-app-title"/>
 <meta content="#111111" name="theme-color"/>
 <link href="https://michi-inc.net/en/media.html" rel="canonical"/>
-<link href="https://michi-inc.net/media.html" hreflang="ja" rel="alternate"/><link href="https://michi-inc.net/en/media.html" hreflang="en" rel="alternate"/><link href="https://michi-inc.net/media.html" hreflang="x-default" rel="alternate"/>
+<link href="https://michi-inc.net/media.html" hreflang="ja" rel="alternate"/><link href="https://michi-inc.net/en/media.html" hreflang="en" rel="alternate"/><link href="https://michi-inc.net/fr/media.html" hreflang="fr" rel="alternate"/><link href="https://michi-inc.net/ko/media.html" hreflang="ko" rel="alternate"/><link href="https://michi-inc.net/zh/media.html" hreflang="zh-Hans" rel="alternate"/><link href="https://michi-inc.net/media.html" hreflang="x-default" rel="alternate"/>
 <script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,'',location.pathname.replace(/index\.html$/,'')+location.search+location.hash)</script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet"/><style>
 body{margin:0;background:#FFFFFF}
@@ -70,7 +70,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 .gnav a{position:relative}
 @media (min-width: 961px){.gnav a:not([style*="background"])::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;border-radius:50%;background:#111111;transform:translateX(-50%) scale(0);transition:transform .3s ease}.gnav a:hover::after,.gnav a[aria-current]::after{transform:translateX(-50%) scale(1)}.gnav a[aria-current]{text-decoration:none !important}}
 </style>
-<style>.lsw{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:0.14em;order:3}.lsw a{text-decoration:none;padding:12px 2px;color:inherit;opacity:.45}.lsw a[aria-current]{opacity:1}.lsw i{font-style:normal;opacity:.35}@media (max-width: 960px){.lsw{order:1;margin-left:auto;margin-right:4px}header .mbtn{order:2}}.w{display:inline-block}body{line-break:strict}.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}</style>
+<style>.lsw{position:relative;order:3;font-size:11px;font-weight:500;letter-spacing:0.14em}.lsw summary{list-style:none;cursor:pointer;color:#FFFFFF;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 4px}.lsw summary::-webkit-details-marker{display:none}.lsw-m{position:absolute;right:0;top:100%;z-index:30;background:#111111;border:1px solid #2A2A2A;min-width:150px;padding:6px 0;display:flex;flex-direction:column}.lsw-m a{color:#FFFFFF !important;text-decoration:none;padding:11px 18px;font-size:13px;letter-spacing:0.06em;opacity:.6}.lsw-m a[aria-current],.lsw-m a:hover{opacity:1}.lsw-m a[aria-current]::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#FFFFFF;margin:0 8px 2px -13px}@media (max-width: 960px){.lsw{order:1;margin-left:auto;margin-right:2px}header .mbtn{order:2}}.w{display:inline-block}body{line-break:strict}.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}</style>
 </head>
 <body>
 <div style="font-family: 'Zen Kaku Gothic New', sans-serif; color: #111111; background: #FFFFFF; line-height: 1.9; letter-spacing: 0.04em">
@@ -92,7 +92,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <a href="talks.html" style="text-decoration: none; padding: 12px 0">TALKS</a>
 <a href="contact.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
 </nav>
-<div aria-label="Language" class="lsw"><a href="../media.html" hreflang="ja" lang="ja">JA</a><i>/</i><a aria-current="true" href="media.html" lang="en">EN</a></div>
+<details class="lsw"><summary aria-label="Language"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-width="1.4" viewbox="0 0 24 24" width="15"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"></path></svg><span>EN</span></summary><div class="lsw-m"><a href="../media.html" hreflang="ja" lang="ja">日本語</a><a aria-current="true" href="media.html" hreflang="en" lang="en">English</a><a href="../fr/media.html" hreflang="fr" lang="fr">Français</a><a href="../ko/media.html" hreflang="ko" lang="ko">한국어</a><a href="../zh/media.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></div></details>
 </header>
 <section class="phead">
 <div style="max-width: 1280px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) 24px 0">
@@ -305,6 +305,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </footer>
 </div>
 <script>
+document.addEventListener('click',function(e){var d=document.querySelector('details.lsw');if(d&&d.open&&!d.contains(e.target))d.open=false;});
 (function(){
   var b=document.querySelector('.mbtn'),n=document.querySelector('.gnav');if(!b||!n)return;
   var ham=b.innerHTML,x='<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>';

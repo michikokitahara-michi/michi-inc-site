@@ -1,0 +1,88 @@
+import random, math
+W,H=1440,820
+FOC=(560,600)
+rnd=random.Random(21)
+pts=[FOC]
+# poisson-ish
+tries=0
+while tries<60000:
+    tries+=1
+    p=(rnd.uniform(-40,W+40),rnd.uniform(-40,H+40))
+    # slightly sparser in the central text area
+    cx,cy=(p[0]-720)/330,(p[1]-410)/170
+    md=118 if cx*cx+cy*cy<1 else 92
+    if all(math.dist(p,q)>=md for q in pts): pts.append(p)
+pts=[(round(x),round(y)) for x,y in pts]
+def inter(p1,p2,p3,p4):
+    if len({p1,p2,p3,p4})<4: return False
+    def ccw(a,b,c): return (c[1]-a[1])*(b[0]-a[0])-(b[1]-a[1])*(c[0]-a[0])
+    return (ccw(p1,p3,p4)>0)!=(ccw(p2,p3,p4)>0) and (ccw(p1,p2,p3)>0)!=(ccw(p1,p2,p4)>0)
+cand=sorted((math.dist(p,q),i,j) for i,p in enumerate(pts) for j,q in enumerate(pts) if i<j)
+edges=[];deg=[0]*len(pts)
+for d,i,j in cand:
+    if d>185: break
+    if deg[i]>=5 or deg[j]>=5: continue
+    if any(inter(pts[i],pts[j],pts[a],pts[b]) for a,b in edges): continue
+    edges.append((i,j));deg[i]+=1;deg[j]+=1
+# keep a subset to stay airy
+rnd.shuffle(edges)
+edges=edges[:int(len(edges)*0.9)]
+fd=lambda p: math.dist(p,FOC)
+maxd=max(fd(p) for p in pts)
+# style per dot
+dots=[]
+for i,p in enumerate(pts):
+    if i==0: r,black=9,True
+    else:
+        black=rnd.random()<0.16
+        r=rnd.choice([5,6,7]) if black else rnd.choice([3,3.5,4,4.5,5])
+    turn = (not black) and rnd.random()<0.38   # turns black at the end
+    dots.append((p,r,black,turn))
+NB=12
+def bucket(d): return min(NB-1,int(d/maxd*NB))
+near=set([0]+[j for i,j in edges if i==0]+[i for i,j in edges if j==0])
+def layer(sharp_only=False):
+    out=[]
+    for i,j in edges:
+        if sharp_only and not (i in near and j in near): continue
+        a,b=pts[i],pts[j]; bk=bucket(min(fd(a),fd(b)))
+        dark = (dots[i][2] or dots[i][3]) and (dots[j][2] or dots[j][3])
+        out.append(f'<line class="e e{bk}{" ek" if dark else ""}" x1="{a[0]}" y1="{a[1]}" x2="{b[0]}" y2="{b[1]}" pathLength="1"></line>')
+    for i,(p,r,black,turn) in enumerate(dots):
+        if sharp_only and i not in near: continue
+        bk=bucket(fd(p))
+        fill='#111111' if black else '#A6A6A6'
+        out.append(f'<circle class="v v{bk}{" vk" if turn else ""}" cx="{p[0]}" cy="{p[1]}" r="{r}" fill="{fill}"></circle>')
+    return '\n'.join(out)
+svg=f'''<svg class="net" viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+<defs><filter id="dof" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3.2"></feGaussianBlur></filter></defs>
+<g class="cam">
+<g class="soft" filter="url(#dof)">
+{layer()}
+</g>
+<g class="crisp">
+{layer()}
+</g>
+</g>
+</svg>'''
+# CSS
+css=[]
+css.append(f'.cam{{transform-origin:{FOC[0]}px {FOC[1]}px;transform-box:view-box;animation:cam 16s cubic-bezier(.45,0,.2,1) infinite}}')
+css.append('@keyframes cam{0%{transform:scale(3.6)}42%,100%{transform:scale(1)}}')
+css.append('.soft{animation:soft 16s ease infinite}@keyframes soft{0%,6%{opacity:1}34%,100%{opacity:0}}')
+css.append('.crisp{animation:crisp 16s ease infinite}@keyframes crisp{0%,6%{opacity:0}34%,96.2%{opacity:1}100%{opacity:0}}')
+css.append('.e{stroke:#C9C9C9;stroke-width:1;fill:none;stroke-dasharray:1;stroke-dashoffset:1}')
+css.append('.v{transform-box:fill-box;transform-origin:center;opacity:0}')
+for b in range(NB):
+    s=1.5+b*3.6; e=s+7
+    css.append(f'.e{b}{{animation:e{b} 16s linear infinite}}@keyframes e{b}{{0%,{s:.1f}%{{stroke-dashoffset:1}}{e:.1f}%,100%{{stroke-dashoffset:0}}}}')
+    s2=b*2.6; e2=s2+3.5
+    css.append(f'.v{b}{{animation:v{b} 16s ease-out infinite}}@keyframes v{b}{{0%,{s2:.1f}%{{opacity:0;transform:scale(0)}}{e2:.1f}%,96.2%{{opacity:1;transform:scale(1)}}100%{{opacity:0;transform:scale(1)}}}}')
+
+for b in range(NB):
+    css.append(f'.vk.v{b}{{animation:v{b} 16s ease-out infinite,vk 16s ease infinite}}')
+    css.append(f'.ek.e{b}{{animation:e{b} 16s linear infinite,ek 16s ease infinite}}')
+css.append('@keyframes vk{0%,63%{fill:#A6A6A6}73%,100%{fill:#111111}}')
+css.append('@keyframes ek{0%,63%{stroke:#C9C9C9}73%,100%{stroke:#7A7A7A}}')
+css.append('@media (prefers-reduced-motion: reduce){.cam,.soft,.crisp,.e,.v{animation:none!important}.cam{transform:none}.soft{opacity:0}.crisp{opacity:1}.e{stroke-dashoffset:0}.v{opacity:1;transform:none}.crisp .vk{fill:#111111}.crisp .ek{stroke:#7A7A7A}.ph{display:none}.fin{animation:none!important;opacity:1!important}}')
+out_css='\n'.join(css)

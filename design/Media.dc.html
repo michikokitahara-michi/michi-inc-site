@@ -164,7 +164,7 @@ const talks = [
 ].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: !!t.upcoming, badge: t.badge || (t.upcoming ? 'UPCOMING' : ''), time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
 const articles = [
 { source: '日経クロストレンド', date: '2026.08.05', title: '日経クロストレンド「マーケティング突破塾」オンライン説明会に講師として登壇', url: 'https://xtrend.nikkei.com/info/18/00006/00443/', img: '/_blob/07e38e2e01125b1d27e8f7ce62675b84', ar: '600 / 337' },
-{ source: 'AnotherADdress', date: '2026.06.23', title: 'MIDOTのデザイナー・北原規稚子さんにインタビュー', url: 'https://www.anotheraddress.jp/topics/1346/detail' },
+{ source: 'AnotherADdress', date: '2026.06.23', title: 'MIDOTのデザイナー・北原規稚子さんにインタビュー', url: 'https://www.anotheraddress.jp/topics/1346/detail', img: '/_blob/97fab58dca688becf6e2b35a3444cda9', ar: '1000 / 667' },
 { source: 'MarkeZine', date: '2025.12.08', title: 'マーケターはいても「価値創造人材」は少ない？元資生堂・北原氏がたどり着いた「最高のチーム」の作り方', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', pos: 'center top' },
 { source: 'DIGIDAY［Glossy］', date: '2025.12', title: '元資生堂マーケター・北原規稚子氏がアパレルブランド「MIDOT」始動', url: 'https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/', img: '/_blob/634b54562aa19fa59f077f2f0f50b05e', ar: '1200 / 675', pos: 'center top' },
 { source: 'AdverTimes.（宣伝会議）', date: '2025.11.28', title: '感性・感覚優位のマーケターの頭の中を、見事に言語化してくれる一冊～『新版「欲しい」の本質』によせて', url: 'https://www.advertimes.com/20251128/article525251/' },
@@ -175,13 +175,6 @@ const articles = [
 { source: '講談社 Cステーション', date: '2025.09.17', title: '型を熟知し、軽やかに型を破る！ライオン、資生堂を経て独立したブランドクリエイター・北原規稚子さんの情熱と感性の源泉（InterFM「J LIVE RADIO」）', url: 'https://cstation.kodansha.co.jp/article/15249' },
 { source: 'PR TIMES', date: '2025.08.26', title: 'KiQ×MICHI、リアル空間と接客の価値を最大化する新プログラム「Shosa Branding Program」を開始', url: 'https://prtimes.jp/main/html/rd/p/000000014.000107116.html', img: '/_blob/6ca027182dea328efc012bbd1db9ecdc', ar: '1200 / 800' },
 { source: '書籍', date: '2025.07', title: 'トーマス・バルタ著『世界のトップマーケターだけが知っている12の成功法則』に対談・推薦コメントを掲載', url: 'https://amzn.asia/d/cTD307s', img: '/_blob/bdda47c35b1ba8d68572a53517a64289', ar: '847 / 1200', fit: 'contain' },
-{ source: '日経クロストレンド', date: '', title: '資生堂の北原氏 新価値を生む秘訣「じゃない方」の市場を見る', url: 'https://xtrend.nikkei.com/atcl/contents/18/00894/00008/' },
-{ source: '日経クロストレンド', date: '', title: '周囲を巻き込むリーダーシップに必要な「3つのP」', url: 'https://xtrend.nikkei.com/atcl/contents/18/00894/00009/' },
-{ source: '宣伝会議', date: '2024.12.18', title: 'プロダクトじゃなく「文化」を創造したい 新価値創造マーケティング本部が発信する新しい価値のつくり方', url: 'https://advanced.massmedian.co.jp/article/detail/id=10594' },
-{ source: '宣伝会議', date: '', title: '「常識を変える価値を生み出すマーケターになる」私の挑戦を支えた学生時代の出会い', url: 'https://advanced.massmedian.co.jp/article/detail/id=10595' },
-{ source: 'DIGIDAY', date: '2024.12.12', title: '資生堂ジャパン 北原規稚子氏が着目する「じゃないほう」の市場「新価値創造マーケティングでデータの先にある未来をつくる」【DIGIDAY BRAND LEADERS 2024】', url: 'https://digiday.jp/digiday_plus/241212-dbl2024-michikokitahara/' },
-{ source: 'AdverTimes.（宣伝会議）', date: '2024.08.28', title: 'マーケターによる大人の社会科見学！資生堂の「ファンデ美容液」×エグゼクティブ向けビューティーサービスを体験—CMO X LAB', url: 'https://www.advertimes.com/20240828/article471610/' },
-{ source: 'Agenda note', date: '2023.10.18', title: '中小企業にマーケティングの可能性を広めるコミュニティを設立【インタビュー：髙口裕之×北原規稚子】', url: 'https://agenda-note.com/career/detail/id=5663' },
 ].map((a) => ({ ...a, img: a.img || '', hasImg: !!a.img, imgs: [a.img, a.img2].filter(Boolean), multi: !!(a.img && a.img2) }));
 return { talks, articles, navOpen: !!(this.state && this.state.navOpen), navClosed: !(this.state && this.state.navOpen), navCls: (this.state && this.state.navOpen) ? 'open' : '', navExpanded: (this.state && this.state.navOpen) ? 'true' : 'false', toggleNav: () => this.setState({ navOpen: !(this.state && this.state.navOpen) }), };
 }

@@ -52,6 +52,7 @@ PERSON_LD = {
 }
 
 BLOBS = {
+    '97fab58dca688becf6e2b35a3444cda9': 'visuals/anotheraddress.jpg',
     '07e38e2e01125b1d27e8f7ce62675b84': 'visuals/toppa-online.jpg',
     '1ba04541731568ec8cb997f80fa0d246': 'visuals/heart.jpg',
     'f38d5ea2a419011ec336bd5c2f1bdbcc': 'visuals/hands.jpg',

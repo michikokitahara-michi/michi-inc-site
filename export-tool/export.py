@@ -470,7 +470,7 @@ def build(src, dst, title):
 {''.join(f'<link rel="alternate" hreflang="{M.HTML_LANG[l]}" href="{lang_url(l, dst)}">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{lang_url('ja', dst)}">
 <script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,'',location.pathname.replace(/index\.html$/,'')+location.search+location.hash)</script>
 {head_extra}
-<style>{LSW_CSS}.w{{display:inline-block}}body{{line-break:strict}}.rv{{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}}.rv.in{{opacity:1;transform:none}}</style>
+<style>[hidden]{{display:none !important}}{LSW_CSS}.w{{display:inline-block}}body{{line-break:strict}}.rv{{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}}.rv.in{{opacity:1;transform:none}}</style>
 </head>
 <body>
 {body}

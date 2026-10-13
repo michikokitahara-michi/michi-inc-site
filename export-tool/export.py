@@ -11,7 +11,7 @@ ACCESS_KEY = os.environ.get('W3F_KEY', 'YOUR_WEB3FORMS_ACCESS_KEY')
 
 PAGES = {
     'Main.dc.html': ('index.html', 'MICHI inc. | DOTをつなぎ、未知なる道を創る'),
-    'Concept.dc.html': ('concept.html', 'CONCEPT / SERVICE | MICHI inc.'),
+    'Concept.dc.html': ('concept.html', 'VISION / CONCEPT / SERVICE | MICHI inc.'),
     'About.dc.html': ('about.html', 'ABOUT CEO | MICHI inc.'),
     'Works.dc.html': ('works.html', 'WORKS | MICHI inc.'),
     'Media.dc.html': ('media.html', 'MEDIA | MICHI inc.'),
@@ -24,7 +24,7 @@ DESC = 'MICHI inc.（株式会社MICHI）は、成長しようとする人や企
 
 PAGE_DESC = {
     'index.html': DESC,
-    'concept.html': '「どう売るか」の前に、「核となる価値」を創る。MICHI inc.のコンセプトと、ブランドを創る・ブランド体験を届ける・ブランドで成長する組織を育てる、3つのサービス（ブランディング、マーケティング支援、研修・ワークショップ）をご紹介します。',
+    'concept.html': '「DOTをつなぎ、未知なる道を創る」MICHI inc.のビジョンと、「どう売るか」の前に「核となる価値」を創るコンセプト、ブランドを創る・ブランド体験を届ける・ブランドで成長する組織を育てる3つのサービスをご紹介します。',
     'about.html': '株式会社MICHI 代表取締役CEO 北原規稚子のプロフィール。ライオン、資生堂でブランドづくりを手がけ、資生堂では副CMO・マーケティング本部長などを歴任。2025年にMICHI inc.を設立。社外取締役や講師としても活動しています。',
     'works.html': 'MICHI inc.（株式会社MICHI）のブランディング・マーケティング支援、講演などの実績一覧です。',
     'media.html': 'MICHI inc. 代表取締役CEO 北原規稚子のメディア掲載記事・インタビューの一覧です。',

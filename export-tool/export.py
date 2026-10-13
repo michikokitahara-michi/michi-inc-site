@@ -76,6 +76,7 @@ PERSON_LD = {
 }
 
 BLOBS = {
+    '024b794175d8119b5286137dea02518f': 'visuals/marketingx-2026.jpg',
     '82742ed81281dffa637e75c2f0821aa2': 'visuals/sendenkaigi-summit2606.jpg',
     'f229aa6578c3712ac86e8303876ad681': 'visuals/backoffice-osaka.jpg',
     'a178545cb5c6471cb390c7ad815f387d': 'visuals/mgc-chouzameya.jpg',

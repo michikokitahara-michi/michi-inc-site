@@ -170,6 +170,19 @@ const articles = [
 { source: '書籍', date: '2025.07', title: 'トーマス・バルタ著『世界のトップマーケターだけが知っている12の成功法則』に対談・推薦コメントを掲載', url: 'https://amzn.asia/d/cTD307s', img: '/_blob/bdda47c35b1ba8d68572a53517a64289', ar: '847 / 1200', fit: 'contain' },
 { source: '日経クロストレンド', date: '', title: '周囲を巻き込むリーダーシップに必要な「3つのP」', url: 'https://xtrend.nikkei.com/atcl/contents/18/00894/00009/' },
 { source: '宣伝会議', date: '', title: '「常識を変える価値を生み出すマーケターになる」私の挑戦を支えた学生時代の出会い', url: 'https://advanced.massmedian.co.jp/article/detail/id=10595' },
+{ source: 'DIGIDAY', date: '2024.12', title: '資生堂ジャパン 北原規稚子氏が着目する「じゃないほう」の市場「新価値創造マーケティングでデータの先にある未来をつくる」【DIGIDAY BRAND LEADERS 2024】', url: 'https://digiday.jp/digiday_plus/241212-dbl2024-michikokitahara/' },
+{ source: 'AdverTimes.（宣伝会議）', date: '2024.08', title: 'マーケターによる大人の社会科見学！資生堂の「ファンデ美容液」×エグゼクティブ向けビューティーサービスを体験—CMO X LAB', url: 'https://www.advertimes.com/20240828/article471610/' },
+{ source: '日経クロストレンド', date: '', title: '元資生堂・北原氏が語る「じゃない方」の市場から新価値を創る', url: 'https://xtrend.nikkei.com/atcl/contents/18/01406/00005/' },
+{ source: '日経クロストレンド', date: '', title: '資生堂の北原氏 新価値を生む秘訣「じゃない方」の市場を見る', url: 'https://xtrend.nikkei.com/atcl/contents/18/00894/00008/' },
+{ source: '日経クロストレンド', date: '', title: '資生堂、リピート重視で商品開発も広告も大刷新 異例づくしのヒット', url: 'https://xtrend.nikkei.com/atcl/contents/18/01021/00003/' },
+{ source: '日経クロストレンド', date: '', title: '4度目の正直で20代獲得に成功した資生堂「マキアージュ」', url: 'https://xtrend.nikkei.com/atcl/contents/watch/00013/00689/' },
+{ source: 'MarkeZine', date: '', title: '生活者インサイトを捉えて新たな文化・市場を創造する 資生堂においてマーケティングが果たす役割', url: 'https://markezine.jp/article/detail/45411' },
+{ source: '宣伝会議', date: '', title: 'プロダクトじゃなく「文化」を創造したい 新価値創造マーケティング本部が発信する新しい価値のつくり方', url: 'https://advanced.massmedian.co.jp/article/detail/id=10594' },
+{ source: 'PR TIMES', date: '', title: '株式会社MICHI代表・北原規稚子氏、シティライツ法律事務所 水野祐氏が、GreatRIVER顧問に就任', url: 'https://prtimes.jp/main/html/rd/p/000000443.000040283.html' },
+{ source: 'PR TIMES', date: '', title: '資生堂ジャパン 北原規稚子氏 一般社団法人マーケターキャリア協会（MCA）理事・メンター就任のお知らせ', url: 'https://prtimes.jp/main/html/rd/p/000000002.000107506.html' },
+{ source: '資生堂 企業情報', date: '2020.11', title: '世界初の成分アプローチで「マスクにつきにくい」と「つや肌仕上がり」を両立「マキアージュヌードジェリーBB」誕生までの道のり', url: 'https://corp.shiseido.com/jp/company/talk/20201120.html' },
+{ source: '国際商業', date: '2020.11', title: '資生堂マキアージュ ― 新たな生活者ニーズを満たすデジタル施策と商品開発で競争力が一段と向上', url: 'https://kokusaishogyo-online.jp/2020/11/53012' },
+{ source: '宣伝会議 ブレーン', date: '2018.10', title: 'マーケティング戦略の中心で機能したキーワード', url: 'https://mag.sendenkaigi.com/brain/201810/spreading-word-of-present-tense/014228.php' },
 { source: 'DIGIDAY［Glossy］', date: '2025.12', title: '元資生堂マーケター・北原規稚子氏がアパレルブランド「MIDOT」始動', url: 'https://digiday.jp/glossy/251206midot-michiko-kitahara-26ss/', img: '/_blob/634b54562aa19fa59f077f2f0f50b05e', ar: '1200 / 675', pos: 'center top' }
 ].map((a) => ({ ...a, img: a.img || '', hasImg: !!a.img, imgs: [a.img, a.img2].filter(Boolean), multi: !!(a.img && a.img2) }));
 return { talks, articles, navOpen: !!(this.state && this.state.navOpen), navClosed: !(this.state && this.state.navOpen), navCls: (this.state && this.state.navOpen) ? 'open' : '', navExpanded: (this.state && this.state.navOpen) ? 'true' : 'false', toggleNav: () => this.setState({ navOpen: !(this.state && this.state.navOpen) }), };

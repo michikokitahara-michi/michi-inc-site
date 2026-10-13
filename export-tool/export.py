@@ -20,7 +20,7 @@ PAGES = {
     'Company.dc.html': ('company.html', '会社概要 | MICHI inc.'),
     'Privacy.dc.html': ('privacy.html', 'プライバシーポリシー | MICHI inc.'),
 }
-DESC = 'MICHI inc.（株式会社MICHI）は、成長しようとする人や企業、地域の点をつなぎ、ブランドの創造・体験設計・組織づくりに伴走するブランドクリエイションブティックです。代表取締役CEO 北原規稚子。'
+DESC = 'MICHI inc.（株式会社MICHI）は、成長しようとする人や企業、地域の点をつなぎ、ブランドの創造・体験設計・組織づくりに伴走するブランドクリエイションスタジオです。代表取締役CEO 北原規稚子。'
 
 PAGE_DESC = {
     'index.html': DESC,

@@ -299,6 +299,26 @@ NAV_JS = """<script>
 })();
 </script>"""
 
+ACC_JS = """<script>
+(function(){
+  var ids=['vision','concept','service'];
+  function show(t,scroll){
+    if(ids.indexOf(t)<0)return;
+    ids.forEach(function(i){var d=document.getElementById(i);if(d)d.open=(i===t);});
+    if(scroll){var el=document.getElementById(t);setTimeout(function(){el.scrollIntoView({block:'start'});},30);}
+  }
+  var h=location.hash.slice(1);if(h)show(h,true);
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1),true);});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href]');if(!a)return;
+    var m=a.getAttribute('href').match(/^(?:concept\.html)?#(vision|concept|service)$/);
+    if(!m&&a.getAttribute('href')==='concept.html')m=[0,'vision'];
+    if(!m)return;
+    e.preventDefault();history.replaceState(null,'','#'+m[1]);show(m[1],true);
+  });
+})();
+</script>"""
+
 FORM_JS = """<script>
 (function(){
   var f=document.getElementById('contact-form'),done=document.getElementById('contact-done'),err=document.getElementById('contact-error');if(!f)return;
@@ -360,6 +380,9 @@ def build(src, dst, title):
         form.insert_after(copy.copy(status))
         body = str(b2)
         extra_js += FORM_JS
+
+    if dst == 'concept.html':
+        extra_js += ACC_JS
 
     html = f"""<!doctype html>
 <html lang="ja">

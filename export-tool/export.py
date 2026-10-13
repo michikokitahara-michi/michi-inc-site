@@ -52,6 +52,7 @@ PERSON_LD = {
 }
 
 BLOBS = {
+    'f229aa6578c3712ac86e8303876ad681': 'visuals/backoffice-osaka.jpg',
     'a178545cb5c6471cb390c7ad815f387d': 'visuals/mgc-chouzameya.jpg',
     '127f1f44a3e45848f9245c38d955604b': 'visuals/toppa-next.jpg',
     '10527b80a1eac9ccac3090ab35d2b04e': 'visuals/core-rule.jpg',

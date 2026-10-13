@@ -32,6 +32,20 @@ a{color:#111111}a:hover{color:#5A5A5A}
 
 
 /* MICHI design refinements */
+.accd{scroll-margin-top:56px}
+.acc{list-style:none;cursor:pointer;display:block;border-top:1px solid #DDDDD8;background:#FFFFFF}
+.acc::-webkit-details-marker{display:none}
+.acc-in{max-width:1040px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.acc-l{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 18px}
+.acc-e{margin:0;font-size:12px;font-weight:700;letter-spacing:.32em;color:#5A5A5A}
+.acc-t{font-family:'Shippori Mincho',serif;font-size:18px;color:#111111}
+.acc-i{position:relative;flex:none;width:40px;height:40px;border:1px solid #111111;border-radius:50%;transition:background .3s ease}
+.acc-i::before,.acc-i::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:#111111;transform:translate(-50%,-50%);transition:transform .3s ease,background .3s ease}
+.acc-i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.accd[open] .acc-i::after{transform:translate(-50%,-50%) rotate(0deg)}
+.acc:hover .acc-i{background:#111111}.acc:hover .acc-i::before,.acc:hover .acc-i::after{background:#FFFFFF}
+.accd[open]>.acc{border-bottom:1px solid #EEEEEE}
+
 .gnav .home-only{display:none}@media (max-width: 960px){.gnav.open .home-only{display:block}}
 html,body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
 header.site{position:sticky !important;top:0;z-index:40;background:#111111;max-width:none !important;padding-left:max(24px, calc((100% - 1232px) / 2)) !important;padding-right:max(24px, calc((100% - 1232px) / 2)) !important}
@@ -90,10 +104,11 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <a href="contact.html" style="text-decoration: none; padding: 12px 0">CONTACT</a>
 </nav>
 </header>
-<section class="dia" id="vision" style="background-color: #FFFFFF">
+<details class="accd" id="vision" open="">
+<summary class="acc"><span class="acc-in"><span class="acc-l"><span class="eyebrow acc-e">VISION</span><span class="acc-t">ビジョン</span></span><span aria-hidden="true" class="acc-i"></span></span></summary>
+<section class="dia" style="background-color: #FFFFFF">
 <div style="max-width: 1040px; margin: 0 auto; padding: clamp(56px, 10vw, 112px) 16px clamp(56px, 9vw, 96px)">
 <div style="max-width: 760px; background: rgba(255,255,255,0.9); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); box-shadow: 0 0 0 1px rgba(17,17,17,0.06); padding: clamp(32px, 7vw, 64px) clamp(24px, 6vw, 64px)">
-<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">VISION</p>
 <h1 style="margin: 20px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(25px, 6.6vw, 44px); line-height: 1.6; letter-spacing: 0.06em"><span style="display: inline-block">DOTをつなぎ、</span><span style="display: inline-block">未知なる道を創る</span></h1>
 <p style="margin: 28px 0 0; font-family: 'Shippori Mincho', serif; font-size: clamp(15px, 4vw, 19px); line-height: 2.1; letter-spacing: 0.04em"><span style="display: inline-block">成長しようとする人、</span><span style="display: inline-block">企業、地域の点をつなぎ、</span><span style="display: inline-block">誰もが自分らしく、</span><span style="display: inline-block">心身ともに豊かに、</span><span style="display: inline-block">美しく生きられる世界へ。</span></p>
 <p style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-size: clamp(15px, 4vw, 19px); line-height: 2.1; letter-spacing: 0.04em"><span style="display: inline-block">MICHI inc.は、</span><span style="display: inline-block">そのための</span><span style="display: inline-block">ブランドクリエイションスタジオです。</span></p>
@@ -140,11 +155,13 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 </div>
 </section>
-<section id="concept" style="background: #F6F6F3">
+</details>
+<details class="accd" id="concept">
+<summary class="acc"><span class="acc-in"><span class="acc-l"><span class="eyebrow acc-e">CONCEPT</span><span class="acc-t">コンセプト</span></span><span aria-hidden="true" class="acc-i"></span></span></summary>
+<section style="background: #F6F6F3">
 <div style="max-width: 1040px; margin: 0 auto; padding: clamp(72px, 10vw, 112px) 24px; display: flex; flex-wrap: wrap; gap: 32px 48px">
 <div style="flex: 1 1 240px">
-<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">CONCEPT</p>
-<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(22px, 6vw, 28px); line-height: 1.7"><span style="display: inline-block">「どう売るか」の前に、</span><span style="display: inline-block">「核となる価値」を</span><span style="display: inline-block">創る。</span></h2>
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(22px, 6vw, 28px); line-height: 1.7"><span style="display: inline-block">「どう売るか」の前に、</span><span style="display: inline-block">「核となる価値」を</span><span style="display: inline-block">創る。</span></h2>
 </div>
 <div style="flex: 999 1 520px; min-width: 0; font-size: 15px; line-height: 2.1; display: flex; flex-direction: column; gap: 20px">
 <p style="margin: 0">データを活用した効率的なマーケティング運用はできても、持続的な成長を生み出す新しい価値をつくれない。それをリードできる人材が社内に不足している。そんなご相談をよくいただきます。</p>
@@ -154,9 +171,11 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 </div>
 </section>
-<section id="service" style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 10vw, 112px) 24px">
-<p class="eyebrow" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #5A5A5A">SERVICE</p>
-<h2 style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6vw, 32px); line-height: 1.6"><span style="display: inline-block">創る、届ける、</span><span style="display: inline-block">育てる。</span></h2>
+</details>
+<details class="accd" id="service">
+<summary class="acc"><span class="acc-in"><span class="acc-l"><span class="eyebrow acc-e">SERVICE</span><span class="acc-t">サービス</span></span><span aria-hidden="true" class="acc-i"></span></span></summary>
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 10vw, 112px) 24px">
+<h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: clamp(24px, 6vw, 32px); line-height: 1.6"><span style="display: inline-block">創る、届ける、</span><span style="display: inline-block">育てる。</span></h2>
 <div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px 40px">
 <article style="border-top: 2px solid #111111; padding-top: 28px">
 <div style="overflow: hidden; background: #EEEEEA; margin-bottom: 28px"><img alt="BRAND IDENTITYと記された白い本" loading="lazy" src="assets/brand-identity.jpg" style="display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; object-position: 18% center"/></div>
@@ -207,6 +226,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 </div>
 </section>
+</details>
 <section class="cta" style="background: #111111; color: #F5F5F2">
 <div style="max-width: 1280px; margin: 0 auto; padding: 96px 24px; text-align: center">
 <p class="eyebrow c" style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; color: #B5B5B5">CONTACT</p>
@@ -238,6 +258,24 @@ header.site .gnav a::after{background:#FFFFFF !important}
   var els=[].slice.call(document.querySelectorAll('main section, body > div > section')).slice(1);
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el){el.classList.add('rv');io.observe(el);});
+})();
+</script><script>
+(function(){
+  var ids=['vision','concept','service'];
+  function show(t,scroll){
+    if(ids.indexOf(t)<0)return;
+    ids.forEach(function(i){var d=document.getElementById(i);if(d)d.open=(i===t);});
+    if(scroll){var el=document.getElementById(t);setTimeout(function(){el.scrollIntoView({block:'start'});},30);}
+  }
+  var h=location.hash.slice(1);if(h)show(h,true);
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1),true);});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href]');if(!a)return;
+    var m=a.getAttribute('href').match(/^(?:concept\.html)?#(vision|concept|service)$/);
+    if(!m&&a.getAttribute('href')==='concept.html')m=[0,'vision'];
+    if(!m)return;
+    e.preventDefault();history.replaceState(null,'','#'+m[1]);show(m[1],true);
+  });
 })();
 </script>
 </body>

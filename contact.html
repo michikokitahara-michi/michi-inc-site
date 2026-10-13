@@ -197,7 +197,7 @@ document.addEventListener('click',function(e){var d=document.querySelector('deta
     var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='送信中…';err.hidden=true;
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){return r.json();})
-      .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;done.hidden=false;done.scrollIntoView({behavior:'smooth',block:'center'});})
+      .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;f.style.display='none';done.hidden=false;done.style.display='';done.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(x){var m=(x&&x.message)||'';if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=err.dataset.base+(m?' ['+m+']':'');err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});btn.disabled=false;btn.textContent='送信する';});
   });
   var warned=false;

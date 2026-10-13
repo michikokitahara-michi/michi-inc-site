@@ -5,8 +5,13 @@ from bs4.element import Stylesheet, Script
 from phrases import phrases
 
 SCR = '/tmp/claude-0/-home-claude/c688d5d6-9989-53bd-beaf-fcf58ec780d4/scratchpad'
-PROJ = f'{SCR}/michi/project'
-OUT = f'{SCR}/site'
+LANG = os.environ.get('SITE_LANG', 'ja')
+PROJ = f'{SCR}/michi/project' + ('' if LANG == 'ja' else f'_{LANG}')
+OUT_ROOT = f'{SCR}/site'
+OUT = OUT_ROOT if LANG == 'ja' else f'{OUT_ROOT}/{LANG}'
+PFX = '' if LANG == 'ja' else '../'
+LPATH = '' if LANG == 'ja' else f'{LANG}/'
+LANGS = ['ja', 'en']
 ACCESS_KEY = os.environ.get('W3F_KEY', 'YOUR_WEB3FORMS_ACCESS_KEY')
 
 PAGES = {
@@ -19,6 +24,23 @@ PAGES = {
     'Contact.dc.html': ('contact.html', 'CONTACT | MICHI inc.'),
     'Company.dc.html': ('company.html', '会社概要 | MICHI inc.'),
     'Privacy.dc.html': ('privacy.html', 'プライバシーポリシー | MICHI inc.'),
+}
+TITLES_EN = {
+    'index.html': 'MICHI inc. | Connecting the dots, creating paths yet unknown',
+    'company.html': 'Company | MICHI inc.',
+    'privacy.html': 'Privacy Policy | MICHI inc.',
+}
+DESC_EN = 'MICHI inc. is a brand creation studio in Tokyo that connects the dots of people, companies and communities that strive to grow — creating brands, designing brand experiences and growing organizations. CEO: Michiko Kitahara.'
+PAGE_DESC_EN = {
+    'index.html': DESC_EN,
+    'concept.html': 'The vision, concept and services of MICHI inc.: before "how to sell," create "the core value." We create brands, deliver brand experiences and grow organizations through brands.',
+    'about.html': 'Profile of Michiko Kitahara, CEO of MICHI inc. After building brands at Lion and Shiseido, where she served as Deputy CMO, she founded MICHI inc. in 2025. She also serves as an outside director and lecturer.',
+    'works.html': 'Selected works of MICHI inc.: branding and marketing support, talks and more.',
+    'media.html': 'Media coverage and appearances of Michiko Kitahara, CEO of MICHI inc. — articles, interviews, TV and video.',
+    'talks.html': 'Talks and speaking engagements by Michiko Kitahara, CEO of MICHI inc., including ad:tech tokyo, Nikkei Cross Trend Forum and MarkeZine Day.',
+    'contact.html': 'Contact MICHI inc. for branding and marketing support, talks, training and workshops.',
+    'company.html': 'Company information of MICHI inc. (MICHI Co., Ltd.): representative, founding date, address (Kita-Aoyama, Minato-ku, Tokyo) and business.',
+    'privacy.html': 'Privacy policy of MICHI inc. (MICHI Co., Ltd.).',
 }
 DESC = 'MICHI inc.（株式会社MICHI）は、成長しようとする人や企業、地域の点をつなぎ、ブランドの創造・体験設計・組織づくりに伴走するブランドクリエイションスタジオです。代表取締役CEO 北原規稚子。'
 
@@ -247,6 +269,7 @@ def page_links(html):
 
 
 EXT_ICON = '<svg class="ext-ic" aria-hidden="true" viewBox="0 0 12 12" width="0.85em" height="0.85em" style="display:inline-block;vertical-align:-0.06em;margin-left:0.45em;flex:none" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1.5h3.5V5"/><path d="M10.5 1.5 5.5 6.5"/><path d="M9 7.5v2.25a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1-.75-.75v-6A.75.75 0 0 1 2.25 3H4.5"/></svg><span style="display:inline-block;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;vertical-align:top">（新しいタブで開きます）</span>'
+if LANG == 'en': EXT_ICON = EXT_ICON.replace('（新しいタブで開きます）', ' (opens in a new tab)')
 
 
 def external_links(html):
@@ -292,7 +315,7 @@ def map_blobs(html):
         bid = m.group(1)
         if bid not in BLOBS: raise SystemExit(f'unknown asset {bid}')
         USED.add(bid)
-        return 'assets/' + os.path.basename(BLOBS[bid])
+        return PFX + 'assets/' + os.path.basename(BLOBS[bid])
     return re.sub(r'/_blob/([0-9a-f]{32})', rep, html)
 
 
@@ -338,6 +361,7 @@ FORM_JS = """<script>
   });
 })();
 </script>"""
+if LANG == 'en': FORM_JS = FORM_JS.replace('送信中…', 'Sending…').replace('送信する', 'Send')
 
 REVEAL_JS = """<script>
 (function(){
@@ -351,10 +375,34 @@ REVEAL_JS = """<script>
 FAVICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#fff"/><line x1="8" y1="22" x2="24" y2="10" stroke="#111" stroke-width="2"/><circle cx="8" cy="22" r="5" fill="#111"/><circle cx="24" cy="10" r="5" fill="#111"/></svg>'
 
 
+LSW_CSS = '.lsw{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:0.14em;order:3}.lsw a{text-decoration:none;padding:12px 2px;color:inherit;opacity:.45}.lsw a[aria-current]{opacity:1}.lsw i{font-style:normal;opacity:.35}@media (max-width: 960px){.lsw{order:1;margin-left:auto;margin-right:4px}header .mbtn{order:2}}'
+
+
+def lang_url(lang, dst):
+    return f'https://michi-inc.net/{"" if lang == "ja" else lang + "/"}{"" if dst == "index.html" else dst}'
+
+
+def lang_switch(dst):
+    page = './' if dst == 'index.html' else dst
+    out = []
+    for l in LANGS:
+        if l == LANG:
+            out.append(f'<a href="{page}" lang="{l}" aria-current="true">{l.upper()}</a>')
+        else:
+            href = ('../' if LANG != 'ja' else '') + ('' if l == 'ja' else l + '/') + ('' if dst == 'index.html' else dst)
+            out.append(f'<a href="{href or "./"}" lang="{l}" hreflang="{l}">{l.upper()}</a>')
+    return '<div class="lsw" aria-label="' + ('言語' if LANG == 'ja' else 'Language') + '">' + '<i>/</i>'.join(out) + '</div>'
+
+
 def build(src, dst, title):
+    if LANG == 'en':
+        title = TITLES_EN.get(dst, title)
+    pdesc = (PAGE_DESC if LANG == 'ja' else PAGE_DESC_EN)[dst]
     _ld = []
     if dst in ('index.html', 'company.html'): _ld.append(ORG_LD)
     if dst == 'about.html': _ld.append(PERSON_LD)
+    if LANG != 'ja':
+        _ld = [dict(x, description=DESC_EN, name='MICHI inc.') if x is ORG_LD else dict(x, name='Michiko Kitahara', alternateName='北原規稚子', jobTitle='CEO') for x in _ld]
     LD = ''.join('<script type="application/ld+json">' + json.dumps(x, ensure_ascii=False) + '</script>\n' for x in _ld)
     path = f'{PROJ}/{src}'
     raw = open(path, encoding='utf-8').read()
@@ -381,7 +429,7 @@ def build(src, dst, title):
         form['action'] = 'https://api.web3forms.com/submit'
         form['method'] = 'POST'
         form.find('input', attrs={'name': 'access_key'})['value'] = ACCESS_KEY
-        err = BeautifulSoup('<p id="contact-error" role="alert" hidden style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。</p>', 'html.parser')
+        err = BeautifulSoup('<p id="contact-error" role="alert" hidden style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">' + ('送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。' if LANG == 'ja' else 'Your message could not be sent. Please try again later, or email michiko.kitahara@michi-inc.com directly.') + '</p>', 'html.parser')
         form.find('button', attrs={'type': 'submit'}).parent.insert_before(err)
         form.insert_after(copy.copy(status))
         body = str(b2)
@@ -391,31 +439,33 @@ def build(src, dst, title):
         extra_js += ACC_JS
 
     html = f"""<!doctype html>
-<html lang="ja">
+<html lang="{LANG}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
-<meta name="description" content="{PAGE_DESC[dst]}">
+<meta name="description" content="{pdesc}">
 <meta property="og:title" content="{title}">
-<meta property="og:description" content="{PAGE_DESC[dst]}">
+<meta property="og:description" content="{pdesc}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://michi-inc.net/assets/ogp.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://michi-inc.net/{'' if dst=='index.html' else dst}">
+<meta property="og:url" content="{lang_url(LANG, dst)}">
+<meta property="og:locale" content="{'ja_JP' if LANG == 'ja' else 'en_US'}">
 <meta property="og:site_name" content="MICHI inc.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="assets/icon-180.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="{PFX}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{PFX}assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{PFX}assets/icon-180.png">
+<link rel="manifest" href="{PFX}site.webmanifest">
 <meta name="apple-mobile-web-app-title" content="MICHI inc.">
 <meta name="theme-color" content="#111111">
-{LD}<link rel="canonical" href="https://michi-inc.net/{'' if dst=='index.html' else dst}">
+{LD}<link rel="canonical" href="{lang_url(LANG, dst)}">
+{''.join(f'<link rel="alternate" hreflang="{l}" href="{lang_url(l, dst)}">' for l in LANGS)}<link rel="alternate" hreflang="x-default" href="{lang_url('ja', dst)}">
 <script>if(/\/index\.html$/.test(location.pathname))history.replaceState(null,'',location.pathname.replace(/index\.html$/,'')+location.search+location.hash)</script>
 {head_extra}
-<style>.w{{display:inline-block}}body{{line-break:strict}}.rv{{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}}.rv.in{{opacity:1;transform:none}}</style>
+<style>{LSW_CSS}.w{{display:inline-block}}body{{line-break:strict}}.rv{{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}}.rv.in{{opacity:1;transform:none}}</style>
 </head>
 <body>
 {body}
@@ -423,6 +473,8 @@ def build(src, dst, title):
 </body>
 </html>
 """
+    html = html.replace('</nav>\n</header>', '</nav>\n' + lang_switch(dst) + '\n</header>', 1)
+    if 'class="lsw"' not in html: raise SystemExit(f'{src}: no lang switch slot')
     html = page_links(map_blobs(html))
     leftover = HOLE.findall(html)
     if leftover: raise SystemExit(f'{src}: unresolved holes {leftover[:5]}')
@@ -432,6 +484,19 @@ def build(src, dst, title):
     open(f'{OUT}/{dst}', 'w', encoding='utf-8').write(html)
     return len(html)
 
+
+def main_en():
+    if os.path.exists(OUT): shutil.rmtree(OUT)
+    os.makedirs(OUT)
+    for src, (dst, title) in PAGES.items():
+        print(LANG, dst, build(src, dst, title))
+    os.makedirs(f'{OUT_ROOT}/assets', exist_ok=True)
+    for bid in sorted(USED):
+        shutil.copy(f'{SCR}/{BLOBS[bid]}', f'{OUT_ROOT}/assets/{os.path.basename(BLOBS[bid])}')
+
+
+if __name__ == '__main__' and LANG != 'ja':
+    main_en(); sys.exit()
 
 if __name__ == '__main__':
     if os.path.exists(OUT):
@@ -456,8 +521,9 @@ if __name__ == '__main__':
         open(f'{OUT}/{d}/index.html', 'w', encoding='utf-8').write(f'<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=../{target}"><link rel="canonical" href="../{target}"><title>MICHI inc.</title></head><body><a href="../{target}">MICHI inc.</a></body></html>')
     import datetime
     today = datetime.date.today().isoformat()
-    urls = ''.join(f'<url><loc>https://michi-inc.net/{"" if d == "index.html" else d}</loc><lastmod>{today}</lastmod></url>' for d, _ in PAGES.values())
-    open(f'{OUT}/sitemap.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    alts = lambda d: ''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{lang_url(l, d)}"/>' for l in LANGS)
+    urls = ''.join(f'<url><loc>{lang_url(l, d)}</loc><lastmod>{today}</lastmod>{alts(d)}</url>' for l in LANGS for d, _ in PAGES.values())
+    open(f'{OUT}/sitemap.xml', 'w').write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">{urls}</urlset>\n')
     open(f'{OUT}/robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://michi-inc.net/sitemap.xml\n')
     shutil.copy(f'{SCR}/export-tool/llms.txt', f'{OUT}/llms.txt')
     print('assets', len(os.listdir(f'{OUT}/assets')))

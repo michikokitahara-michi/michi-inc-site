@@ -76,6 +76,12 @@ PERSON_LD = {
 }
 
 BLOBS = {
+    '834ee78c5bfa9ca8c0f949e856003783': 'visuals/spotify-hits-2025.jpg',
+    '515a4382db99c7b31c8537c6d59fab6d': 'visuals/newspicks-freee.jpg',
+    '2c756f301d342b4211db5391eedda186': 'visuals/mgc-2026-01.jpg',
+    'fe341df0eacd5895799a27de9de57267': 'visuals/core-midot-talk.jpg',
+    'bef1bd97bf41cbce9a6844455833d22a': 'visuals/aomori-bussan-2026.jpg',
+    '3d1d192c7e7981d1116bc5183b212858': 'visuals/marketingx-2026-a2.jpg',
     '64bcd691e5e544c6a9dcaacb0fa9785c': 'visuals/sendenkaigi-summit2606-2.jpg',
     '67e27105fc9806f0d64d829d6a18eb9e': 'visuals/marketingx-2025-osaka-2.jpg',
     'c1e83180ccbf3b29b44ca87ecccb0fd5': 'visuals/marketingx-2026-2.jpg',

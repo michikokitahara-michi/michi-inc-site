@@ -76,6 +76,8 @@ PERSON_LD = {
 }
 
 BLOBS = {
+    '43544fd8adfcb48d82e5a3d073c5dd35': 'visuals/marketingx-2026-maiko.jpg',
+    'ec9e20c1f4fc848a543f05838d78d3be': 'visuals/marketingx-2026-maiko-2.jpg',
     'fac72241a8c5135f95e4592a10ae8bdb': 'visuals/12powers-endorse.jpg',
     'b98c1a67b6a290b3125302f26a6ca541': 'visuals/adweek-asia-2025.jpg',
     '834ee78c5bfa9ca8c0f949e856003783': 'visuals/spotify-hits-2025.jpg',

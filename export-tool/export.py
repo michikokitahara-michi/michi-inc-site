@@ -77,6 +77,9 @@ PERSON_LD = {
 
 BLOBS = {
     '88a9523a1b382980dff2e9770224c04b': 'visuals/cjpf-lab-2026-12.jpg',
+    '3db9d0673a6d4f2330b10af7abba98fe': 'visuals/cstation-2026-10.jpg',
+    '0e844b983b63913ae2bd2ee740d94bd3': 'visuals/moy-2026-logo.jpg',
+    '3e4d4145210c18024d54aa88ac47affc': 'visuals/moy-2026-judges.jpg',
     'f144264ef4f15e97b220522b2d714cce': 'visuals/marketingx-2026-maiko-a1.jpg',
     '43544fd8adfcb48d82e5a3d073c5dd35': 'visuals/marketingx-2026-maiko.jpg',
     'ec9e20c1f4fc848a543f05838d78d3be': 'visuals/marketingx-2026-maiko-2.jpg',

@@ -1099,7 +1099,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 <div style="flex: 999 1 420px; min-width: 0; padding-bottom: 22px">
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 26px; line-height: 1.5; letter-spacing: 0.08em">기타하라 미치코</p>
-<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">CEO</span></p>
+<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">대표이사 CEO /</span> <span style="display: inline-block">J-Beauty Expert</span></p>
 <p style="margin: 0; font-size: 15px; line-height: 2; color: #444444">라이온과 시세이도에서 수많은 브랜드를 만들었고, 시세이도에서는 부CMO, 마케팅 본부장 등을 역임. 2025년 MICHI inc. 설립.</p>
 <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #333333">
 <li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>주식회사 알시코어 사외이사</li>
@@ -1278,6 +1278,8 @@ const talks = [
 ].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: true, badge: '', time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
 const articles = [
 { source: 'GreatRIVER presents Reframe Studio Vol. 7', date: '2025.11.05', title: '녹화 강의 「기능이 아니라 의미를 판다 — 고객에게 진정으로 닿는 인사이트 찾는 법」', url: 'https://youtu.be/tAllLok8FKo', yt: 'tAllLok8FKo' },
+{ source: '고단샤 C-STATION', date: '2026.10.30', title: '「MICHI」와 「MIDOT」. 마케터 기타하라 미치코의 두 가지 새로운 브랜딩 이야기｜시리즈 「슬로 애드버타이징」 제2회', url: 'https://cstation.kodansha.co.jp/article/18363', img: '/_blob/3db9d0673a6d4f2330b10af7abba98fe', ar: '3 / 2', pos: 'center 30%' },
+{ source: '닛케이 크로스 트렌드', date: '2026.10.13', title: '「올해의 마케터 2026」 심사위원으로 참여', url: 'https://xtrend.nikkei.com/atcl/contents/18/01484/', img: '/_blob/0e844b983b63913ae2bd2ee740d94bd3', img2: '/_blob/3e4d4145210c18024d54aa88ac47affc', ar: '3 / 2' },
 { source: '도서 소개', date: '', title: '필립 코틀러 『Essentials of Modern Marketing, Japan Edition』에 당사 CEO가 이끈 사례 게재', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
 { source: 'MarkeZine', date: '2025.12.08', title: '마케터는 많아도 가치를 만드는 사람은 적다? 전 시세이도 임원 기타하라가 만드는 ‘최강의 팀’', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', fit: 'cover', pos: 'center top' },
 { source: 'CORE「Dear Woman.」', date: '', title: '시대를 이끄는 여성 리더 100인 선정(EMPOWERMENT LEADER)', url: 'https://core-official.com/media/dear_woman', img: '/_blob/6b9b94fec0eb67a35e9cb062ed23debc', ar: '1200 / 675', img2: '/_blob/8ffa9796beabf0775f6874b36c7fa92d', fit: 'cover', pos: 'center' },

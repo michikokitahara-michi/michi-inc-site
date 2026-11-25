@@ -1099,7 +1099,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 <div style="flex: 999 1 420px; min-width: 0; padding-bottom: 22px">
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 26px; line-height: 1.5; letter-spacing: 0.08em">Michiko Kitahara</p>
-<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">CEO</span></p>
+<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">CEO /</span> <span style="display: inline-block">J-Beauty Expert</span></p>
 <p style="margin: 0; font-size: 15px; line-height: 2; color: #444444">Built numerous brands at Lion and Shiseido, serving at Shiseido as Deputy CMO and Head of Marketing, among other roles. Founded MICHI inc. in 2025.</p>
 <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #333333">
 <li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>Outside Director, R.C. CORE Co., Ltd.</li>
@@ -1278,6 +1278,8 @@ const talks = [
 ].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: true, badge: '', time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
 const articles = [
 { source: 'GreatRIVER presents Reframe Studio Vol. 7', date: '2025.11.05', title: 'Recorded lecture: "Sell Meaning, Not Function — How to Find Insights That Truly Resonate with Customers"', url: 'https://youtu.be/tAllLok8FKo', yt: 'tAllLok8FKo' },
+{ source: 'Kodansha C-STATION', date: '2026.10.30', title: '“MICHI” and “MIDOT”: Two New Branding Stories of Marketer Michiko Kitahara | “Slow Advertising” Series, Part 2', url: 'https://cstation.kodansha.co.jp/article/18363', img: '/_blob/3db9d0673a6d4f2330b10af7abba98fe', ar: '3 / 2', pos: 'center 30%' },
+{ source: 'Nikkei Cross Trend', date: '2026.10.13', title: 'Served as a judge for “Marketer of the Year 2026”', url: 'https://xtrend.nikkei.com/atcl/contents/18/01484/', img: '/_blob/0e844b983b63913ae2bd2ee740d94bd3', img2: '/_blob/3e4d4145210c18024d54aa88ac47affc', ar: '3 / 2' },
 { source: 'Book feature', date: '', title: 'A case led by our CEO featured in Philip Kotler\'s "Essentials of Modern Marketing, Japan Edition"', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
 { source: 'MarkeZine', date: '2025.12.08', title: 'Plenty of marketers, but few value creators? How former Shiseido executive Kitahara builds "the best team"', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', fit: 'cover', pos: 'center top' },
 { source: 'CORE「Dear Woman.」', date: '', title: 'Selected as one of 100 women leaders shaping the era (EMPOWERMENT LEADER)', url: 'https://core-official.com/media/dear_woman', img: '/_blob/6b9b94fec0eb67a35e9cb062ed23debc', ar: '1200 / 675', img2: '/_blob/8ffa9796beabf0775f6874b36c7fa92d', fit: 'cover', pos: 'center' },

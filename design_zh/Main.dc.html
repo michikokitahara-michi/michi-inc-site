@@ -1099,7 +1099,7 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 <div style="flex: 999 1 420px; min-width: 0; padding-bottom: 22px">
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 26px; line-height: 1.5; letter-spacing: 0.08em">北原规稚子</p>
-<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">CEO</span></p>
+<p style="margin: 6px 0 24px; font-size: 12px; letter-spacing: 0.24em; color: #5A5A5A"><span style="display: inline-block">MICHIKO KITAHARA /</span> <span style="display: inline-block">代表董事CEO /</span> <span style="display: inline-block">J-Beauty Expert</span></p>
 <p style="margin: 0; font-size: 15px; line-height: 2; color: #444444">曾在狮王与资生堂打造众多品牌，在资生堂历任副CMO、营销本部长等职。2025年创立MICHI inc.。</p>
 <ul style="margin: 20px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #333333">
 <li style="display: flex; gap: 14px"><span aria-hidden="true" style="flex: none; width: 6px; height: 6px; margin-top: 12px; border-radius: 50%; background: #111111"></span>株式会社R.C.CORE 独立董事</li>
@@ -1278,6 +1278,8 @@ const talks = [
 ].map((t) => ({ ...t, hasUrl: !!t.url, img: t.img || '', hasImg: !!t.img, fit: t.fit || 'cover', pos: t.pos || 'center', upcoming: true, badge: '', time: t.time || '', imgs: [t.img, t.img2].filter(Boolean), multi: !!(t.img && t.img2) }));
 const articles = [
 { source: 'GreatRIVER presents Reframe Studio Vol. 7', date: '2025.11.05', title: '录播讲座：“卖意义，而不是卖功能——如何找到真正打动顾客的洞察”', url: 'https://youtu.be/tAllLok8FKo', yt: 'tAllLok8FKo' },
+{ source: '讲谈社 C-STATION', date: '2026.10.30', title: '「MICHI」与「MIDOT」：营销人北原规稚子的两个全新品牌故事｜「慢广告」系列 第2回', url: 'https://cstation.kodansha.co.jp/article/18363', img: '/_blob/3db9d0673a6d4f2330b10af7abba98fe', ar: '3 / 2', pos: 'center 30%' },
+{ source: '日经Cross Trend', date: '2026.10.13', title: '担任「年度营销人2026」评委', url: 'https://xtrend.nikkei.com/atcl/contents/18/01484/', img: '/_blob/0e844b983b63913ae2bd2ee740d94bd3', img2: '/_blob/3e4d4145210c18024d54aa88ac47affc', ar: '3 / 2' },
 { source: '书籍介绍', date: '', title: '菲利普·科特勒《Essentials of Modern Marketing, Japan Edition》收录本公司CEO主导的案例', url: 'https://www.amazon.co.jp/s?k=9798170828333', img: '/_blob/fdf892390333d05111564fe10f803ca9', ar: '693 / 1000', fit: 'contain' },
 { source: 'MarkeZine', date: '2025.12.08', title: '营销人很多，价值创造者却很少？前资生堂高管北原如何打造“最强团队”', url: 'https://markezine.jp/article/detail/50159', img: '/_blob/2e94fba1e71e46f7b4fef185b865bbc0', ar: '1200 / 800', fit: 'cover', pos: 'center top' },
 { source: 'CORE「Dear Woman.」', date: '', title: '入选“引领时代的100位女性领导者”（EMPOWERMENT LEADER）', url: 'https://core-official.com/media/dear_woman', img: '/_blob/6b9b94fec0eb67a35e9cb062ed23debc', ar: '1200 / 675', img2: '/_blob/8ffa9796beabf0775f6874b36c7fa92d', fit: 'cover', pos: 'center' },

@@ -9,8 +9,6 @@
   "3. 第三者への提供": "3. Communication à des tiers",
   "4. 業務の委託": "4. Sous-traitance",
   "5. 安全管理": "5. Mesures de sécurité",
-  "6. 開示・訂正・削除等のご請求": "6. Demandes d’accès, de rectification ou de suppression",
-  "7. 改定": "7. Modifications",
   "ART（右脳的な感性・想像力・センス）と、SCIENCE（左脳的なロジックや分析）。その双方をバランスよく行ったり来たりすることが、イノベーションを生み出す重要な鍵だと考えています。": "ART : le monde du cerveau droit, celui de la sensibilité, de l’imagination et du goût. SCIENCE : le monde du cerveau gauche, celui de la logique et de l’analyse. Nous croyons que circuler librement et en équilibre entre les deux est la clé de l’innovation.",
   "AdverTimes.（宣伝会議）": "AdverTimes. (Sendenkaigi)",
   "BRAND IDENTITYと記された白い本": "Un livre blanc intitulé BRAND IDENTITY",
@@ -358,5 +356,11 @@
   "大変恐縮ですが、営業・広告・サービスのご案内など、売り込みを目的としたご連絡はご遠慮いただいております。": "Nous vous remercions de bien vouloir ne pas nous adresser de sollicitations commerciales, publicitaires ou de présentations de services.",
   "こちらのフォームから営業のご連絡をいただいた場合は、お返事を控えさせていただくとともに、どれほど魅力的な企業様・ご提案であっても、その後のお取引はご遠慮させていただきます。あらかじめご了承いただけますと幸いです。": "Si nous recevons une sollicitation commerciale via ce formulaire, nous n’y répondrons pas et, aussi intéressants que soient l’entreprise ou la proposition, nous déclinerons respectueusement toute collaboration ultérieure. Merci de votre compréhension.",
   "営業・売り込みを目的としたご連絡ではありません。": "Ce message n’est pas une sollicitation commerciale.",
-  "確認済み": "Confirmé"
+  "確認済み": "Confirmé",
+  "7. 開示・訂正・削除等のご請求": "7. Demandes d’accès, de rectification ou de suppression",
+  "8. 改定": "8. Modifications",
+  "6. アクセス解析ツールについて": "6. Outils d’analyse d’audience",
+  "当社は、ウェブサイトの利用状況を把握してサービスの向上に役立てるため、Google LLCが提供するGoogleタグマネージャーおよびGoogleアナリティクスを利用しています。Googleアナリティクスは、Cookieを使用して、個人を特定する情報を含まない形でアクセス情報を収集します。収集された情報は、Google LLCのプライバシーポリシーに基づいて管理されます。ブラウザの設定でCookieを無効にすることで、収集を拒否することができます。詳しくは": "Afin de comprendre l’utilisation de notre site et d’améliorer nos services, nous utilisons Google Tag Manager et Google Analytics, fournis par Google LLC. Google Analytics utilise des cookies pour collecter des données de fréquentation sous une forme qui ne permet pas d’identifier les personnes. Les données collectées sont gérées conformément à la politique de confidentialité de Google LLC. Vous pouvez refuser cette collecte en désactivant les cookies dans les paramètres de votre navigateur. Pour en savoir plus, consultez ",
+  "Googleによるデータの使用について": "Comment Google utilise les données des sites qui utilisent ses services",
+  "をご覧ください。": "."
 }

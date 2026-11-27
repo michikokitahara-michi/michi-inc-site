@@ -9,8 +9,6 @@
   "3. 第三者への提供": "3. Disclosure to Third Parties",
   "4. 業務の委託": "4. Outsourcing",
   "5. 安全管理": "5. Security Measures",
-  "6. 開示・訂正・削除等のご請求": "6. Requests for Disclosure, Correction or Deletion",
-  "7. 改定": "7. Revisions",
   "ART（右脳的な感性・想像力・センス）と、SCIENCE（左脳的なロジックや分析）。その双方をバランスよく行ったり来たりすることが、イノベーションを生み出す重要な鍵だと考えています。": "ART — the right-brain world of sensibility, imagination and taste. SCIENCE — the left-brain world of logic and analysis. We believe that moving freely and in balance between the two is the key to innovation.",
   "AdverTimes.（宣伝会議）": "AdverTimes. (Sendenkaigi)",
   "BRAND IDENTITYと記された白い本": "A white book titled BRAND IDENTITY",
@@ -358,5 +356,11 @@
   "大変恐縮ですが、営業・広告・サービスのご案内など、売り込みを目的としたご連絡はご遠慮いただいております。": "We kindly ask that you refrain from sending sales, advertising or service pitches.",
   "こちらのフォームから営業のご連絡をいただいた場合は、お返事を控えさせていただくとともに、どれほど魅力的な企業様・ご提案であっても、その後のお取引はご遠慮させていただきます。あらかじめご了承いただけますと幸いです。": "If we receive a sales inquiry through this form, we will not reply, and regardless of how appealing the company or proposal may be, we will respectfully decline any future business. Thank you for your understanding.",
   "営業・売り込みを目的としたご連絡ではありません。": "This message is not a sales pitch.",
-  "確認済み": "Confirmed"
+  "確認済み": "Confirmed",
+  "7. 開示・訂正・削除等のご請求": "7. Requests for Disclosure, Correction or Deletion",
+  "8. 改定": "8. Revisions",
+  "6. アクセス解析ツールについて": "6. Use of Analytics Tools",
+  "当社は、ウェブサイトの利用状況を把握してサービスの向上に役立てるため、Google LLCが提供するGoogleタグマネージャーおよびGoogleアナリティクスを利用しています。Googleアナリティクスは、Cookieを使用して、個人を特定する情報を含まない形でアクセス情報を収集します。収集された情報は、Google LLCのプライバシーポリシーに基づいて管理されます。ブラウザの設定でCookieを無効にすることで、収集を拒否することができます。詳しくは": "To understand how our website is used and improve our services, we use Google Tag Manager and Google Analytics, provided by Google LLC. Google Analytics uses cookies to collect traffic data in a form that does not identify individuals. The data collected is managed under Google LLC’s privacy policy. You can opt out of this collection by disabling cookies in your browser settings. For details, please see ",
+  "Googleによるデータの使用について": "How Google uses information from sites or apps that use its services",
+  "をご覧ください。": "."
 }

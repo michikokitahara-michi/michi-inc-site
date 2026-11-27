@@ -103,6 +103,11 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <input type="hidden" name="from_name" value="MICHI inc. 웹사이트">
 <div class="hp" aria-hidden="true"><label>이 칸은 비워 두세요<input type="checkbox" name="botcheck" tabindex="-1"></label></div>
 
+<div style="padding: 20px 22px; background: #F6F6F3; border-left: 3px solid #111111; font-size: 13px; line-height: 2; color: #444444">
+<p style="margin: 0">죄송하지만 영업·광고·서비스 안내 등 판매를 목적으로 한 연락은 삼가 주시기 바랍니다.</p>
+<p style="margin: 6px 0 0">이 양식을 통해 영업 연락을 주신 경우 답변을 드리지 않으며, 아무리 훌륭한 기업이나 제안이라도 이후의 거래는 정중히 사양하겠습니다. 양해 부탁드립니다.</p>
+</div>
+
 <fieldset style="margin: 0; padding: 0; border: 0">
 <legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px">문의 유형 <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">필수</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
@@ -141,9 +146,16 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
+<input type="checkbox" name="Not Sales" value="확인함" required style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111">
+<span>영업·판매를 목적으로 한 연락이 아닙니다.</span>
+</label>
+
+<label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input type="checkbox" name="Privacy Policy" value="동의합니다" required style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111">
 <span><a href="Privacy.dc.html">개인정보 처리방침</a>에 동의하고 보냅니다.</span>
 </label>
+
+<div class="h-captcha" data-captcha="true" style="display: flex; justify-content: center"></div>
 
 <div style="text-align: center; padding-top: 8px">
 <button type="submit" class="sendbtn">보내기</button>

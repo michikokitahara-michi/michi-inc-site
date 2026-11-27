@@ -103,6 +103,11 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <input type="hidden" name="from_name" value="Site de MICHI inc.">
 <div class="hp" aria-hidden="true"><label>Laissez ce champ vide<input type="checkbox" name="botcheck" tabindex="-1"></label></div>
 
+<div style="padding: 20px 22px; background: #F6F6F3; border-left: 3px solid #111111; font-size: 13px; line-height: 2; color: #444444">
+<p style="margin: 0">Nous vous remercions de bien vouloir ne pas nous adresser de sollicitations commerciales, publicitaires ou de présentations de services.</p>
+<p style="margin: 6px 0 0">Si nous recevons une sollicitation commerciale via ce formulaire, nous n’y répondrons pas et, aussi intéressants que soient l’entreprise ou la proposition, nous déclinerons respectueusement toute collaboration ultérieure. Merci de votre compréhension.</p>
+</div>
+
 <fieldset style="margin: 0; padding: 0; border: 0">
 <legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px">Objet de la demande <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">Obligatoire</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
@@ -141,9 +146,16 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
+<input type="checkbox" name="Not Sales" value="Confirmé" required style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111">
+<span>Ce message n’est pas une sollicitation commerciale.</span>
+</label>
+
+<label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input type="checkbox" name="Privacy Policy" value="J’accepte" required style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111">
 <span><a href="Privacy.dc.html">Politique de confidentialité</a> — j’accepte et j’envoie.</span>
 </label>
+
+<div class="h-captcha" data-captcha="true" style="display: flex; justify-content: center"></div>
 
 <div style="text-align: center; padding-top: 8px">
 <button type="submit" class="sendbtn">Envoyer</button>

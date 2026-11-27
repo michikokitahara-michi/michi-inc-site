@@ -103,6 +103,11 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <input type="hidden" name="from_name" value="MICHI inc. 官网">
 <div class="hp" aria-hidden="true"><label>请勿填写此栏<input type="checkbox" name="botcheck" tabindex="-1"></label></div>
 
+<div style="padding: 20px 22px; background: #F6F6F3; border-left: 3px solid #111111; font-size: 13px; line-height: 2; color: #444444">
+<p style="margin: 0">非常抱歉，恕不接受以推销为目的的联系，例如营业推广、广告或服务介绍等。</p>
+<p style="margin: 6px 0 0">如通过本表单收到推销类联系，我们将不予回复；无论企业或提案多么出色，今后也将恕不开展合作。敬请谅解。</p>
+</div>
+
 <fieldset style="margin: 0; padding: 0; border: 0">
 <legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px">咨询类别 <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必填</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
@@ -141,9 +146,16 @@ header.site .gnav a::after{background:#FFFFFF !important}
 </div>
 
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
+<input type="checkbox" name="Not Sales" value="已确认" required style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111">
+<span>本次联系并非以推销为目的。</span>
+</label>
+
+<label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input type="checkbox" name="Privacy Policy" value="同意" required style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111">
 <span><a href="Privacy.dc.html">隐私政策</a>，同意后提交。</span>
 </label>
+
+<div class="h-captcha" data-captcha="true" style="display: flex; justify-content: center"></div>
 
 <div style="text-align: center; padding-top: 8px">
 <button type="submit" class="sendbtn">提交</button>

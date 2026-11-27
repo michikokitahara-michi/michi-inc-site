@@ -7,10 +7,10 @@ LANG_ARIA = {'ja': '言語', 'en': 'Language', 'fr': 'Langue', 'ko': '언어', '
 NEW_TAB = {'en': ' (opens in a new tab)', 'fr': ' (s’ouvre dans un nouvel onglet)', 'ko': ' (새 탭에서 열림)', 'zh': '（在新标签页中打开）'}
 SENDING = {'en': ('Sending…', 'Send'), 'fr': ('Envoi…', 'Envoyer'), 'ko': ('보내는 중…', '보내기'), 'zh': ('提交中…', '提交')}
 FORM_ERR = {
-    'en': 'Your message could not be sent. Please try again later, or email michiko.kitahara@michi-inc.com directly.',
-    'fr': 'Votre message n’a pas pu être envoyé. Veuillez réessayer plus tard ou écrire directement à michiko.kitahara@michi-inc.com.',
-    'ko': '전송하지 못했습니다. 잠시 후 다시 시도하시거나 michiko.kitahara@michi-inc.com 으로 직접 연락해 주세요.',
-    'zh': '提交失败。请稍后重试，或直接发送邮件至 michiko.kitahara@michi-inc.com。',
+    'en': 'Your message could not be sent. Please try again later, Sorry for the inconvenience.',
+    'fr': 'Votre message n’a pas pu être envoyé. Veuillez réessayer plus tard Merci de votre compréhension.',
+    'ko': '전송하지 못했습니다. 번거로우시겠지만 잠시 후 다시 시도해 주세요.',
+    'zh': '提交失败。请稍后重试。',
 }
 FONTS = {  # replace Japanese web fonts for CJK languages
     'ko': {'Shippori Mincho': 'Noto Serif KR', 'Zen Kaku Gothic New': 'Noto Sans KR'},
@@ -71,3 +71,5 @@ PAGE_DESC = {
     },
 }
 for _l in PAGE_DESC: PAGE_DESC[_l]['index.html'] = DESC[_l]
+
+CAPMSG = {'ja': 'お手数ですが、「私はロボットではありません」の確認をお願いいたします。', 'en': 'Please complete the “I am human” check before sending.', 'fr': 'Veuillez confirmer que vous n’êtes pas un robot avant d’envoyer.', 'ko': '보내기 전에 로봇이 아님을 확인해 주세요.', 'zh': '提交前请完成人机验证。'}

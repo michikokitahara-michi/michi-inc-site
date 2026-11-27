@@ -379,8 +379,11 @@ FORM_JS = """<script>
   var f=document.getElementById('contact-form'),done=document.getElementById('contact-done'),err=document.getElementById('contact-error');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
+    var cap=f.querySelector('[name="h-captcha-response"]');if(cap&&!cap.value){if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=CAPMSG;err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    if(err.dataset.base)err.textContent=err.dataset.base;
+    var fd=new FormData(f),ty=fd.get('Inquiry Type');if(ty)fd.set('subject','【'+ty+'】'+fd.get('subject'));
     var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='送信中…';err.hidden=true;
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
       .then(function(r){return r.json();})
       .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;f.style.display='none';done.hidden=false;done.style.display='';done.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(x){var m=(x&&x.message)||'';if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=err.dataset.base+(m?' ['+m+']':'');err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});btn.disabled=false;btn.textContent='送信する';});
@@ -389,6 +392,7 @@ FORM_JS = """<script>
   f.addEventListener('invalid',function(e){if(warned)return;warned=true;setTimeout(function(){warned=false;},500);var el=e.target;var box=el.closest('label')||el;box.scrollIntoView({behavior:'smooth',block:'center'});box.style.outline='2px solid #111111';box.style.outlineOffset='4px';setTimeout(function(){box.style.outline='';},2500);},true);
 })();
 </script>"""
+FORM_JS = FORM_JS.replace('CAPMSG', json.dumps(M.CAPMSG[LANG], ensure_ascii=False)).replace('<script>', '<script src="https://web3forms.com/client/script.js" async defer></script>\n<script>', 1)
 if LANG != 'ja': FORM_JS = FORM_JS.replace('送信中…', M.SENDING[LANG][0]).replace('送信する', M.SENDING[LANG][1])
 
 BADGE_JS = """<script>
@@ -468,7 +472,7 @@ def build(src, dst, title):
         form['action'] = 'https://api.web3forms.com/submit'
         form['method'] = 'POST'
         form.find('input', attrs={'name': 'access_key'})['value'] = ACCESS_KEY
-        err = BeautifulSoup('<p id="contact-error" role="alert" hidden style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">' + ('送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。' if LANG == 'ja' else M.FORM_ERR[LANG]) + '</p>', 'html.parser')
+        err = BeautifulSoup('<p id="contact-error" role="alert" hidden style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">' + ('送信できませんでした。お手数ですが、時間をおいて再度お試しください。' if LANG == 'ja' else M.FORM_ERR[LANG]) + '</p>', 'html.parser')
         form.find('button', attrs={'type': 'submit'}).parent.insert_before(err)
         form.insert_after(copy.copy(status))
         body = str(b2)

@@ -115,6 +115,10 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <input name="subject" type="hidden" value="[Site MICHI inc.] Nouvelle demande reçue"/>
 <input name="from_name" type="hidden" value="Site de MICHI inc."/>
 <div aria-hidden="true" class="hp"><label>Laissez ce champ vide<input name="botcheck" tabindex="-1" type="checkbox"/></label></div>
+<div style="padding: 20px 22px; background: #F6F6F3; border-left: 3px solid #111111; font-size: 13px; line-height: 2; color: #444444">
+<p style="margin: 0">Nous vous remercions de bien vouloir ne pas nous adresser de sollicitations commerciales, publicitaires ou de présentations de services.</p>
+<p style="margin: 6px 0 0">Si nous recevons une sollicitation commerciale via ce formulaire, nous n’y répondrons pas et, aussi intéressants que soient l’entreprise ou la proposition, nous déclinerons respectueusement toute collaboration ultérieure. Merci de votre compréhension.</p>
+</div>
 <fieldset style="margin: 0; padding: 0; border: 0">
 <legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px">Objet de la demande <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">Obligatoire</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
@@ -149,10 +153,15 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <textarea class="fi" id="f-message" name="message" placeholder="Indiquez si possible le contexte et le calendrier souhaité." required="" rows="8" style="min-height: 200px; resize: vertical; line-height: 1.8"></textarea>
 </div>
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
+<input name="Not Sales" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="Confirmé"/>
+<span>Ce message n’est pas une sollicitation commerciale.</span>
+</label>
+<label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input name="Privacy Policy" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="J’accepte"/>
 <span><a href="privacy.html">Politique de confidentialité</a> — j’accepte et j’envoie.</span>
 </label>
-<p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">Votre message n’a pas pu être envoyé. Veuillez réessayer plus tard ou écrire directement à michiko.kitahara@michi-inc.com.</p><div style="text-align: center; padding-top: 8px">
+<div class="h-captcha" data-captcha="true" style="display: flex; justify-content: center"></div>
+<p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">Votre message n’a pas pu être envoyé. Veuillez réessayer plus tard Merci de votre compréhension.</p><div style="text-align: center; padding-top: 8px">
 <button class="sendbtn" type="submit">Envoyer</button>
 </div>
 </form><div hidden="" id="contact-done" role="status" style="margin-top: 48px; padding: 56px 24px; border: 1px solid #DDDDD8; text-align: center">
@@ -189,13 +198,17 @@ document.addEventListener('click',function(e){var d=document.querySelector('deta
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el){el.classList.add('rv');io.observe(el);});
 })();
-</script><script>
+</script><script async="" defer="" src="https://web3forms.com/client/script.js"></script>
+<script>
 (function(){
   var f=document.getElementById('contact-form'),done=document.getElementById('contact-done'),err=document.getElementById('contact-error');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
+    var cap=f.querySelector('[name="h-captcha-response"]');if(cap&&!cap.value){if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent="Veuillez confirmer que vous n’êtes pas un robot avant d’envoyer.";err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    if(err.dataset.base)err.textContent=err.dataset.base;
+    var fd=new FormData(f),ty=fd.get('Inquiry Type');if(ty)fd.set('subject','【'+ty+'】'+fd.get('subject'));
     var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='Envoi…';err.hidden=true;
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
       .then(function(r){return r.json();})
       .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;f.style.display='none';done.hidden=false;done.style.display='';done.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(x){var m=(x&&x.message)||'';if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=err.dataset.base+(m?' ['+m+']':'');err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});btn.disabled=false;btn.textContent='Envoyer';});

@@ -115,6 +115,10 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <input name="subject" type="hidden" value="【MICHI inc. 官网】收到新的咨询"/>
 <input name="from_name" type="hidden" value="MICHI inc. 官网"/>
 <div aria-hidden="true" class="hp"><label>请勿填写此栏<input name="botcheck" tabindex="-1" type="checkbox"/></label></div>
+<div style="padding: 20px 22px; background: #F6F6F3; border-left: 3px solid #111111; font-size: 13px; line-height: 2; color: #444444">
+<p style="margin: 0">非常抱歉，恕不接受以推销为目的的联系，例如营业推广、广告或服务介绍等。</p>
+<p style="margin: 6px 0 0">如通过本表单收到推销类联系，我们将不予回复；无论企业或提案多么出色，今后也将恕不开展合作。敬请谅解。</p>
+</div>
 <fieldset style="margin: 0; padding: 0; border: 0">
 <legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px">咨询类别 <span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必填</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
@@ -149,10 +153,15 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <textarea class="fi" id="f-message" name="message" placeholder="请尽可能告诉我们相关背景和期望的时间。" required="" rows="8" style="min-height: 200px; resize: vertical; line-height: 1.8"></textarea>
 </div>
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
+<input name="Not Sales" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="已确认"/>
+<span>本次联系并非以推销为目的。</span>
+</label>
+<label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input name="Privacy Policy" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="同意"/>
 <span><a href="privacy.html">隐私政策</a>，同意后提交。</span>
 </label>
-<p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">提交失败。请稍后重试，或直接发送邮件至 michiko.kitahara@michi-inc.com。</p><div style="text-align: center; padding-top: 8px">
+<div class="h-captcha" data-captcha="true" style="display: flex; justify-content: center"></div>
+<p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">提交失败。请稍后重试。</p><div style="text-align: center; padding-top: 8px">
 <button class="sendbtn" type="submit">提交</button>
 </div>
 </form><div hidden="" id="contact-done" role="status" style="margin-top: 48px; padding: 56px 24px; border: 1px solid #DDDDD8; text-align: center">
@@ -189,13 +198,17 @@ document.addEventListener('click',function(e){var d=document.querySelector('deta
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el){el.classList.add('rv');io.observe(el);});
 })();
-</script><script>
+</script><script async="" defer="" src="https://web3forms.com/client/script.js"></script>
+<script>
 (function(){
   var f=document.getElementById('contact-form'),done=document.getElementById('contact-done'),err=document.getElementById('contact-error');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
+    var cap=f.querySelector('[name="h-captcha-response"]');if(cap&&!cap.value){if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent="提交前请完成人机验证。";err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    if(err.dataset.base)err.textContent=err.dataset.base;
+    var fd=new FormData(f),ty=fd.get('Inquiry Type');if(ty)fd.set('subject','【'+ty+'】'+fd.get('subject'));
     var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='提交中…';err.hidden=true;
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
       .then(function(r){return r.json();})
       .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;f.style.display='none';done.hidden=false;done.style.display='';done.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(x){var m=(x&&x.message)||'';if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=err.dataset.base+(m?' ['+m+']':'');err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});btn.disabled=false;btn.textContent='提交';});

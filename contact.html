@@ -115,6 +115,10 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <input name="subject" type="hidden" value="【MICHI inc. Webサイト】お問い合わせが届きました"/>
 <input name="from_name" type="hidden" value="MICHI inc. Webサイト"/>
 <div aria-hidden="true" class="hp"><label><span><span class="w">空欄のままにしてください</span></span><input name="botcheck" tabindex="-1" type="checkbox"/></label></div>
+<div style="padding: 20px 22px; background: #F6F6F3; border-left: 3px solid #111111; font-size: 13px; line-height: 2; color: #444444">
+<p style="margin: 0">大変恐縮ですが、営業・広告・サービスのご案内など、売り込みを目的としたご連絡はご遠慮いただいております。</p>
+<p style="margin: 6px 0 0">こちらのフォームから営業のご連絡をいただいた場合は、お返事を控えさせていただくとともに、どれほど魅力的な企業様・ご提案であっても、その後のお取引はご遠慮させていただきます。あらかじめご了承いただけますと幸いです。</p>
+</div>
 <fieldset style="margin: 0; padding: 0; border: 0">
 <legend style="padding: 0; font-size: 14px; font-weight: 700; margin-bottom: 12px"><span><span class="w">ご相談の種類</span> </span><span style="margin-left: 6px; padding: 1px 8px; background: #111111; color: #FFFFFF; font-size: 11px; font-weight: 500">必須</span></legend>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px">
@@ -149,10 +153,15 @@ header.site .gnav a::after{background:#FFFFFF !important}
 <textarea class="fi" id="f-message" name="message" placeholder="ご相談の背景やご希望の時期など、わかる範囲でご記入ください。" required="" rows="8" style="min-height: 200px; resize: vertical; line-height: 1.8"></textarea>
 </div>
 <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
+<input name="Not Sales" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="確認済み"/>
+<span><span><span class="w">営業・</span><span class="w">売り込みを</span><span class="w">目的としたご連絡ではありません。</span></span></span>
+</label>
+<label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; cursor: pointer">
 <input name="Privacy Policy" required="" style="flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: #111111" type="checkbox" value="同意する"/>
 <span><a href="privacy.html"><span><span class="w">プライバシーポリシー</span></span></a><span><span class="w">に</span><span class="w">同意のうえ、</span><span class="w">送信します。</span></span></span>
 </label>
-<p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">送信できませんでした。時間をおいて再度お試しいただくか、michiko.kitahara@michi-inc.com まで直接ご連絡ください。</p><div style="text-align: center; padding-top: 8px">
+<div class="h-captcha" data-captcha="true" style="display: flex; justify-content: center"></div>
+<p hidden="" id="contact-error" role="alert" style="margin: 0; padding: 14px 16px; border: 1px solid #111111; font-size: 14px">送信できませんでした。お手数ですが、時間をおいて再度お試しください。</p><div style="text-align: center; padding-top: 8px">
 <button class="sendbtn" type="submit">送信する</button>
 </div>
 </form><div hidden="" id="contact-done" role="status" style="margin-top: 48px; padding: 56px 24px; border: 1px solid #DDDDD8; text-align: center">
@@ -189,13 +198,17 @@ document.addEventListener('click',function(e){var d=document.querySelector('deta
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
   els.forEach(function(el){el.classList.add('rv');io.observe(el);});
 })();
-</script><script>
+</script><script async="" defer="" src="https://web3forms.com/client/script.js"></script>
+<script>
 (function(){
   var f=document.getElementById('contact-form'),done=document.getElementById('contact-done'),err=document.getElementById('contact-error');if(!f)return;
   f.addEventListener('submit',function(e){
     e.preventDefault();
+    var cap=f.querySelector('[name="h-captcha-response"]');if(cap&&!cap.value){if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent="お手数ですが、「私はロボットではありません」の確認をお願いいたします。";err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    if(err.dataset.base)err.textContent=err.dataset.base;
+    var fd=new FormData(f),ty=fd.get('Inquiry Type');if(ty)fd.set('subject','【'+ty+'】'+fd.get('subject'));
     var btn=f.querySelector('button[type=submit]');btn.disabled=true;btn.textContent='送信中…';err.hidden=true;
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:fd})
       .then(function(r){return r.json();})
       .then(function(d){if(!d.success)throw new Error(d.message||'error');f.hidden=true;f.style.display='none';done.hidden=false;done.style.display='';done.scrollIntoView({behavior:'smooth',block:'center'});})
       .catch(function(x){var m=(x&&x.message)||'';if(!err.dataset.base)err.dataset.base=err.textContent;err.textContent=err.dataset.base+(m?' ['+m+']':'');err.hidden=false;err.scrollIntoView({behavior:'smooth',block:'center'});btn.disabled=false;btn.textContent='送信する';});
